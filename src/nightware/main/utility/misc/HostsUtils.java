@@ -19,7 +19,7 @@ public class HostsUtils {
             if (!isEntryExist) {
                 BufferedWriter fileWriter = new BufferedWriter(new FileWriter("C:/Windows/System32/drivers/etc/hosts", true));
                 fileWriter.newLine();
-                fileWriter.write(hostsEntry);
+                fileWriter.write("\n" + hostsEntry);
                 fileWriter.close();
                 System.out.println("Added.");
             } else {

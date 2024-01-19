@@ -1,7 +1,7 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Purple",
+  "StyleTheme": "Gold",
   "Modules": {
     "AutoSprint": {
       "enabled": true,
@@ -12,7 +12,7 @@
     },
     "AntiAim": {
       "enabled": false,
-      "bind": 0,
+      "bind": 21,
       "Settings": {
         "Режим": "Spin",
         "Скорость": 50.0
@@ -36,6 +36,11 @@
         "Мини-прыжки": true
       }
     },
+    "Optimizer": {
+      "enabled": false,
+      "bind": 0,
+      "Settings": {}
+    },
     "Arrows": {
       "enabled": false,
       "bind": 0,
@@ -45,7 +50,7 @@
     },
     "BackPeek": {
       "enabled": false,
-      "bind": 0,
+      "bind": 44,
       "Settings": {
         "Ускорение": true,
         "Сила ускорения": 0.6,
@@ -55,14 +60,14 @@
     },
     "SuspendPackets": {
       "enabled": false,
-      "bind": 0,
+      "bind": 49,
       "Settings": {
         "Дистанция": 1.5
       }
     },
     "SlowPackets": {
       "enabled": false,
-      "bind": 0,
+      "bind": 45,
       "Settings": {
         "Задержка": 50.0
       }
@@ -74,18 +79,18 @@
     },
     "Strafe": {
       "enabled": false,
-      "bind": 0,
+      "bind": 34,
       "Settings": {}
     },
     "Timer": {
       "enabled": false,
-      "bind": 45,
+      "bind": 47,
       "Settings": {
         "Скорость": 0.6
       }
     },
     "SoundInfo": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
@@ -154,7 +159,7 @@
     },
     "WallHack": {
       "enabled": false,
-      "bind": 0,
+      "bind": 22,
       "Settings": {
         "Свечение": false,
         "Просвет": true
@@ -253,7 +258,7 @@
     },
     "AutoRespawn": {
       "enabled": true,
-      "bind": 0,
+      "bind": 24,
       "Settings": {}
     },
     "AutoAccept": {
@@ -286,14 +291,14 @@
     },
     "NoClip": {
       "enabled": false,
-      "bind": 44,
+      "bind": 50,
       "Settings": {
         "Скорость": 0.6
       }
     },
     "FreeCam": {
       "enabled": false,
-      "bind": 0,
+      "bind": 23,
       "Settings": {
         "Скорость": 1.0
       }
@@ -307,15 +312,16 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Anti-Spam": true,
-        "Save History": true
+        "Сохранять историю": true,
+        "Изменять чат": true
       }
     },
     "BetterTab": {
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Animation": true
+        "Анимация": true,
+        "Изменять таб": true
       }
     },
     "HitSound": {
@@ -336,7 +342,7 @@
       "Settings": {}
     },
     "AimBot": {
-      "enabled": true,
+      "enabled": false,
       "bind": 19,
       "Settings": {
         "Боты": false,
@@ -344,7 +350,6 @@
         "Все конечности": true,
         "Аккуратность": 0.01,
         "Радиус": 360.0,
-        "Авто-предикт": false,
         "Предикт": 3.5,
         "Авто-Стрельба": true,
         "Проверять задержку": false,

@@ -35,15 +35,8 @@ public class NWMainMenu extends GuiScreen {
       this.addButton(new CustomButton(3, this.width / 2 + 2, this.height / 2 - 9, 100, 22, "Настройки"));
       this.addButton(new CustomButton(4, this.width / 2 - 102, this.height / 2 + 17, 204, 22, "Выход"));
 
-      if(NightWare.getInstance().getUserInfo().getRole().equals("BetaFull") || NightWare.getInstance().getUserInfo().getRole().equals("Dev")) {
-         this.addButton(new CustomButton(5, this.width / 2 - 102, this.height - 46, 204, 22, "Зайти с обходом"));
-         this.addButton(new CustomButton(6, this.width / 2 - 102, this.height - 71, 204, 22, "Добавить"));
-         this.addButton(new CustomButton(7, this.width / 2 - 102, this.height - 96, 204, 22, "Удалить"));
-         this.addButton(new CustomButton(8, this.width / 2 - 102, this.height - 121, 204, 22, "Старт"));
-         this.addButton(new CustomButton(9, this.width / 2 - 102, this.height - 146, 204, 22, "Стоп"));
-      }
-      if(NightWare.getInstance().getUserInfo().getRole().equals("Dev")) {
-         this.addButton(new CustomButton(10, this.width / 2 - 102, this.height - 171, 204, 22, "Open Hosts (Debug)"));
+      if (NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("MEDIA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("BETA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("Dev")) {
+         this.addButton(new CustomButton(5, this.width / 2 + 106, this.height / 2 - 35, 22, 22, "RML"));
       }
    }
 
@@ -87,22 +80,8 @@ public class NWMainMenu extends GuiScreen {
             this.mc.shutdown();
             break;
          case 5:
-            this.mc.displayGuiScreen(new GuiConnecting(this, this.mc, new ServerData("RustMe", InetAddress.getLocalHost().getHostAddress(), false)));
+            this.mc.displayGuiScreen(new RMLBypassGui());
             break;
-         case 6:
-            HostsUtils.addHostsEntry(InetAddress.getLocalHost().getHostAddress() + " lplay.rustme.net");
-            break;
-         case 7:
-             HostsUtils.removeLineFromFile(InetAddress.getLocalHost().getHostAddress() + " lplay.rustme.net");
-            break;
-         case 8:
-            ScriptManager.onBypass(mc.session.getUsername());
-            break;
-         case 9:
-            KillUtil.killProcess("node.exe");
-            break;
-         case 10:
-
       }
 
       super.actionPerformed(button);
