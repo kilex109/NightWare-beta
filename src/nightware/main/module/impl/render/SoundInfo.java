@@ -96,12 +96,13 @@ public class SoundInfo extends Module {
                         g = false;
                      }
                   }
-                  if (g) {
+                  if (g && exes.size() <= 20) {
                      exes.add(new Ex(new Vec3d(packet.getX(), packet.getY(), packet.getZ()), packet.getSoundName()));
                   }
                } else {
-                  exes.add(new Ex(new Vec3d(packet.getX(), packet.getY(), packet.getZ()), packet.getSoundName()));
-
+                  if (exes.size() <= 20) {
+                     exes.add(new Ex(new Vec3d(packet.getX(), packet.getY(), packet.getZ()), packet.getSoundName()));
+                  }
                }
 
             }
