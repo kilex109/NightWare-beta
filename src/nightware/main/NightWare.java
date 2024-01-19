@@ -2,6 +2,7 @@ package nightware.main;
 
 import com.darkmagician6.eventapi.EventManager;
 import com.darkmagician6.eventapi.EventTarget;
+import lombok.Getter;
 import net.minecraft.util.text.TextFormatting;
 import nightware.main.command.CommandManager;
 import nightware.main.event.input.EventInputKey;
@@ -11,69 +12,69 @@ import nightware.main.manager.dragging.DragManager;
 import nightware.main.manager.friend.FriendManager;
 import nightware.main.manager.lastAccount.LastAccountManager;
 import nightware.main.manager.macro.MacroManager;
-import nightware.main.manager.proxy.ProxyManager;
 import nightware.main.manager.staff.StaffManager;
 import nightware.main.manager.theme.ThemeManager;
 import nightware.main.manager.theme.Themes;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleManager;
+import nightware.main.module.impl.render.Arraylist;
 import nightware.main.ui.csgui.CsGui;
 import nightware.main.ui.menu.altmanager.alt.AltFileManager;
-import nightware.main.ui.menu.main.NWMainMenu;
-import nightware.main.ui.menu.proxy.GuiProxy;
 import nightware.main.utility.misc.Discord;
-import nightware.main.utility.misc.ScriptManager;
 import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.model.WingsLayerRender;
 import nightware.main.utility.render.model.WingsModel;
 import java.awt.Color;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Random;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiMultiplayer;
 import net.minecraft.client.renderer.entity.RenderPlayer;
-import org.lwjgl.input.Keyboard;
-import org.lwjgl.opengl.Display;
 import ru.crashdami.internalprotection.nativeobfuscator.Native;
 import ru.crashdami.internalprotection.nativeobfuscator.NotNative;
 
 @Native
 public class NightWare {
    public static String NAME = "NightWare";
-   public static String VERSION = "1.0";
    public static String BUILD_TYPE = "Beta";
-   public static String EDITION = "1.12.2 Edition";
    private static final NightWare instance = new NightWare();
+   @Getter
    private ModuleManager moduleManager;
+   @Getter
    private final ConfigManager configManager = new ConfigManager();
+   @Getter
    private ThemeManager themeManager;
+   @Getter
    private CommandManager commandManager;
+   @Getter
    private AltFileManager altFileManager;
+   @Getter
    private LastAccountManager lastAccountManager;
+   @Getter
    private FriendManager friendManager;
+   @Getter
    private StaffManager staffManager;
+   @Getter
    private MacroManager macroManager;
-   private ProxyManager proxyManager;
+   @Getter
    private DragManager dragManager;
+   @Getter
    private CsGui csGui;
    private UserInfo userInfo;
-   private GuiProxy guiProxy;
    public static String username;
    public static int uid;
    public static String role;
    public static String till;
 
    public void start() throws IOException {
-      System.out.println("Инициализация пользователя.. | 1/19");
+      System.out.println("Инициализация пользователя.. | 1/15");
       AvtorizaciyaHAHA.Server();
       this.userInfo = new UserInfo(username, uid, role, till);
-      System.out.println("Инициализация тем клиента.. | 2/19");
+      System.out.println("Инициализация тем клиента.. | 2/15");
       this.themeManager = new ThemeManager();
-      System.out.println("Инициализация модулей.. | 3/19");
+      System.out.println("Инициализация модулей.. | 3/15");
       this.moduleManager = new ModuleManager();
-      System.out.println("Инициализация комманд.. | 4/19");
+      System.out.println("Инициализация комманд.. | 4/15");
       this.commandManager = new CommandManager();
 
       try {
@@ -111,70 +112,56 @@ public class NightWare {
          killProcess("httpdebugger.exe");
          killProcess("cheatengine-x86_64.exe");
 
-         System.out.println("Инициализация конфигов.. | 5/19");
+         System.out.println("Инициализация конфигов.. | 5/15");
          this.configManager.loadConfig("autocfg");
-         System.out.println("Инициализация аккаунтов.. | 6/19");
+         System.out.println("Инициализация аккаунтов.. | 6/15");
          this.altFileManager = new AltFileManager();
          this.altFileManager.init();
-         System.out.println("Инициализация последнего аккаунта.. | 7/19");
+         System.out.println("Инициализация последнего аккаунта.. | 7/15");
          this.lastAccountManager = new LastAccountManager();
          this.lastAccountManager.init();
-         System.out.println("Инициализация передвижения худа.. | 8/19");
+         System.out.println("Инициализация передвижения худа.. | 8/15");
          this.dragManager = new DragManager();
          this.dragManager.init();
-         System.out.println("Инициализация списка друзей.. | 9/19");
+         System.out.println("Инициализация списка друзей.. | 9/15");
          this.friendManager = new FriendManager();
          this.friendManager.init();
-         System.out.println("Инициализация списка админов.. | 10/19");
+         System.out.println("Инициализация списка админов.. | 10/15");
          this.staffManager = new StaffManager();
          this.staffManager.init();
-         System.out.println("Инициализация макросов.. | 11/19");
+         System.out.println("Инициализация макросов.. | 11/15");
          this.macroManager = new MacroManager();
          this.macroManager.init();
-         System.out.println("Инициализация прокси.. | 12/19");
-         this.proxyManager = new ProxyManager();
-         this.proxyManager.init();
-      } catch (Exception var3) {
-         var3.printStackTrace();
+      } catch (Exception ignored) {
       }
-      System.out.println("Инициализация активности в дискорде.. | 13/19");
+      System.out.println("Инициализация активности в дискорде.. | 12/15");
       Discord.startRPC();
-      System.out.println("Инициализация прокси гуи.. | 14/19");
-      this.guiProxy = new GuiProxy(new GuiMultiplayer(new NWMainMenu()));
-      System.out.println("Инициализация кликгуи.. | 15/19");
+      System.out.println("Инициализация кликгуи.. | 13/15");
       this.csGui = new CsGui();
-      System.out.println("Инициализация крыльев.. | 16/19");
+      System.out.println("Инициализация крыльев.. | 14/15");
       new WingsModel();
-      System.out.println("Инициализация рендера.. | 17/19");
-      Iterator var1 = Minecraft.getMinecraft().getRenderManager().getSkinMap().values().iterator();
 
-      while(var1.hasNext()) {
-         RenderPlayer render = (RenderPlayer)var1.next();
-         render.addLayer(new WingsLayerRender());
-      }
+       for (RenderPlayer render : Minecraft.getMinecraft().getRenderManager().getSkinMap().values()) {
+           render.addLayer(new WingsLayerRender());
+       }
 
-      System.out.println("Инициализация эвентов.. | 18/19");
+      System.out.println("Инициализация эвентов.. | 15/15");
       EventManager.register(this);
-      System.out.println("Инициализация потоков.. | 19/19");
-      Runtime.getRuntime().addShutdownHook(new Thread(this::shutdown));
-     if (this.username.equals("null") || this.till.equals("null") || this.role.equals("null")) {
+      if (username.equals("null") || till.equals("null") || role.equals("null")) {
          System.exit((new Random()).nextInt(20));
       }
    }
 
    @NotNative
    public void reload() {
+      try {
+         AvtorizaciyaHAHA.Server();
+      } catch (IOException e) {
+         throw new RuntimeException(e);
+      }
+      this.userInfo = new UserInfo(username, uid, role, till);
       this.themeManager = new ThemeManager();
       this.commandManager = new CommandManager();
-   }
-
-   @NotNative
-   public void shutdown() {
-      this.dragManager.save();
-      this.proxyManager.save();
-      this.altFileManager.saveAll();
-      this.lastAccountManager.save();
-      this.configManager.saveConfig("autocfg");
    }
 
    @NotNative
@@ -201,15 +188,17 @@ public class NightWare {
    @EventTarget
    @NotNative
    public void onInputKey(EventInputKey eventInputKey) {
-      Iterator var2 = this.moduleManager.getModules().iterator();
+      this.dragManager.save();
+      this.altFileManager.saveAll();
+      this.lastAccountManager.save();
+      this.configManager.saveConfig("autocfg");
 
-      while(var2.hasNext()) {
+       for (Module module : this.moduleManager.getModules()) {
 
-         Module module = (Module)var2.next();
-         if (module.getBind() == eventInputKey.getKey()) {
-            module.toggle();
-         }
-      }
+           if (module.getBind() == eventInputKey.getKey()) {
+               module.toggle();
+           }
+       }
 
       this.macroManager.onKeyPressed(eventInputKey.getKey());
    }
@@ -217,73 +206,19 @@ public class NightWare {
    @EventTarget
    @NotNative
    public void onMouse(EventMouse eventMouse) {
-      Iterator var2 = this.moduleManager.getModules().iterator();
 
-      while(var2.hasNext()) {
-         Module module = (Module)var2.next();
-         if (module.getMouseBind() == eventMouse.getButton() && eventMouse.getButton() > 2) {
-            module.toggle();
-         }
-      }
+       for (Module module : this.moduleManager.getModules()) {
+           if (module.getMouseBind() == eventMouse.getButton() && eventMouse.getButton() > 2) {
+               module.toggle();
+           }
+       }
 
       this.macroManager.onMousePressed(eventMouse.getButton());
-   }
-
-   public ModuleManager getModuleManager() {
-      return this.moduleManager;
-   }
-
-   public ConfigManager getConfigManager() {
-      return this.configManager;
-   }
-
-   public ThemeManager getThemeManager() {
-      return this.themeManager;
-   }
-
-   public CommandManager getCommandManager() {
-      return this.commandManager;
-   }
-
-   public AltFileManager getAltFileManager() {
-      return this.altFileManager;
-   }
-
-   public LastAccountManager getLastAccountManager() {
-      return this.lastAccountManager;
-   }
-
-   public FriendManager getFriendManager() {
-      return this.friendManager;
-   }
-
-   public StaffManager getStaffManager() {
-      return this.staffManager;
-   }
-
-   public MacroManager getMacroManager() {
-      return this.macroManager;
-   }
-
-   public ProxyManager getProxyManager() {
-      return this.proxyManager;
-   }
-
-   public DragManager getDragManager() {
-      return this.dragManager;
-   }
-
-   public CsGui getCsGui() {
-      return this.csGui;
    }
 
    @Native
    public UserInfo getUserInfo() {
       return this.userInfo;
-   }
-
-   public GuiProxy getGuiProxy() {
-      return this.guiProxy;
    }
 
    @NotNative
@@ -295,6 +230,6 @@ public class NightWare {
    public Color getC(int index) {
       Color color = NightWare.getInstance().getThemeManager().getCurrentStyleTheme().getColors()[0];
       Color color2 = NightWare.getInstance().getThemeManager().getCurrentStyleTheme().getColors()[1];
-      return ColorUtility.TwoColorEffect(color, color2, getModuleManager().arraylist.colorSpeed.get(), index);
+      return ColorUtility.TwoColorEffect(color, color2, Arraylist.colorSpeed.get(), index);
    }
 }
