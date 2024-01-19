@@ -90,7 +90,7 @@
       }
     },
     "SoundInfo": {
-      "enabled": true,
+      "enabled": false,
       "bind": 27,
       "Settings": {}
     },
@@ -342,15 +342,16 @@
       "Settings": {}
     },
     "AimBot": {
-      "enabled": true,
+      "enabled": false,
       "bind": 19,
       "Settings": {
         "Боты": false,
         "Сайлент": true,
         "Все конечности": true,
         "Аккуратность": 0.15,
-        "Радиус": 182.0,
-        "Предикт": 7.5,
+        "Радиус": 160.0,
+        "Предикт": 7.0,
+        "Авто-предикт": true,
         "Авто-Стрельба": true,
         "Проверять задержку": false,
         "КПС": 18.0

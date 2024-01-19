@@ -113,7 +113,7 @@ public class ConfigManager extends Manager<Config> {
          Config config;
          do {
             if (!var2.hasNext()) {
-               if ((new File(configDirectory, configName + ".ss")).exists()) {
+               if ((new File(configDirectory, configName + ".nw")).exists()) {
                   return new Config(configName);
                }
 

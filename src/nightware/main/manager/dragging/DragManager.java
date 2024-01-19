@@ -70,7 +70,7 @@ public class DragManager {
    }
 
    static {
-      dragablesFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\elements.ss");
+      dragablesFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\elements.nw");
       GSON = (new GsonBuilder()).setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
    }
 }

@@ -57,6 +57,6 @@ public class AltFileManager {
    }
 
    static {
-      altsFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\alts.ss");
+      altsFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\alts.nw");
    }
 }

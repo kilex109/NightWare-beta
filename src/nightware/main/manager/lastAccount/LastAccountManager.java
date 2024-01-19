@@ -47,6 +47,6 @@ public class LastAccountManager implements Utility {
    }
 
    static {
-      lastAccountFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\lastAccount.ss");
+      lastAccountFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\lastAccount.nw");
    }
 }
