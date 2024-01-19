@@ -44,7 +44,6 @@ public class AimBot extends Module {
     public static BooleanSetting multipoint = new BooleanSetting("Все конечности", false);
     public static NumberSetting accuracy = new NumberSetting("Аккуратность", 0.1f, 0.01f, 0.3f, 0.01f);
     public static NumberSetting fov = new NumberSetting("Радиус", 100, 10, 360, 1);
-    public static BooleanSetting autoPredict = new BooleanSetting("Авто-предикт", false);
     public static NumberSetting predict = new NumberSetting("Предикт", 5.5f, 0, 10, 0.1f);
     public static BooleanSetting autoShoot = new BooleanSetting("Авто-Стрельба", false);
     public static BooleanSetting checkCoolDown = new BooleanSetting("Проверять задержку", false);
@@ -53,7 +52,6 @@ public class AimBot extends Module {
 
     public AimBot() {
         super();
-        predict.setVisible(() -> !autoPredict.get());
         checkCoolDown.setVisible(() -> autoShoot.get());
         cps.setVisible(() -> autoShoot.get());
     }
@@ -95,11 +93,9 @@ public class AimBot extends Module {
         double distY = Math.abs(mc.player.posY - t.posY) * Math.abs(mc.player.posY - t.posY) / 36f;
         return (float) (((mc.player.getDistanceToEntity(t) * mc.player.getDistanceToEntity(t)) / (360 * 5.5)) + ((ishandcontainbow) ? distY : 0));
     }
-    float[] rotations;
-    @EventTarget
+
     public void aim(TargetResult target, EventUpdate event) {
-        //float pred = (mc.getConnection().getPlayerInfo(this.mc.player.getUniqueID()).getResponseTime()) / 20f;
-        rotations = getAim(target, predict.get());
+        float[] rotations = getAim(target, predict.get());
         if (silent.get()) {
             event.setRotationYaw(rotations[0]);
             event.setRotationPitch(rotations[1]);

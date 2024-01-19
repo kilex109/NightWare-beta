@@ -28,13 +28,13 @@ public class RofolComanda extends CommandAbstract {
    public void execute(String[] args) throws Exception {
       ChatUtility.addChatMessage("Айди предмета в руке - " + mc.player.getHeldItemMainhand().itemDamage);
       ChatUtility.addChatMessage("Находится ли лук в руке - " + AimBot.ishandcontainbow);
-      ChatUtility.addChatMessage("Значение автопредикта - " + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) / 20f);
       if (AimBot.lastTarget != null) {
          ChatUtility.addChatMessage("Последний таргет - " + AimBot.lastTarget.getTarget().getName());
       }
       ChatUtility.addChatMessage("Юзернейм - " + NightWare.getInstance().getUserInfo().getName());
       ChatUtility.addChatMessage("Уникальный айди - " + NightWare.getInstance().getUserInfo().getUid());
       ChatUtility.addChatMessage("Роль - " + NightWare.getInstance().getUserInfo().getRole());
+      ChatUtility.addChatMessage("Рекомендуемый предикт - " + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) / 20f);
    }
 
    public void error() {

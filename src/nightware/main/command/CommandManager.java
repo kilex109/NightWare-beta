@@ -16,6 +16,7 @@ public class CommandManager {
       this.commands.add(new PrefixCommand());
       this.commands.add(new ConfigCommand());
       this.commands.add(new FriendCommand());
+      this.commands.add(new ReloadCommand());
       this.commands.add(new StaffCommand());
       this.commands.add(new BindCommand());
       this.commands.add(new MacroCommand());

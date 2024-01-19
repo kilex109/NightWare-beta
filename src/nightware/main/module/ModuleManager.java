@@ -31,6 +31,7 @@ public class ModuleManager {
       this.registerModule(new AntiBot());
       this.registerModule(new BullingBot());
       this.registerModule(new WaterSpeed());
+      this.registerModule(new Optimizer());
       this.registerModule(new Arrows());
       this.registerModule(new BackPeek());
       this.registerModule(new SuspendPackets());

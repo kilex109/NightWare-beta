@@ -45,7 +45,7 @@ public class Arraylist extends Module {
          List<Module> sortedModules = this.getSortedModules();
          Iterator var8;
          Module module;
-         String moduleName;//уси
+         String moduleName;
          if (this.shadow.get()) {
             var8 = sortedModules.iterator();
 

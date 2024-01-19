@@ -13,14 +13,10 @@ import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
 import nightware.main.module.impl.combat.AimBot;
 import nightware.main.module.setting.impl.MultiBooleanSetting;
-import nightware.main.utility.math.MathUtility;
 import nightware.main.utility.misc.FontAnim;
-import nightware.main.utility.render.SmartScissor;
 import nightware.main.utility.render.animation.Animation;
-import nightware.main.utility.render.animation.AnimationMath;
 import nightware.main.utility.render.animation.Direction;
 import nightware.main.utility.render.animation.impl.DecelerateAnimation;
-import nightware.main.utility.render.blur.BlurUtility;
 import nightware.main.utility.render.font.Fonts;
 import java.awt.Color;
 import java.text.SimpleDateFormat;
@@ -44,7 +40,6 @@ import net.minecraft.world.DimensionType;
 import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.RenderUtility;
 import nightware.main.utility.render.StencilUtility;
-import org.lwjgl.opengl.GL11;
 
 @ModuleAnnotation(
         name = "Hud",
@@ -60,7 +55,7 @@ public class Hud extends Module {
    private EntityLivingBase currentTarget = null;
    private final Animation animation;
    public static FontAnim wtA = new FontAnim(1500, Arrays.asList("", NightWare.getInstance().getUserInfo().getName() + " [UID: " + NightWare.getInstance().getUserInfo().getUid() + "]", "Ваше время: " + (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date()), "https://dsc.gg/nightwareofc", "https://vk.com/nightwareofc"));
-   private float hp;
+   private double hp;
    public Hud() {
       this.animation = new DecelerateAnimation(175, 1.0F, Direction.BACKWARDS);
       this.potionsDraggable.setWidth(105.0F);
@@ -190,10 +185,9 @@ public class Hud extends Module {
                   }
                }
 
-               this.hp = MathUtility.clamp(MathUtility.lerp(this.hp, this.currentTarget.getHealth() / this.currentTarget.getMaxHealth(), (float)(12.0D * AnimationMath.deltaTime())), 0.0F, 1.0F);
-               RenderUtility.drawRoundedRect((float)(this.targetHudDraggable.getX() + 38), (float)this.targetHudDraggable.getY() + 27.5F, 70.0F, 6.5F, 3.0F, isDark ? (new Color(50, 50, 50)).getRGB() : Color.WHITE.getRGB());
-               RenderUtility.drawRoundedGradientRect((float)(this.targetHudDraggable.getX() + 38), (float)this.targetHudDraggable.getY() + 27.5F, 70.0F * this.hp, 6.5F, 3.0F, 1.0F, color, color, color2, color2);
-               Fonts.tenacityBold12.drawCenteredString(MathUtility.round((double)(this.hp * 100.0F), 0.10000000149011612D) + "%", (float)(this.targetHudDraggable.getX() + 73), (float)(this.targetHudDraggable.getY() + 29), isDark ? Color.WHITE.getRGB() : Color.BLACK.getRGB());
+               this.hp = mc.player.getDistanceToEntity(currentTarget);
+               String hpt = (hp + "").replace(".", "KKSAL").replaceAll("KKSAL.*", "");
+               Fonts.mntssb14.drawCenteredString(hpt + " блоков", (float)(this.targetHudDraggable.getX() + 73), (float)(this.targetHudDraggable.getY() + 29), isDark ? Color.WHITE.getRGB() : Color.BLACK.getRGB());
                RenderUtility.scaleEnd();
             }
          }

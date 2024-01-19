@@ -10,5 +10,6 @@ import nightware.main.module.setting.impl.BooleanSetting;
    category = Category.UTIL
 )
 public class BetterTab extends Module {
-   public static BooleanSetting animation = new BooleanSetting("Animation", true);
+   public static BooleanSetting animation = new BooleanSetting("Анимация", true);
+   public static BooleanSetting changeTab = new BooleanSetting("Изменять таб", true);
 }

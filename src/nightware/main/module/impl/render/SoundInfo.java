@@ -78,9 +78,6 @@ public class SoundInfo extends Module {
                exes.get(chouse).use = !exes.get(chouse).use;
             }
          }
-         if(exes.size() < 11) {
-            exes.clear();
-         }
       }
    }
 

@@ -16,6 +16,5 @@ public class CameraClip extends Module {
       if (event.getOverlayType().equals(EventOverlay.OverlayType.CAMERA_CLIP)) {
          event.setCancelled(true);
       }
-
    }
 }
