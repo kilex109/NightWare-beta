@@ -1,0 +1,1550 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"water_bottle": "rustme/models/water_bottle"
+	},
+	"elements": [
+		{
+			"name": "octagon",
+			"from": [2, -8.703, 5.51472],
+			"to": [14, 2.297, 10.48528],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, -8.703, 5.51472],
+			"to": [14, 2.297, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -8.703, 2],
+			"to": [10.48528, 2.297, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -8.703, 2],
+			"to": [10.48528, 2.297, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -10.08882, 2.57403],
+			"to": [10.48528, -8.76882, 13.42597],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.29823, -53.20882, 7.85403]},
+			"faces": {
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.57403, -10.08882, 5.51472],
+			"to": [13.42597, -8.76882, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -9.42882, 8]},
+			"faces": {
+				"up": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.4059, -10.08882, 5.92062],
+			"to": [13.5941, -8.76882, 10.07938],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -9.42882, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.92062, -10.08882, 2.4059],
+			"to": [10.07938, -8.76882, 13.5941],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -9.42882, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 2.0676, 2.15328],
+			"to": [10.48528, 3.0676, 3.15328],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 2.5676, 2.65328]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 2.0676, 12.84672],
+			"to": [10.48528, 3.0676, 13.84672],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 2.5676, 13.34672]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.15328, 2.0676, 5.51472],
+			"to": [3.15328, 3.0676, 10.48528],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [2.65328, 2.5676, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [12.84672, 2.0676, 5.51472],
+			"to": [13.84672, 3.0676, 10.48528],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [13.34672, 2.5676, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 4.0264, 2.15328],
+			"to": [10.48528, 5.0264, 3.15328],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 4.5264, 2.65328]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.15328, 4.0264, 5.51472],
+			"to": [3.15328, 5.0264, 10.48528],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [2.65328, 4.5264, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [12.84672, 4.0264, 5.51472],
+			"to": [13.84672, 5.0264, 10.48528],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13.34672, 4.5264, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 4.0264, 12.84672],
+			"to": [10.48528, 5.0264, 13.84672],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 4.5264, 13.34672]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [12.84672, -9.9736, 5.51472],
+			"to": [13.84672, -8.4736, 10.48528],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13.34672, -8.9736, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -9.9736, 2.15328],
+			"to": [10.48528, -8.4736, 3.15328],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -8.9736, 2.65328]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.15328, -9.9736, 5.51472],
+			"to": [3.15328, -8.4736, 10.48528],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [2.65328, -8.9736, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -9.9736, 12.84672],
+			"to": [10.48528, -8.4736, 13.84672],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -8.9736, 13.34672]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 4.797, 5.51472],
+			"to": [14, 6.797, 10.48528],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -43.203, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 4.797, 5.51472],
+			"to": [14, 6.797, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -43.203, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 4.797, 2],
+			"to": [10.48528, 6.797, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -43.203, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 4.797, 2],
+			"to": [10.48528, 6.797, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -43.203, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 6.997, 2],
+			"to": [10.48528, 11.997, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -41.003, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 6.997, 2],
+			"to": [10.48528, 11.997, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -41.003, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 6.997, 5.51472],
+			"to": [14, 11.997, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -41.003, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 6.997, 5.51472],
+			"to": [14, 11.997, 10.48528],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -41.003, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 12.297, 5.51472],
+			"to": [14, 15.297, 10.48528],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -35.703, 8]},
+			"faces": {
+				"east": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 12.297, 5.51472],
+			"to": [14, 15.297, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -35.703, 8]},
+			"faces": {
+				"east": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 12.297, 2],
+			"to": [10.48528, 15.297, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -35.703, 8]},
+			"faces": {
+				"north": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 12.297, 2],
+			"to": [10.48528, 15.297, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -35.703, 8]},
+			"faces": {
+				"north": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [9, 13, 11, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 6.7015, 2.18],
+			"to": [10.41072, 6.9925, 13.82],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -39.8585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 6.7015, 2.18],
+			"to": [10.41072, 6.9925, 13.82],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -39.8585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 6.7015, 5.58928],
+			"to": [13.82, 6.9925, 10.41072],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -39.8585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 6.7015, 5.58928],
+			"to": [13.82, 6.9925, 10.41072],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -39.8585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 12.0015, 5.58928],
+			"to": [13.82, 12.2925, 10.41072],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -34.5585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 12.0015, 5.58928],
+			"to": [13.82, 12.2925, 10.41072],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -34.5585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 12.0015, 2.18],
+			"to": [10.41072, 12.2925, 13.82],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -34.5585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 12.0015, 2.18],
+			"to": [10.41072, 12.2925, 13.82],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -34.5585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 15.3015, 2.18],
+			"to": [10.41072, 15.5925, 13.82],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -31.2585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.58928, 15.3015, 2.18],
+			"to": [10.41072, 15.5925, 13.82],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -31.2585, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 15.3015, 5.58928],
+			"to": [13.82, 15.5925, 10.41072],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -31.2585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.18, 15.3015, 5.58928],
+			"to": [13.82, 15.5925, 10.41072],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -31.2585, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 15.597, 2],
+			"to": [10.48528, 18.597, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -32.403, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 17.3041, 9.87868],
+			"to": [10.48528, 22.3041, 12.87868],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 19.3041, 11.87868]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [3.12132, 17.3041, 5.51472],
+			"to": [6.12132, 22.3041, 10.48528],
+			"rotation": {"angle": -45, "axis": "z", "origin": [4.12132, 19.3041, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [13, 13, 15, 15], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 17.3041, 3.12132],
+			"to": [10.48528, 22.3041, 6.12132],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 19.3041, 4.12132]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [9.87868, 17.3041, 5.51472],
+			"to": [12.87868, 22.3041, 10.48528],
+			"rotation": {"angle": 45, "axis": "z", "origin": [11.87868, 19.3041, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 15.597, 2],
+			"to": [10.48528, 18.597, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -32.403, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 15.597, 5.51472],
+			"to": [14, 18.597, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -32.403, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.18872, 19.91018, 6.83553],
+			"to": [10.81128, 24.48382, 9.16447],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -0.20409, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.83553, 19.91018, 5.18872],
+			"to": [9.16447, 24.48382, 10.81128],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -0.20409, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.83553, 19.91018, 5.18872],
+			"to": [9.16447, 24.48382, 10.81128],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -0.20409, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2, 15.597, 5.51472],
+			"to": [14, 18.597, 10.48528],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -32.403, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.18872, 19.91018, 6.83553],
+			"to": [10.81128, 24.48382, 9.16447],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -2.54683, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.68027, 23.64927, 4.81388],
+			"to": [9.31973, 24.34473, 11.18612],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.8531, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.68027, 23.64927, 4.81388],
+			"to": [9.31973, 24.34473, 11.18612],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0.8531, 8]},
+			"faces": {
+				"north": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.81388, 23.64927, 6.68027],
+			"to": [11.18612, 24.34473, 9.31973],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.8531, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.81388, 23.64927, 6.68027],
+			"to": [11.18612, 24.34473, 9.31973],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -1.802, 8]},
+			"faces": {
+				"east": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 13, 15, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.70614, 24.43791, 4.87635],
+			"to": [9.29386, 26.41973, 11.12365],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1.98872, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.70614, 24.43791, 4.87635],
+			"to": [9.29386, 26.41973, 11.12365],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 1.98872, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.70614, 24.43791, 4.77635],
+			"to": [8.29386, 26.41973, 11.22365],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 1.98872, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.70614, 24.43791, 4.77635],
+			"to": [8.29386, 26.41973, 11.22365],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 1.98872, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.77635, 24.43791, 7.70614],
+			"to": [11.22365, 26.41973, 8.29386],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.70614, 24.43791, 4.77635],
+			"to": [8.29386, 26.41973, 11.22365],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.70614, 24.43791, 4.57635],
+			"to": [8.29386, 26.41973, 11.42365],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.57635, 24.43791, 7.70614],
+			"to": [11.42365, 26.41973, 8.29386],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.57635, 24.43791, 7.70614],
+			"to": [11.42365, 26.41973, 8.29386],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.70614, 24.43791, 4.57635],
+			"to": [8.29386, 26.41973, 11.42365],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 25.42882, 8]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.87635, 24.43791, 6.70614],
+			"to": [11.12365, 26.41973, 9.29386],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1.98872, 8]},
+			"faces": {
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [4.87635, 24.43791, 6.70614],
+			"to": [11.12365, 26.41973, 9.29386],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -0.61432, 8]},
+			"faces": {
+				"east": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.357, 2.13375, 5.66259],
+			"to": [13.643, 4.86025, 10.33741],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -42.81025, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [2.357, 2.13375, 5.66259],
+			"to": [13.643, 4.86025, 10.33741],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -42.81025, 8]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.66259, 2.13375, 2.357],
+			"to": [10.33741, 4.86025, 13.643],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -42.81025, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.66259, 2.13375, 2.357],
+			"to": [10.33741, 4.86025, 13.643],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -42.81025, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, 0.897, 9.51472],
+			"to": [14.1, 1.297, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.44401, 0.897, 1.9],
+			"to": [10.55599, 1.297, 14.07071],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 1.097, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, 0.72651, 8.65763],
+			"to": [14.1, 1.12651, 9.6282],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0.92651, 9.14291]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, 0.55603, 7.22889],
+			"to": [14.1, 0.95603, 8.77111],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -58.04397, 6.91417]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, 0.72651, 6.3718],
+			"to": [14.1, 1.12651, 7.34237],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 0.92651, 6.85709]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, 0.897, 5.51472],
+			"to": [14.1, 1.297, 6.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.90429, 0.897, 5.43365],
+			"to": [14.075, 1.297, 10.54564],
+			"rotation": {"angle": 45, "axis": "y", "origin": [7.98964, 1.097, 7.98964]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [9.51472, 0.897, 1.9],
+			"to": [10.48528, 1.297, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [8.65763, 0.72651, 1.9],
+			"to": [9.6282, 1.12651, 14.1],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.14291, 0.92651, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.22889, 0.55603, 1.9],
+			"to": [8.77111, 0.95603, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.08583, -58.04397, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.3718, 0.72651, 1.9],
+			"to": [7.34237, 1.12651, 14.1],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.85709, 0.92651, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, 0.897, 1.9],
+			"to": [6.48528, 1.297, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -57.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -1.103, 9.51472],
+			"to": [14.1, -0.703, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -59.703, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.44401, -1.103, 1.9],
+			"to": [10.55599, -0.703, 14.07071],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -0.903, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -1.27349, 8.65763],
+			"to": [14.1, -0.87349, 9.6282],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -1.07349, 9.14291]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -1.44397, 7.22889],
+			"to": [14.1, -1.04397, 8.77111],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -60.04397, 6.91417]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -1.27349, 6.3718],
+			"to": [14.1, -0.87349, 7.34237],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -1.07349, 6.85709]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -1.103, 5.51472],
+			"to": [14.1, -0.703, 6.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -59.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.90429, -1.103, 5.43365],
+			"to": [14.075, -0.703, 10.54564],
+			"rotation": {"angle": 45, "axis": "y", "origin": [7.98964, -0.903, 7.98964]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [9.51472, -1.103, 1.9],
+			"to": [10.48528, -0.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -59.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [8.65763, -1.27349, 1.9],
+			"to": [9.6282, -0.87349, 14.1],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.14291, -1.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.22889, -1.44397, 1.9],
+			"to": [8.77111, -1.04397, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.08583, -60.04397, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.3718, -1.27349, 1.9],
+			"to": [7.34237, -0.87349, 14.1],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.85709, -1.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -1.103, 1.9],
+			"to": [6.48528, -0.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -59.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -3.103, 9.51472],
+			"to": [14.1, -2.703, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -61.703, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.44401, -3.103, 1.9],
+			"to": [10.55599, -2.703, 14.07071],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -2.903, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -3.27349, 8.65763],
+			"to": [14.1, -2.87349, 9.6282],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -3.07349, 9.14291]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -3.44397, 7.22889],
+			"to": [14.1, -3.04397, 8.77111],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -62.04397, 6.91417]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -3.27349, 6.3718],
+			"to": [14.1, -2.87349, 7.34237],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -3.07349, 6.85709]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -3.103, 5.51472],
+			"to": [14.1, -2.703, 6.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -61.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.90429, -3.103, 5.43365],
+			"to": [14.075, -2.703, 10.54564],
+			"rotation": {"angle": 45, "axis": "y", "origin": [7.98964, -2.903, 7.98964]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [9.51472, -3.103, 1.9],
+			"to": [10.48528, -2.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -61.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [8.65763, -3.27349, 1.9],
+			"to": [9.6282, -2.87349, 14.1],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.14291, -3.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.22889, -3.44397, 1.9],
+			"to": [8.77111, -3.04397, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.08583, -62.04397, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.3718, -3.27349, 1.9],
+			"to": [7.34237, -2.87349, 14.1],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.85709, -3.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -3.103, 1.9],
+			"to": [6.48528, -2.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -61.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -5.103, 9.51472],
+			"to": [14.1, -4.703, 10.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -63.703, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.44401, -5.103, 1.9],
+			"to": [10.55599, -4.703, 14.07071],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -4.903, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -5.27349, 8.65763],
+			"to": [14.1, -4.87349, 9.6282],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -5.07349, 9.14291]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -5.44397, 7.22889],
+			"to": [14.1, -5.04397, 8.77111],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -64.04397, 6.91417]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -5.27349, 6.3718],
+			"to": [14.1, -4.87349, 7.34237],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -5.07349, 6.85709]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.9, -5.103, 5.51472],
+			"to": [14.1, -4.703, 6.48528],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -63.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [1.90429, -5.103, 5.43365],
+			"to": [14.075, -4.703, 10.54564],
+			"rotation": {"angle": 45, "axis": "y", "origin": [7.98964, -4.903, 7.98964]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"east": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [9.51472, -5.103, 1.9],
+			"to": [10.48528, -4.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -63.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [8.65763, -5.27349, 1.9],
+			"to": [9.6282, -4.87349, 14.1],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [9.14291, -5.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 270, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [7.22889, -5.44397, 1.9],
+			"to": [8.77111, -5.04397, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.08583, -64.04397, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [6.3718, -5.27349, 1.9],
+			"to": [7.34237, -4.87349, 14.1],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.85709, -5.07349, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		},
+		{
+			"name": "octagon",
+			"from": [5.51472, -5.103, 1.9],
+			"to": [6.48528, -4.703, 14.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -63.703, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"south": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"west": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"up": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"},
+				"down": {"uv": [5, 13, 7, 15], "rotation": 90, "texture": "#water_bottle"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, 0.25],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 0.5, 0],
+			"translation": [0, 0, 0.25],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"firstperson_righthand": {
+			"rotation": [-5, 23, 14],
+			"translation": [-1, 3.25, 0.75],
+			"scale": [0.21, 0.21, 0.21]
+		},
+		"firstperson_lefthand": {
+			"rotation": [10.04, -21.32, 24.68],
+			"translation": [1.25, 3.25, 0.75],
+			"scale": [0.21, 0.21, 0.21]
+		},
+		"gui": {
+			"scale": [0, 0, 0]
+		}
+	}
+}

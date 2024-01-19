@@ -1,0 +1,42 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "rustme/models/1000000 (1)",
+		"texture1": "rustme/models/radtown_blue_door",
+		"particle": "rustme/models/1000000 (1)"
+	},
+	"elements": [
+		{
+			"name": "Voxels-FFFFFF",
+			"from": [0, 0, 7.5],
+			"to": [1, 32, 23.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"east": {"uv": [8, 0, 0, 16], "texture": "#texture1"},
+				"south": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"west": {"uv": [0, 0, 8, 16], "texture": "#texture1"},
+				"up": {"uv": [8, 0.5, 0, 1], "rotation": 270, "texture": "#texture1"},
+				"down": {"uv": [8, 0.5, 0, 1], "rotation": 90, "texture": "#texture1"}
+			}
+		},
+		{
+			"from": [-0.375, 4.1, 13],
+			"to": [1.625, 7.375, 18.05],
+			"faces": {
+				"north": {"uv": [0, 0, 2, 3.275], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 2, 3.275], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 2, 5.05], "texture": "#1"},
+				"down": {"uv": [0, 0, 2, 5.05], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, -56, 0],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	}
+}

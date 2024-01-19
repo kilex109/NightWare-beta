@@ -1,0 +1,318 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"berry_plant": "rustme/models/berry_plant",
+		"berry_plant_leaves": "rustme/models/berry_plant_leaves"
+	},
+	"elements": [
+		{
+			"from": [8.41204, 2.17783, 7.72073],
+			"to": [8.89404, 4.57983, 8.20273],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8.65304, 3.37883, 7.96173]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [9.66776, 4.05715, 7.72073],
+			"to": [10.14976, 6.45915, 8.20273],
+			"rotation": {"angle": -45, "axis": "z", "origin": [9.90876, 5.25815, 7.96173]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"up": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [8.85354, 3.15715, 7.72073],
+			"to": [9.33554, 8.05915, 8.20273],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8.49454, 5.25815, 7.96173]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"up": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"down": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [7.97108, 2.97783, 8.16168],
+			"to": [8.45308, 5.37983, 8.64368],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8.21208, 4.17883, 8.40268]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [7.97108, 2.33783, 7.20168],
+			"to": [8.45308, 2.81983, 9.60368],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8.21208, 4.17883, 8.40268]},
+			"faces": {
+				"east": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#berry_plant"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#berry_plant"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [5.399, 2.59636, 12.87263],
+			"to": [10.601, 2.59836, 15.87463],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 2.59736, 14.37363]},
+			"faces": {
+				"up": {"uv": [0, 0, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 0], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.399, 3.17031, 9.98719],
+			"to": [10.601, 3.17231, 12.98919],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.97131, 12.58819]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 16], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 16, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.399, 5.97031, 2.21081],
+			"to": [10.601, 5.97231, 5.21281],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.77131, 2.61181]},
+			"faces": {
+				"up": {"uv": [0, 16, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 16], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.399, 5.39636, -0.67463],
+			"to": [10.601, 5.39836, 2.32737],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 5.39736, 0.82637]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 0], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 0, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 6.97031, 10.38719],
+			"to": [10.801, 6.97231, 13.38919],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.2, 9.77131, 12.98819]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 16], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 16, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 6.39636, 13.27263],
+			"to": [10.801, 6.39836, 16.27463],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8.2, 6.39736, 14.77363]},
+			"faces": {
+				"up": {"uv": [0, 0, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 0], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [10.699, 6.07031, 5.38719],
+			"to": [13.701, 6.07231, 10.58919],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13.3, 8.87131, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 16, 15, 8], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 16], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [13.58444, 5.49636, 5.38719],
+			"to": [16.58644, 5.49836, 10.58919],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [15.08544, 5.49736, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 0], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 0, 15, 8], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [9.399, 9.67031, 5.38719],
+			"to": [12.401, 9.67231, 10.58919],
+			"rotation": {"angle": 45, "axis": "z", "origin": [12.34272, 9.38433, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 16, 15, 8], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 16], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [12.17859, 9.62646, 5.38719],
+			"to": [15.18059, 9.62846, 10.58919],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13.67959, 9.62746, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 0], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 0, 15, 8], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [7.26446, 3.05715, 6.79727],
+			"to": [7.74646, 6.95915, 7.27927],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.50546, 5.15815, 7.63827]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "texture": "#berry_plant"},
+				"up": {"uv": [3, 3, 1, 1], "rotation": 90, "texture": "#berry_plant"},
+				"down": {"uv": [3, 3, 1, 1], "rotation": 270, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [4.93092, 7.05252, 3.63766],
+			"to": [10.13292, 7.05452, 6.63966],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [7.53192, 7.05352, 5.13866]},
+			"faces": {
+				"up": {"uv": [15, 8, 0, 16], "texture": "#berry_plant_leaves"},
+				"down": {"uv": [15, 16, 0, 8], "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [4.93092, 7.62646, 0.75222],
+			"to": [10.13292, 7.62846, 3.75422],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.53192, 7.62746, 2.25322]},
+			"faces": {
+				"up": {"uv": [15, 0, 0, 8], "texture": "#berry_plant_leaves"},
+				"down": {"uv": [15, 8, 0, 0], "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [7.50596, 1.17783, 7.72073],
+			"to": [7.98796, 3.57983, 8.20273],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [7.74696, 2.37883, 7.96173]},
+			"faces": {
+				"north": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"east": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"south": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"west": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [6.25024, 3.05715, 7.72073],
+			"to": [6.73224, 5.45915, 8.20273],
+			"rotation": {"angle": 45, "axis": "z", "origin": [6.49124, 4.25815, 7.96173]},
+			"faces": {
+				"north": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"east": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"south": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"west": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"},
+				"up": {"uv": [3, 1, 1, 3], "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [2.699, 5.07031, 5.38719],
+			"to": [5.701, 5.07231, 10.58919],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3.1, 7.87131, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 16], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 16, 15, 8], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [-0.18644, 4.49636, 5.38719],
+			"to": [2.81556, 4.49836, 10.58919],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [1.31456, 4.49736, 7.98819]},
+			"faces": {
+				"up": {"uv": [0, 0, 15, 8], "rotation": 270, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 0], "rotation": 90, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 5.17031, 8.28719],
+			"to": [10.801, 5.17231, 11.28919],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8.2, 4.88433, 11.23091]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 16], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 16, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 5.17031, 11.17263],
+			"to": [10.801, 5.17231, 14.17463],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.2, 4.88433, 11.23091]},
+			"faces": {
+				"up": {"uv": [0, 0, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 0], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 3.77031, 4.51081],
+			"to": [10.801, 3.77231, 7.51281],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8.2, 3.48433, 4.56909]},
+			"faces": {
+				"up": {"uv": [0, 16, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 8, 15, 16], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [5.599, 3.77031, 1.62537],
+			"to": [10.801, 3.77231, 4.62737],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.2, 3.48433, 4.56909]},
+			"faces": {
+				"up": {"uv": [0, 8, 15, 0], "rotation": 180, "texture": "#berry_plant_leaves"},
+				"down": {"uv": [0, 0, 15, 8], "rotation": 180, "texture": "#berry_plant_leaves"}
+			}
+		},
+		{
+			"from": [7.97108, -0.03898, 7.72073],
+			"to": [8.45308, 3.16302, 8.20273],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.25208, -0.03798, 6.76173]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [7.97108, 4.85715, 9.41741],
+			"to": [8.45308, 7.25915, 9.89941],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8.21208, 6.05815, 9.65841]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [7.97108, 1.37783, 7.27978],
+			"to": [8.45308, 4.57983, 7.76178],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8.21208, 2.57883, 7.52078]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"}
+			}
+		},
+		{
+			"from": [7.97108, 4.23057, 6.2836],
+			"to": [8.45308, 6.63257, 6.7656],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8.21208, 4.63157, 6.5246]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"east": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"west": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 90, "texture": "#berry_plant"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, -37.595, 0],
+			"scale": [0.7, 0.7, 0.7]
+		}
+	}
+}

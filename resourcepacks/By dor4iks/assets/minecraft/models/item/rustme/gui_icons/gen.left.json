@@ -1,0 +1,1 @@
+{"elements":[{"from":[-5.35,-0.9706,7.95],"to":[13.85,17.0294,7.951],"shade":false,"rotation":{"angle":0,"axis":"y","origin":[16,0,0]},"faces":{"south":{"uv":[16,0,0,16],"texture":"#gen_line"}}},{"from":[1.525,1.5544,8],"to":[14.475,14.5044,8.001],"shade":false,"faces":{"south":{"uv":[0,0,16,16],"texture":"#gen"}}}]}

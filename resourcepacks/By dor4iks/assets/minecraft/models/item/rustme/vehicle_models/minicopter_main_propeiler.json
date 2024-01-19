@@ -1,0 +1,118 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"minicopter": "rustme/models/minicopter",
+		"minicopter_main_propeiler": "rustme/models/minicopter_main_propeiler"
+	},
+	"elements": [
+		{
+			"from": [7.62875, 8.47025, 15.49925],
+			"to": [8.86625, 8.71775, 15.74675],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"east": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"west": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"up": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"down": {"uv": [5, 13, 7, 15], "texture": "#minicopter"}
+			}
+		},
+		{
+			"from": [7.13375, 8.47025, 0.25325],
+			"to": [8.37125, 8.71775, 0.50075],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"east": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"south": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"west": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"up": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"down": {"uv": [5, 13, 7, 15], "texture": "#minicopter"}
+			}
+		},
+		{
+			"from": [7.62875, 8.47025, 15.74675],
+			"to": [8.86625, 8.71775, 31.83425],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 2], "texture": "#minicopter_main_propeiler"},
+				"south": {"uv": [0, 0, 0.9, 1.9], "texture": "#minicopter_main_propeiler"},
+				"west": {"uv": [16, 0, 0, 2], "texture": "#minicopter_main_propeiler"},
+				"up": {"uv": [16, 2, 0, 0], "rotation": 90, "texture": "#minicopter_main_propeiler"},
+				"down": {"uv": [0, 2, 16, 0], "rotation": 90, "texture": "#minicopter_main_propeiler"}
+			}
+		},
+		{
+			"from": [7.13375, 8.47025, -15.83425],
+			"to": [8.37125, 8.71775, 0.25325],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.9, 1.9], "texture": "#minicopter_main_propeiler"},
+				"east": {"uv": [16, 0, 0, 2], "texture": "#minicopter_main_propeiler"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#minicopter_main_propeiler"},
+				"up": {"uv": [0, 0, 16, 2], "rotation": 90, "texture": "#minicopter_main_propeiler"},
+				"down": {"uv": [16, 0, 0, 2], "rotation": 90, "texture": "#minicopter_main_propeiler"}
+			}
+		},
+		{
+			"from": [6.93575, 8.02475, 6.93575],
+			"to": [9.06425, 8.17325, 9.06425],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [1, 5, 3, 7], "texture": "#minicopter"},
+				"east": {"uv": [1, 5, 3, 7], "texture": "#minicopter"},
+				"south": {"uv": [1, 5, 3, 7], "texture": "#minicopter"},
+				"west": {"uv": [1, 5, 3, 7], "texture": "#minicopter"},
+				"up": {"uv": [1, 5, 3, 7], "texture": "#minicopter"},
+				"down": {"uv": [1, 5, 3, 7], "texture": "#minicopter"}
+			}
+		},
+		{
+			"from": [7.604, 5.7725, 7.604],
+			"to": [8.396, 9.0395, 8.396],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [9, 13, 11, 15], "texture": "#minicopter"},
+				"east": {"uv": [9, 13, 11, 15], "texture": "#minicopter"},
+				"south": {"uv": [9, 13, 11, 15], "texture": "#minicopter"},
+				"west": {"uv": [9, 13, 11, 15], "texture": "#minicopter"},
+				"up": {"uv": [9, 13, 11, 15], "texture": "#minicopter"},
+				"down": {"uv": [9, 13, 11, 15], "texture": "#minicopter"}
+			}
+		},
+		{
+			"from": [7.6535, 8.495, 8.396],
+			"to": [8.3465, 8.693, 15.524],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"east": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"south": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"west": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"up": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"down": {"uv": [5, 13, 7, 15], "texture": "#minicopter"}
+			}
+		},
+		{
+			"from": [7.6535, 8.495, 0.476],
+			"to": [8.3465, 8.693, 7.604],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"east": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"south": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"west": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"up": {"uv": [5, 13, 7, 15], "texture": "#minicopter"},
+				"down": {"uv": [5, 13, 7, 15], "texture": "#minicopter"}
+			}
+		}
+	],
+	"display": {
+		"ground": {
+			"translation": [0, 24.75, 0],
+			"scale": [4, 4, 4]
+		},
+		"head": {
+			"scale": [4, 4, 4]
+		}
+	}
+}

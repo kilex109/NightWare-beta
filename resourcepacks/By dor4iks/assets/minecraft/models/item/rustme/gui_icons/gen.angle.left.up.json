@@ -1,0 +1,1 @@
+{"display":{},"elements":[{"from":[-1.0294,2.15,7.95],"to":[16.9706,28.35,7.951],"shade":false,"rotation":{"angle":45,"axis":"z","origin":[8,8,0]},"faces":{"south":{"uv":[16,16,0,0],"rotation":90,"texture":"#gen_line"}}},{"from":[1.525,1.5544,8],"to":[14.475,14.5044,8.001],"shade":false,"faces":{"south":{"uv":[0,0,16,16],"texture":"#gen"}}}]}

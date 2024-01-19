@@ -1,0 +1,16 @@
+{
+	"credit": "Discord: AAD#8237",
+	"parent": "block/grass",
+	"textures": {
+		"particle": "blocks/dirt",
+		"bottom": "blocks/dirt",
+		"top": "blocks/grass_top",
+		"side": "blocks/grass_side",
+		"overlay": "blocks/grass_side_overlay"
+	},
+	"display": {
+		"gui": {
+			"scale": [0, 0, 0]
+		}
+	}
+}

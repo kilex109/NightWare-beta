@@ -1,0 +1,1 @@
+{"display":{"gui":{"translation":[72,49,-80],"scale":[3.66,3.66,3.66]}},"textures":{"texture":"rustme/gui/container_0"},"elements":[{"from":[-16,-16,16.5],"to":[32,-0.75,16.501],"faces":{"north":{"uv":[11,16,0,12.5],"texture":"#texture","rotation":180},"south":{"uv":[11,16,0,12.5],"texture":"#texture","rotation":180}}}]}

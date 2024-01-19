@@ -1,0 +1,12 @@
+{
+	"credit": "Discord: AAD#8237",
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "blocks/end_stone"
+	},
+	"display": {
+		"gui": {
+			"scale": [0, 0, 0]
+		}
+	}
+}

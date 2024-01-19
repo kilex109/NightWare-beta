@@ -1,0 +1,68 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "rustme/models/1000000 (1)",
+		"texture1": "rustme/models/radtown_red_door",
+		"particle": "rustme/models/1000000 (1)"
+	},
+	"elements": [
+		{
+			"name": "Voxels-FFFFFF",
+			"from": [-8, 0, 7.5],
+			"to": [-7, 32, 23.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"east": {"uv": [8, 0, 0, 16], "texture": "#texture1"},
+				"south": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"west": {"uv": [0, 0, 8, 16], "texture": "#texture1"},
+				"up": {"uv": [8, 0.5, 0, 1], "rotation": 270, "texture": "#texture1"},
+				"down": {"uv": [8, 0.5, 0, 1], "rotation": 90, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "Voxels-FFFFFF",
+			"from": [23, 0, 7.5],
+			"to": [24, 32, 23.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"east": {"uv": [8, 0, 0, 16], "texture": "#texture1"},
+				"south": {"uv": [0, 1, 8, 0.5], "rotation": 270, "texture": "#texture1"},
+				"west": {"uv": [0, 0, 8, 16], "texture": "#texture1"},
+				"up": {"uv": [8, 0.5, 0, 1], "rotation": 270, "texture": "#texture1"},
+				"down": {"uv": [8, 0.5, 0, 1], "rotation": 90, "texture": "#texture1"}
+			}
+		},
+		{
+			"from": [-8.25, 4, 13],
+			"to": [-6.75, 7.5, 18],
+			"faces": {
+				"north": {"uv": [0, 0, 1.5, 3.5], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 1.5, 3.5], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 1.5, 5], "texture": "#1"},
+				"down": {"uv": [0, 0, 1.5, 5], "texture": "#1"}
+			}
+		},
+		{
+			"from": [22.75, 4, 13.025],
+			"to": [24.25, 7.55, 17.95],
+			"faces": {
+				"north": {"uv": [0, 0, 1.5, 3.55], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 1.5, 3.55], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 1.5, 4.925], "texture": "#1"},
+				"down": {"uv": [0, 0, 1.5, 4.925], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, -56, 0],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	}
+}

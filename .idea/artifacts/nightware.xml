@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="nightware">
+    <output-path>$PROJECT_DIR$/out/artifacts/nightware</output-path>
+    <root id="archive" name="nightware.jar">
+      <element id="module-output" name="nightware" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,112 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"5": "iii/garage/garage1",
+		"texture1": "rustme/models/garage_door"
+	},
+	"elements": [
+		{
+			"name": "rp by dora",
+			"from": [-15.57867, 28.26784, 8.57311],
+			"to": [31.42867, 28.45066, 9.60908],
+			"rotation": {"angle": 0, "axis": "y", "origin": [41.87659, 29.85955, 7.12041]},
+			"faces": {
+				"south": {"uv": [5, 1, 7, 3], "rotation": 180, "texture": "#texture1"},
+				"up": {"uv": [5, 1, 7, 3], "rotation": 180, "texture": "#texture1"},
+				"down": {"uv": [5, 1, 7, 3], "rotation": 180, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [31.34975, -16, 8.55849],
+			"to": [32, 29.50856, 9.6237],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-26.40531, 30.78368, 7.04158]},
+			"faces": {
+				"north": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"east": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"south": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"up": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"down": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-16, -16, 8.55849],
+			"to": [-15.31649, 29.50856, 9.6237],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-26.40531, 30.78368, 7.04158]},
+			"faces": {
+				"north": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"east": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"south": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"up": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"},
+				"down": {"uv": [3, 13, 1, 15], "rotation": 180, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-15.91306, -16, 8.72546],
+			"to": [31.38806, 28.32878, 9.45673],
+			"rotation": {"angle": 0, "axis": "y", "origin": [41.87659, 29.85955, 7.12041]},
+			"faces": {
+				"north": {"uv": [0.90625, 14.1875, 14.84375, 0.15625], "rotation": 180, "texture": "#5"},
+				"south": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-16, 28.68347, 4.78409],
+			"to": [32, 30.61894, 9.45673],
+			"rotation": {"angle": 0, "axis": "y", "origin": [41.89722, 29.65121, 7.12041]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"east": {"uv": [1, 13, 3, 15], "rotation": 180, "texture": "#texture1"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [1, 13, 3, 15], "rotation": 270, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-16, 28.68347, 4.78409],
+			"to": [32, 30.61894, 9.45673],
+			"rotation": {"angle": 45, "axis": "x", "origin": [41.89722, 29.65121, 7.12041]},
+			"faces": {
+				"north": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"east": {"uv": [1, 13, 3, 15], "rotation": 180, "texture": "#texture1"},
+				"south": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [1, 13, 3, 15], "rotation": 270, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-16, 27.31489, 6.15268],
+			"to": [32, 31.98753, 8.08815],
+			"rotation": {"angle": 0, "axis": "y", "origin": [41.89722, 29.65121, 7.12041]},
+			"faces": {
+				"east": {"uv": [1, 13, 3, 15], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [1, 13, 3, 15], "rotation": 270, "texture": "#texture1"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"}
+			}
+		},
+		{
+			"name": "rp by dora",
+			"from": [-16, 27.31489, 6.15268],
+			"to": [32, 31.98753, 8.08815],
+			"rotation": {"angle": 45, "axis": "x", "origin": [41.89722, 29.65121, 7.12041]},
+			"faces": {
+				"east": {"uv": [1, 13, 3, 15], "rotation": 180, "texture": "#texture1"},
+				"west": {"uv": [1, 13, 3, 15], "rotation": 270, "texture": "#texture1"},
+				"up": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"},
+				"down": {"uv": [1, 1, 3, 3], "rotation": 180, "texture": "#texture1"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, -43.22, 0],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	}
+}

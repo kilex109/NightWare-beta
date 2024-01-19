@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"3": "iii/mvkdoor/mvkdoor",
+		"particle": "rustme/models/666"
+	},
+	"elements": [
+		{
+			"name": "Voxels-FFFFFF",
+			"from": [0, 0, 7.5],
+			"to": [16, 32, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#3"},
+				"east": {"uv": [0, 0.5, 8, 0], "rotation": 270, "texture": "#3"},
+				"south": {"uv": [8, 0, 0, 16], "texture": "#3"},
+				"west": {"uv": [0, 0.5, 8, 0], "rotation": 270, "texture": "#3"},
+				"up": {"uv": [0, 0.5, 8, 0], "texture": "#3"},
+				"down": {"uv": [0, 0.5, 8, 0], "texture": "#3"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"translation": [0, -56, 0],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	}
+}
