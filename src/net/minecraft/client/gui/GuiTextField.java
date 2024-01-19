@@ -9,6 +9,9 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ChatAllowedCharacters;
 import net.minecraft.util.math.MathHelper;
+import nightware.main.NightWare;
+import nightware.main.module.impl.util.BetterChat;
+import nightware.main.utility.render.font.Fonts;
 
 public class GuiTextField extends Gui
 {
@@ -537,71 +540,112 @@ public class GuiTextField extends Gui
     /**
      * Draws the textbox
      */
-    public void drawTextBox()
-    {
-        if (this.getVisible())
-        {
-            if (this.getEnableBackgroundDrawing())
-            {
-                drawRect(this.xPosition - 1, this.yPosition - 1, this.xPosition + this.width + 1, this.yPosition + this.height + 1, -6250336);
-                drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, -16777216);
-            }
-
-            int i = this.isEnabled ? this.enabledColor : this.disabledColor;
-            int j = this.cursorPosition - this.lineScrollOffset;
-            int k = this.selectionEnd - this.lineScrollOffset;
-            String s = this.fontRendererInstance.trimStringToWidth(this.text.substring(this.lineScrollOffset), this.getWidth());
-            boolean flag = j >= 0 && j <= s.length();
-            boolean flag1 = this.isFocused && this.cursorCounter / 6 % 2 == 0 && flag;
-            int l = this.enableBackgroundDrawing ? this.xPosition + 4 : this.xPosition;
-            int i1 = this.enableBackgroundDrawing ? this.yPosition + (this.height - 8) / 2 : this.yPosition;
-            int j1 = l;
-
-            if (k > s.length())
-            {
-                k = s.length();
-            }
-
-            if (!s.isEmpty())
-            {
-                String s1 = flag ? s.substring(0, j) : s;
-                j1 = this.fontRendererInstance.drawStringWithShadow(s1, (float)l, (float)i1, i);
-            }
-
-            boolean flag2 = this.cursorPosition < this.text.length() || this.text.length() >= this.getMaxStringLength();
-            int k1 = j1;
-
-            if (!flag)
-            {
-                k1 = j > 0 ? l + this.width : l;
-            }
-            else if (flag2)
-            {
-                k1 = j1 - 1;
-                --j1;
-            }
-
-            if (!s.isEmpty() && flag && j < s.length())
-            {
-                j1 = this.fontRendererInstance.drawStringWithShadow(s.substring(j), (float)j1, (float)i1, i);
-            }
-
-            if (flag1)
-            {
-                if (flag2)
-                {
-                    Gui.drawRect(k1, i1 - 1, k1 + 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT, -3092272);
+    public void drawTextBox() {
+        if (NightWare.getInstance().getModuleManager().getModule(BetterChat.class).isEnabled() && BetterChat.changeChat.get()) {
+            if (this.getVisible()) {
+                if (this.getEnableBackgroundDrawing()) {
+                    drawRect(this.xPosition - 1, this.yPosition - 1, this.xPosition + this.width + 1, this.yPosition + this.height + 1, -6250336);
+                    drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, -16777216);
                 }
-                else
-                {
-                    this.fontRendererInstance.drawStringWithShadow("_", (float)k1, (float)i1, i);
+
+                int i = this.isEnabled ? this.enabledColor : this.disabledColor;
+                int j = this.cursorPosition - this.lineScrollOffset;
+                int k = this.selectionEnd - this.lineScrollOffset;
+                String s = Fonts.mntsb18.trimStringToWidth(this.text.substring(this.lineScrollOffset), this.getWidth(), false);
+                boolean flag = j >= 0 && j <= s.length();
+                boolean flag1 = this.isFocused && this.cursorCounter / 6 % 2 == 0 && flag;
+                int l = this.enableBackgroundDrawing ? this.xPosition + 4 : this.xPosition;
+                int i1 = this.enableBackgroundDrawing ? this.yPosition + (this.height - 8) / 2 : this.yPosition;
+                int j1 = l;
+
+                if (k > s.length()) {
+                    k = s.length();
+                }
+
+                if (!s.isEmpty()) {
+                    String s1 = flag ? s.substring(0, j) : s;
+                    j1 = (int) Fonts.mntsb18.drawStringWithShadow(s1, (float) l, (float) i1 + 2, i);
+                }
+
+                boolean flag2 = this.cursorPosition < this.text.length() || this.text.length() >= this.getMaxStringLength();
+                int k1 = j1;
+
+                if (!flag) {
+                    k1 = j > 0 ? l + this.width : l;
+                } else if (flag2) {
+                    k1 = j1 - 1;
+                    --j1;
+                }
+
+                if (!s.isEmpty() && flag && j < s.length()) {
+                    j1 = (int) Fonts.mntsb18.drawStringWithShadow(s.substring(j), (float) j1, (float) i1 + 2, i);
+                }
+
+                if (flag1) {
+                    if (flag2) {
+                        Gui.drawRect(k1, i1 - 1, k1 + 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT, -3092272);
+                    } else {
+                        Fonts.mntsb18.drawStringWithShadow("_", (float) k1 + 1, (float) i1 + 2, i);
+                    }
+                }
+
+                if (k != j) {
+                    int l1 = l + Fonts.mntsb18.getStringWidth(s.substring(0, k));
+                    this.drawCursorVertical(k1, i1 - 1, l1 - 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT);
                 }
             }
+        } else {
+            if (this.getVisible()) {
+                if (this.getEnableBackgroundDrawing()) {
+                    drawRect(this.xPosition - 1, this.yPosition - 1, this.xPosition + this.width + 1, this.yPosition + this.height + 1, -6250336);
+                    drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, -16777216);
+                }
 
-            if (k != j)
-            {
-                int l1 = l + this.fontRendererInstance.getStringWidth(s.substring(0, k));
-                this.drawCursorVertical(k1, i1 - 1, l1 - 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT);
+                int i = this.isEnabled ? this.enabledColor : this.disabledColor;
+                int j = this.cursorPosition - this.lineScrollOffset;
+                int k = this.selectionEnd - this.lineScrollOffset;
+                String s = this.fontRendererInstance.trimStringToWidth(this.text.substring(this.lineScrollOffset), this.getWidth());
+                boolean flag = j >= 0 && j <= s.length();
+                boolean flag1 = this.isFocused && this.cursorCounter / 6 % 2 == 0 && flag;
+                int l = this.enableBackgroundDrawing ? this.xPosition + 4 : this.xPosition;
+                int i1 = this.enableBackgroundDrawing ? this.yPosition + (this.height - 8) / 2 : this.yPosition;
+                int j1 = l;
+
+                if (k > s.length()) {
+                    k = s.length();
+                }
+
+                if (!s.isEmpty()) {
+                    String s1 = flag ? s.substring(0, j) : s;
+                    j1 = this.fontRendererInstance.drawStringWithShadow(s1, (float) l, (float) i1, i);
+                }
+
+                boolean flag2 = this.cursorPosition < this.text.length() || this.text.length() >= this.getMaxStringLength();
+                int k1 = j1;
+
+                if (!flag) {
+                    k1 = j > 0 ? l + this.width : l;
+                } else if (flag2) {
+                    k1 = j1 - 1;
+                    --j1;
+                }
+
+                if (!s.isEmpty() && flag && j < s.length()) {
+                    j1 = this.fontRendererInstance.drawStringWithShadow(s.substring(j), (float) j1, (float) i1, i);
+                }
+
+                if (flag1) {
+                    if (flag2) {
+                        Gui.drawRect(k1, i1 - 1, k1 + 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT, -3092272);
+                    } else {
+                        this.fontRendererInstance.drawStringWithShadow("_", (float) k1, (float) i1, i);
+                    }
+                }
+
+                if (k != j) {
+                    int l1 = l + this.fontRendererInstance.getStringWidth(s.substring(0, k));
+                    this.drawCursorVertical(k1, i1 - 1, l1 - 1, i1 + 1 + this.fontRendererInstance.FONT_HEIGHT);
+                }
             }
         }
     }

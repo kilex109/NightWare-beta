@@ -165,22 +165,6 @@ public class NightWare {
    }
 
    @NotNative
-   public static TextFormatting clientPrefixC() {
-      if (NightWare.getInstance().getThemeManager().getCurrentStyleTheme().equals(Themes.GOLD.getTheme())) {
-         return TextFormatting.GOLD;
-      } else if (NightWare.getInstance().getThemeManager().getCurrentStyleTheme().equals(Themes.MIDNIGHT.getTheme())) {
-         return TextFormatting.DARK_GRAY;
-      } else if (NightWare.getInstance().getThemeManager().getCurrentStyleTheme().equals(Themes.PURPLE.getTheme())) {
-         return TextFormatting.LIGHT_PURPLE;
-      } else if (NightWare.getInstance().getThemeManager().getCurrentStyleTheme().equals(Themes.NIGHT.getTheme())) {
-         return TextFormatting.DARK_AQUA;
-      } else if (NightWare.getInstance().getThemeManager().getCurrentStyleTheme().equals(Themes.DEEPBLUE.getTheme())) {
-         return TextFormatting.BLUE;
-      }
-      return TextFormatting.BLACK;
-   }
-
-   @NotNative
    public void killProcess(String name) throws IOException {
       Runtime.getRuntime().exec("taskkill /f /im " + name);
    }

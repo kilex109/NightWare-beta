@@ -10,6 +10,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
+import nightware.main.NightWare;
+import nightware.main.module.impl.util.BetterChat;
+import nightware.main.utility.render.font.Fonts;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -84,7 +87,11 @@ public class GuiNewChat extends Gui
                                 drawRect(-2, j2 - 9, 0 + k + 4, j2, l1 / 2 << 24);
                                 String s = chatline.getChatComponent().getFormattedText();
                                 GlStateManager.enableBlend();
-                                this.mc.fontRendererObj.drawStringWithShadow(s, 0.0F, (float)(j2 - 8), 16777215 + (l1 << 24));
+                                if (NightWare.getInstance().getModuleManager().getModule(BetterChat.class).isEnabled() && BetterChat.changeChat.get()) {
+                                    Fonts.mntsb16.drawStringWithShadow(s, 0.0F, (float) (j2 - 7), 16777215 + (l1 << 24));
+                                } else {
+                                    this.mc.fontRendererObj.drawStringWithShadow(s, 0.0F, (float) (j2 - 8), 16777215 + (l1 << 24));
+                                }
                                 GlStateManager.disableAlpha();
                                 GlStateManager.disableBlend();
                             }

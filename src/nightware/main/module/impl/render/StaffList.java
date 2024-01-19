@@ -83,8 +83,11 @@ public class StaffList extends Module {
          this.realOffset = AnimationMath.fast(this.realOffset, (float) offset, 15.0F);
          this.staffListDraggable.setWidth((float) width);
          this.staffListDraggable.setHeight((float) (19 + offset));
-         RenderUtility.drawGradientGlow((float) this.staffListDraggable.getX(), (float) this.staffListDraggable.getY(), (float) width, 19.0F + this.realOffset, 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-         RenderUtility.Cornered((float) this.staffListDraggable.getX(), (float) this.staffListDraggable.getY(), (float) width, 19.0F + this.realOffset, 5, 5, 5, 5, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
+         int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+         int color = NightWare.getInstance().getC(0).getRGB();
+         int color2 = NightWare.getInstance().getC(500).getRGB();
+         RenderUtility.drawGradientGlow((float) this.staffListDraggable.getX(), (float) this.staffListDraggable.getY(), (float) width, 19.0F + this.realOffset, 10, color, color2, color, color2);
+         RenderUtility.Cornered((float) this.staffListDraggable.getX(), (float) this.staffListDraggable.getY(), (float) width, 19.0F + this.realOffset, 5, 5, 5, 5, bgColor);
          Fonts.nunitoBold18.drawGradientCenteredString("Администрация", (float) (this.staffListDraggable.getX() + (width / 2)), (float) this.staffListDraggable.getY() + 5.5F, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
          SmartScissor.push();
          SmartScissor.setFromComponentCoordinates((double) this.staffListDraggable.getX(), (double) this.staffListDraggable.getY(), (double) width, (double) (19.0F + this.realOffset));

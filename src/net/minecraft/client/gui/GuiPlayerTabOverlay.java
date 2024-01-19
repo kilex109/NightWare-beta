@@ -174,12 +174,12 @@ public class GuiPlayerTabOverlay extends Gui
             int i5 = k4 % i4;
             int j2 = j1 + l4 * i1 + l4 * 5;
             int k2 = k1 + i5 * 9;
-            if (NightWare.getInstance().getModuleManager().getModule(BetterTab.class).isEnabled()) {
+            if (NightWare.getInstance().getModuleManager().getModule(BetterTab.class).isEnabled() && BetterTab.changeTab.get()) {
                 int color = this.mc.player == this.mc.world.getPlayerEntityByUUID(((NetworkPlayerInfo) list.get(k4)).getGameProfile().getId()) ?  ColorUtility.setAlpha(NightWare.getInstance().getC(0).getRGB(), 100) : new Color(45, 45, 45, 0).getRGB();
                 int color2 = this.mc.player == this.mc.world.getPlayerEntityByUUID(((NetworkPlayerInfo) list.get(k4)).getGameProfile().getId()) ?  ColorUtility.setAlpha(NightWare.getInstance().getC(500).getRGB(), 100) : new Color(45, 45, 45, 0).getRGB();
                 RenderUtility.drawGradientRect(j2, k2 - 0.5f, i1, 9, color, color2, color2, color);
             } else {
-                drawRect(j2, (int) (k2 - 0.25f), j2 + i1, (int) (k2 + 8.5f), new Color(45, 45, 45, 175).getRGB());
+                drawRect(j2, k2, j2 + i1, k2 + 8, 553648127);
             }
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
             GlStateManager.enableAlpha();
@@ -214,11 +214,19 @@ public class GuiPlayerTabOverlay extends Gui
 
                 if (networkplayerinfo1.getGameType() == GameType.SPECTATOR)
                 {
-                    Fonts.mntssb15.drawStringWithShadow(TextFormatting.ITALIC + s4, (float)j2, (float)k2 + 1.5f, -1862270977);
+                    if (NightWare.getInstance().getModuleManager().getModule(BetterTab.class).isEnabled() && BetterTab.changeTab.get()) {
+                        Fonts.mntssb15.drawStringWithShadow(TextFormatting.ITALIC + s4, (float) j2, (float) k2 + 1.5f, -1862270977);
+                    } else {
+                        this.mc.fontRendererObj.drawStringWithShadow(TextFormatting.ITALIC + s4, (float)j2, (float)k2, -1862270977);
+                    }
                 }
                 else
                 {
-                    Fonts.mntssb15.drawStringWithShadow(s4, (float)j2, (float)k2 + 1.5f, -1);
+                    if (NightWare.getInstance().getModuleManager().getModule(BetterTab.class).isEnabled() && BetterTab.changeTab.get()) {
+                        Fonts.mntssb15.drawStringWithShadow(s4, (float) j2, (float) k2 + 1.5f, -1);
+                    } else {
+                        this.mc.fontRendererObj.drawStringWithShadow(s4, (float)j2, (float)k2, -1);
+                    }
                 }
 
                 if (scoreObjectiveIn != null && networkplayerinfo1.getGameType() != GameType.SPECTATOR)

@@ -5,6 +5,7 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.*;
 import nightware.main.NightWare;
 import nightware.main.manager.theme.Themes;
+import nightware.main.module.impl.util.Optimizer;
 import nightware.main.utility.Utility;
 import nightware.main.utility.misc.DiscordPresence;
 import nightware.main.utility.render.shader.Shader;
@@ -685,6 +686,9 @@ public class RenderUtility implements Utility {
    private static final HashMap<Integer, Integer> shadowCache = new HashMap<>();
 
    public static void drawGlow(float x, float y, float width, float height, int glowRadius, Color color) {
+      if (Optimizer.a) {
+         return;
+      }
       BufferedImage original = null;
       GaussianFilter op = null;
       glPushMatrix();
@@ -740,6 +744,9 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawFixedGlow(float x, float y, float width, float height, int glowRadius, int color) {
+      if (Optimizer.a) {
+         return;
+      }
       BufferedImage original = null;
       GaussianFilter op = null;
       glPushMatrix();
@@ -806,6 +813,9 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawGradientGlow(float x, float y, float width, float height, int glowRadius, int color1, int color2, int color3, int color4) {
+      if (Optimizer.a) {
+         return;
+      }
       BufferedImage original = null;
       GaussianFilter op = null;
       glPushMatrix();
@@ -872,6 +882,9 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawHorizontalGlow(float x, float y, float width, float height, int glowRadius, int color1, int color2) {
+      if (Optimizer.a) {
+         return;
+      }
       BufferedImage original = null;
       GaussianFilter op = null;
       glPushMatrix();
@@ -939,6 +952,9 @@ public class RenderUtility implements Utility {
 
 
    public static void drawGradientGlow(float x, float y, float width, float height, int glowRadius, Color color1, Color color2) {
+      if (Optimizer.a) {
+         return;
+      }
       BufferedImage original = null;
       GaussianFilter op = null;
       GL11.glPushMatrix();
@@ -1005,6 +1021,9 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawGradientGlow(float x, float y, float width, float height, int glowRadius, Color color1, Color color2, Color color3, Color color4) {
+      if (Optimizer.a) {
+         return;
+      }
       GL11.glPushMatrix();
       GlStateManager.disableAlpha();
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);

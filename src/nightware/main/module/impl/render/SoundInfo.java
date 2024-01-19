@@ -178,7 +178,7 @@ public class SoundInfo extends Module {
          int color = NightWare.getInstance().getC(0).getRGB();
          int color2 = NightWare.getInstance().getC(500).getRGB();
          boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
-         
+
          float x = this.siDraggable.getX();
          float y = this.siDraggable.getY();
          if (chouse > exes.size() - 1) {
@@ -195,8 +195,9 @@ public class SoundInfo extends Module {
          }
          this.siDraggable.setHeight(15 + exes.size() * 16 + 4);
          animSize.to = this.siDraggable.getHeight();
-         RenderUtility.drawGradientGlow(x, y, this.siDraggable.getWidth(), this.siDraggable.getHeight(), 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-         RenderUtility.Cornered(x, y, this.siDraggable.getWidth(), this.siDraggable.getHeight(), 5, 5, 5, 5, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
+         int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+         RenderUtility.drawGradientGlow(x, y, this.siDraggable.getWidth(), this.siDraggable.getHeight(), 10, color, color2, color, color2);
+         RenderUtility.Cornered(x, y, this.siDraggable.getWidth(), this.siDraggable.getHeight(), 5, 5, 5, 5, bgColor);
          y += 3;
          Fonts.mntsb16.drawGradientCenteredString("Ближайшие звуки", x + this.siDraggable.getWidth() / 2 + 0, y + 15 / 2 - Fonts.mntsb16.getFontHeight() / 2, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
          animChouse.to = chouse * 16;
@@ -205,7 +206,11 @@ public class SoundInfo extends Module {
             ex.render(x, i + y);
             i += ex.getFontHeight();
          }
-         RenderUtility.drawRect(x - 1, y + 15 + animChouse.getAnim() + 16 / 2 - 4, 1, 8, isDark ? new Color(30, 30, 30).getRGB() : Color.WHITE.getRGB());
+         if (chouse != -1) {
+            int middleColor = ColorUtility.interpolateColorC(color, color2, 0.5F).getRGB();
+            RenderUtility.drawRect(x, y + 10 + animChouse.getAnim() + 16 / 2, 1, 12, middleColor);
+            RenderUtility.drawRect(x + this.siDraggable.getWidth() - 1, y + 10 + animChouse.getAnim() + 16 / 2, 1, 12, middleColor);
+         }
       }
    }
 

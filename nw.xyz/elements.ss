@@ -5,8 +5,8 @@
     "name": "Potions"
   },
   {
-    "x": 653,
-    "y": 79,
+    "x": 823,
+    "y": 12,
     "name": "Sound Info"
   },
   {
@@ -15,8 +15,8 @@
     "name": "Target HUD"
   },
   {
-    "x": 162,
-    "y": 87,
+    "x": 151,
+    "y": 73,
     "name": "Keybinds"
   },
   {
@@ -25,8 +25,8 @@
     "name": "Staff List"
   },
   {
-    "x": 785,
-    "y": 13,
+    "x": 335,
+    "y": 143,
     "name": "Inventory View"
   }
 ]

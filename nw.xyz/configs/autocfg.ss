@@ -1,7 +1,7 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Gold",
+  "StyleTheme": "Bloody Mary",
   "Modules": {
     "AutoSprint": {
       "enabled": true,
@@ -42,10 +42,10 @@
       "Settings": {}
     },
     "Arrows": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Размер": 1.0
+        "Размер": 1.5
       }
     },
     "BackPeek": {
@@ -116,7 +116,7 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Elements": "Watermark\nServer Info\nCoords\nInventory\nArmor\nTarget HUD\n"
+        "Элементы": "Логотип\nКоординаты\nБроня\nТаргет худ\n"
       }
     },
     "ClickGui": {
@@ -215,12 +215,12 @@
       "Settings": {}
     },
     "Staff List": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {}
     },
     "Tracers": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {
         "Line Width": 1.0,
@@ -245,7 +245,7 @@
       "Settings": {}
     },
     "NoHurtCam": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
@@ -348,9 +348,9 @@
         "Боты": false,
         "Сайлент": true,
         "Все конечности": true,
-        "Аккуратность": 0.01,
+        "Аккуратность": 0.15,
         "Радиус": 360.0,
-        "Предикт": 3.5,
+        "Предикт": 7.0,
         "Авто-Стрельба": true,
         "Проверять задержку": false,
         "КПС": 15.0

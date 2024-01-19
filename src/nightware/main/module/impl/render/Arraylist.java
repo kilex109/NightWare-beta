@@ -36,8 +36,8 @@ public class Arraylist extends Module {
    @EventTarget
    public void onRender2D(EventRender2D event) {
       if (!mc.gameSettings.showDebugInfo) {
-         float x = 9.0F;
-         float y = 54.0F;
+         float x = 5.0F;
+         float y = NightWare.getInstance().getModuleManager().getModule(Hud.class).isEnabled() && Hud.elements.get(0) ? 32.0F : 6.0F;
          int offset = 0;
          int count = 0;
          boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
@@ -109,8 +109,6 @@ public class Arraylist extends Module {
                         } while(!module.isEnabled() && moduleAnimation.finished(Direction.BACKWARDS));
 
                         alphaAnimation = moduleAnimation.getOutput();
-                        RenderUtility.drawRect(x, y + (float)offset, 2.0F, 11.0F, ColorUtility.applyOpacity(getArrayColor(count), alphaAnimation).getRGB());
-                        RenderUtility.drawGradientGlow(x, y + (float)offset, 2.0F, 11.0F, 3, ColorUtility.applyOpacity(getArrayColor(count), alphaAnimation).getRGB(), ColorUtility.applyOpacity(getArrayColor(count), alphaAnimation).getRGB(), ColorUtility.applyOpacity(getArrayColor(count), alphaAnimation).getRGB(), ColorUtility.applyOpacity(getArrayColor(count), alphaAnimation).getRGB());
                         offset = (int)((float)offset + moduleAnimation.getOutput() * 10.0F);
                         ++count;
                      }
@@ -130,8 +128,14 @@ public class Arraylist extends Module {
             }
 
             alphaAnimation = moduleAnimation.getOutput();
-            RenderUtility.drawRect(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 6, 11.0F, isDark ? (new Color(30, 30, 30)).getRGB() : (new Color(255, 255, 255)).getRGB());
-            this.getFont().drawString(moduleName, x + 4.0F + (float)(this.getFont().equals(Fonts.minecraft13) ? 1 : 0), y + (float)offset + (11.0F - (float)this.getFont().getStringHeight(moduleName)) / 2.0F + 1.0F, isDark ? Color.WHITE.getRGB() : Color.BLACK.getRGB());
+            int offsetiki = 0;
+            offsetiki += 25;
+            int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+            int color = NightWare.getInstance().getC(offsetiki).getRGB();
+            int color2 = NightWare.getInstance().getC(500 + offsetiki).getRGB();
+            RenderUtility.drawFixedGlow(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 5, bgColor);
+            RenderUtility.drawRoundedRect(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 2, bgColor);
+            this.getFont().drawGradientString(moduleName, x + 2.0F + (float)(this.getFont().equals(Fonts.minecraft13) ? 1 : 0), y + (float)offset + (11.0F - (float)this.getFont().getStringHeight(moduleName)) / 2.0F + 1.0F, new Color(color), new Color(color2));
             if (!moduleAnimation.isDone()) {
                RenderUtility.scaleEnd();
             }

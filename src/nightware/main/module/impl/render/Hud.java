@@ -41,12 +41,14 @@ import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.RenderUtility;
 import nightware.main.utility.render.StencilUtility;
 
+import static nightware.main.module.Utils.mc;
+
 @ModuleAnnotation(
         name = "Hud",
         category = Category.RENDER
 )
 public class Hud extends Module {
-   public static final MultiBooleanSetting elements = new MultiBooleanSetting("Elements", Arrays.asList("Watermark", "Server Info", "Coords", "Inventory", "Armor", "Target HUD"));
+   public static final MultiBooleanSetting elements = new MultiBooleanSetting("Элементы", Arrays.asList("Логотип", "Координаты", "Инвентарь", "Броня", "Таргет худ"));
    private final String username = NightWare.getInstance().getUserInfo().getName();
    private final Draggable invViewDraggable = DragManager.create(this, "Inventory View", 10, 100);
    private final Draggable potionsDraggable = DragManager.create(this, "Potions", 10, 300);
@@ -54,7 +56,7 @@ public class Hud extends Module {
    public float realOffset = 0.0F;
    private EntityLivingBase currentTarget = null;
    private final Animation animation;
-   public static FontAnim wtA = new FontAnim(1500, Arrays.asList("", NightWare.getInstance().getUserInfo().getName() + " [UID: " + NightWare.getInstance().getUserInfo().getUid() + "]", "Ваше время: " + (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date()), "https://dsc.gg/nightwareofc", "https://vk.com/nightwareofc"));
+   public static FontAnim wtA = new FontAnim(1500, Arrays.asList("", NightWare.getInstance().getUserInfo().getName() + " [UID: " + NightWare.getInstance().getUserInfo().getUid() + "]", "Дата окончания вашей подписки: " + NightWare.till, "https://dsc.gg/nightwareofc", "https://vk.com/nightwareofc"));
    private double hp;
    public Hud() {
       this.animation = new DecelerateAnimation(175, 1.0F, Direction.BACKWARDS);
@@ -68,58 +70,35 @@ public class Hud extends Module {
    @EventTarget
    public void onRender2D(EventRender2D event) {
       if (!mc.gameSettings.showDebugInfo) {
+         int itemOffset;
          int scaledHeight = event.getResolution().getScaledHeight();
          int color = NightWare.getInstance().getC(0).getRGB();
          int color2 = NightWare.getInstance().getC(500).getRGB();
-         int middleColor = ColorUtility.interpolateColorC(color, color2, 0.5F).getRGB();
          boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+         int textColor = isDark ? new Color(255, 255, 255).getRGB() : new Color(44, 44, 44).getRGB();
+         int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
          GlStateManager.pushMatrix();
-         int itemOffset;
-         String date;
-         String userinfo;
-         String doneText;
-         String bpsText;
-         String serverIP;
-         String serverPing;
-         String serverData;
 
          if (elements.get(0)) {
-            date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date()) + NightWare.clientPrefixC() + " // " + ChatFormatting.RESET + Minecraft.getDebugFPS() + "fps";
-            userinfo = NightWare.getInstance().getUserInfo().getName() + " - " + NightWare.getInstance().getUserInfo().getUid();
-            doneText = NightWare.clientPrefixC() + "NightWare" + ChatFormatting.RESET + " -> " + date + NightWare.clientPrefixC() + " // " + ChatFormatting.RESET + userinfo;
-            NetworkPlayerInfo playerInfo = mc.getConnection().getPlayerInfo(mc.player.getGameProfile().getId());
-            serverIP = (!mc.isSingleplayer() ? mc.getCurrentServerData().serverIP.toLowerCase() : "localhost").replace("192.168.0.2", "play.rustme.net");
-            serverPing = (playerInfo != null && !mc.isSingleplayer() ? playerInfo.getResponseTime() : 0) + " ms";
-            serverData = serverIP + NightWare.clientPrefixC() + " // " + ChatFormatting.RESET + serverPing;
-
-            RenderUtility.drawGradientGlow(10, 10.0F, 10 + Fonts.nunitoBold16.getStringWidth(doneText), 15.0F, 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-            RenderUtility.drawGradientGlow(10.0F, 24F, 10 + Fonts.nunitoBold16.getStringWidth(serverData), 15.0F, 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-
-            RenderUtility.Cornered(10, 10.0F, 10 + Fonts.nunitoBold16.getStringWidth(doneText), 15.0F, 5, 0, 5, 5, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
-            RenderUtility.Cornered(10.0F, 24.749F, 10 + Fonts.nunitoBold16.getStringWidth(serverData), 15.0F, 0, 5, 0, 5, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
-
-            Fonts.nunitoBold16.drawString(doneText, 15, 15.0F, isDark ? Color.WHITE.getRGB() : Color.BLACK.getRGB());
-            Fonts.nunitoBold16.drawString(serverData, 15, 29.0F, isDark ? Color.WHITE.getRGB() : Color.BLACK.getRGB());
-
-            /*String text = "NightWare BETA";
+            String text = "NightWare " + ChatFormatting.GRAY + "| " + ChatFormatting.RESET + Minecraft.getDebugFPS() + "fps " + ChatFormatting.GRAY + "| " + ChatFormatting.RESET + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) + "ms";
             String textA = wtA.done;
-            int width = Math.max(Fonts.mntsb16.getStringWidth(text),Fonts.mntssb14.getStringWidth(textA)) + 6;
-            RenderUtility.drawGradientGlow(7, 10, width + 2, 22, 6, color, color2, color, color2);
-            RenderUtility.drawRoundedGradientRect(8, 10, width, 20, 2, 1, color, color2, color, color2);
-            RenderUtility.drawRoundedRect(10, 8, width, 20, 2, new Color(225, 225, 225).getRGB());
-            Fonts.mntsb16.drawString(text, 12, 12, new Color(55, 55, 55).getRGB());
-            Fonts.mntssb14.drawString(textA, 12, 20, new Color(55, 55, 55).getRGB());*/
+            int width = Math.max(Fonts.mntsb16.getStringWidth(text),Fonts.mntssb14.getStringWidth(textA)) + 14;
+            RenderUtility.drawGradientGlow(6, 6, width, 20, 5, color, color2, color, color2);
+            RenderUtility.drawRoundedRect(6, 6, width, 20, 5, bgColor);
+            RenderUtility.drawRoundedGradientRect(8, 7.5f, 6, 17, 5, 1, color, color2, color, color2);
+            RenderUtility.drawGradientGlow(8, 7.5f, 6, 17, 5, color, color2, color, color2);
+            Fonts.mntsb16.drawString(text, 16, 9, textColor);
+            Fonts.mntssb14.drawString(textA, 16, 19, textColor);
          }
 
-         if (elements.get(2)) {
+         if (elements.get(1)) {
             Fonts.mntsb16.drawGradientString(mc.player.getPosition().getX() + " :: " + mc.player.getPosition().getY() + " :: " + mc.player.getPosition().getZ(), 2, scaledHeight - 8, NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));
          }
 
-         if (elements.get(3)) {
-            RenderUtility.drawGradientGlow((float)this.invViewDraggable.getX(), (float)this.invViewDraggable.getY(), 170.0F, 72.0F, 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-            RenderUtility.drawRoundedRect((float)this.invViewDraggable.getX(), (float)this.invViewDraggable.getY(), 170.0F, 72.0F, 5.0F, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
+         if (elements.get(2)) {
+            RenderUtility.drawGradientGlow((float)this.invViewDraggable.getX(), (float)this.invViewDraggable.getY(), 170.0F, 72.0F, 10, color,color2, color, color2);
+            RenderUtility.drawRoundedRect((float)this.invViewDraggable.getX(), (float)this.invViewDraggable.getY(), 170.0F, 72.0F, 5.0F, bgColor);
             Fonts.nunitoBold16.drawGradientCenteredString("Инвентарь", (float)(this.invViewDraggable.getX() + (170 / 2)), (float)this.invViewDraggable.getY() + 4F, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
-            RenderUtility.drawRect(this.invViewDraggable.getX(), (float)this.invViewDraggable.getY() + 13f, 170.0F, 0.5F, isDark ? new Color(255, 255, 255, 220).getRGB() : (new Color(22, 22, 22)).getRGB());
 
             for(itemOffset = 9; itemOffset < 36; ++itemOffset) {
                ItemStack itemStack = mc.player.inventory.getStackInSlot(itemOffset);
@@ -132,7 +111,7 @@ public class Hud extends Module {
 
          Iterator var17;
 
-         if (elements.get(5)) {
+         if (elements.get(4)) {
             if (AimBot.target != null) {
                this.currentTarget = AimBot.target.getTarget();
             } else if (mc.currentScreen instanceof GuiChat) {
@@ -193,7 +172,7 @@ public class Hud extends Module {
          }
 
          GlStateManager.popMatrix();
-         if (elements.get(4)) {
+         if (elements.get(3)) {
             List<ItemStack> armor = Lists.reverse(mc.player.inventory.armorInventory);
 
             for(int i = 0; i < 4; ++i) {
@@ -203,22 +182,6 @@ public class Hud extends Module {
       }
    }
 
-   private String getCoordsText() {
-      if (mc.player == null) {
-         return "";
-      } else {
-         StringBuilder coordsBuilder = (new StringBuilder()).append("XYZ: ");
-         if (mc.player.getEntityWorld().provider.getDimensionType().equals(DimensionType.THE_END)) {
-            coordsBuilder.append(ChatFormatting.DARK_PURPLE).append(mc.player.getPosition().getX()).append(", ").append(mc.player.getPosition().getY()).append(", ").append(mc.player.getPosition().getZ()).append(ChatFormatting.RESET);
-         } else if (mc.player.getEntityWorld().provider.getDimensionType().equals(DimensionType.NETHER)) {
-            coordsBuilder.append(ChatFormatting.RED).append(mc.player.getPosition().getX()).append(", ").append(mc.player.getPosition().getY()).append(", ").append(mc.player.getPosition().getZ()).append(ChatFormatting.GREEN).append(" (").append(mc.player.getPosition().getX() * 8).append(", ").append(mc.player.getPosition().getY()).append(", ").append(mc.player.getPosition().getZ() * 8).append(")").append(ChatFormatting.RESET);
-         } else {
-            coordsBuilder.append(ChatFormatting.GREEN).append(mc.player.getPosition().getX()).append(", ").append(mc.player.getPosition().getY()).append(", ").append(mc.player.getPosition().getZ()).append(ChatFormatting.RED).append(" (").append(mc.player.getPosition().getX() / 8).append(", ").append(mc.player.getPosition().getY()).append(", ").append(mc.player.getPosition().getZ() / 8).append(")").append(ChatFormatting.RESET);
-         }
-
-         return coordsBuilder.toString();
-      }
-   }
 
    public static String getPotionPower(PotionEffect potionEffect) {
       if (potionEffect.getAmplifier() == 1) {
@@ -244,46 +207,6 @@ public class Hud extends Module {
 
    public static String getDuration(PotionEffect potionEffect) {
       return potionEffect.getIsPotionDurationMax() ? "**:**" : StringUtils.ticksToElapsedTime(potionEffect.getDuration());
-   }
-
-   private static int getPotionDurationColor(PotionEffect potionEffect, boolean isDark) {
-      int potionColor = -1;
-      if (potionEffect.getDuration() < 200) {
-         potionColor = (new Color(255, 103, 32)).getRGB();
-      } else if (potionEffect.getDuration() < 400) {
-         potionColor = (new Color(231, 143, 32)).getRGB();
-      } else if (potionEffect.getDuration() > 400) {
-         potionColor = isDark ? (new Color(205, 205, 205)).getRGB() : (new Color(20, 20, 20)).getRGB();
-      }
-
-      return potionColor;
-   }
-
-   private int getArmorOffset() {
-      int offset = 56;
-      if (mc.player.isCreative()) {
-         offset -= 15;
-      }
-
-      if (!mc.player.isCreative() && mc.player.isInsideOfMaterial(Material.WATER)) {
-         offset += 10;
-      }
-
-      if (mc.player.getRidingEntity() != null && mc.player.getRidingEntity() instanceof EntityLiving) {
-         EntityLiving entity = (EntityLiving)mc.player.getRidingEntity();
-         offset = (int)((double)(offset - 10) + Math.ceil((double)((entity.getMaxHealth() - 1.0F) / 20.0F)) * 10.0D) + (mc.player.isCreative() ? 15 : 0);
-      }
-
-      return offset;
-   }
-
-   public static int getTooltipOffset() {
-      int offset = 63;
-      if (!mc.player.isCreative() && mc.player.isInsideOfMaterial(Material.WATER)) {
-         offset += 10;
-      }
-
-      return offset;
    }
 
    private static float getHurtPercent(EntityLivingBase entity) {

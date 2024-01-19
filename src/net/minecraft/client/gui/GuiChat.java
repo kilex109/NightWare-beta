@@ -1,11 +1,13 @@
 package net.minecraft.client.gui;
 
+import java.awt.*;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
 import nightware.main.NightWare;
 import nightware.main.manager.dragging.DragManager;
 import nightware.main.module.impl.movement.Timer;
+import nightware.main.module.impl.util.BetterChat;
 import nightware.main.module.impl.util.PasswordHider;
 import nightware.main.utility.math.Vec2i;
 import nightware.main.utility.render.RenderUtility;
@@ -265,7 +267,12 @@ public class GuiChat extends GuiScreen implements ITabCompleter
      */
     public void drawScreen(int mouseX, int mouseY, float partialTicks)
     {
-        drawRect(2, this.height - 14, this.width - 2, this.height - 2, Integer.MIN_VALUE);
+        if (NightWare.getInstance().getModuleManager().getModule(BetterChat.class).isEnabled() && BetterChat.changeChat.get()) {
+            RenderUtility.drawFixedGlow(2, this.height - 14, this.width - 3, 13, 10, new Color(33, 33, 33, 150).getRGB());
+            RenderUtility.drawRoundedRect(2, this.height - 14, this.width - 3, 13, 5, new Color(33, 33, 33, 150).getRGB());
+        } else {
+            drawRect(2, this.height - 14, this.width - 2, this.height - 2, Integer.MIN_VALUE);
+        }
         this.inputField.drawTextBox();
         ITextComponent itextcomponent = this.mc.ingameGUI.getChatGUI().getChatComponent(Mouse.getX(), Mouse.getY());
 
@@ -274,7 +281,7 @@ public class GuiChat extends GuiScreen implements ITabCompleter
             this.handleComponentHover(itextcomponent, mouseX, mouseY);
         }
 
-        if (NightWare.getInstance().getModuleManager().getModule(PasswordHider.class).isEnabled() && (this.inputField.getText().startsWith("/l") && this.inputField.getText().split(" ")[0].length() <= 6 || this.inputField.getText().startsWith("/reg") && this.inputField.getText().split(" ")[0].length() <= 9 || this.inputField.getText().startsWith("/warp") && this.inputField.getText().split(" ")[0].length() <= 9) && this.inputField.getText().split(" ").length != 1) {
+        if (NightWare.getInstance().getModuleManager().getModule(PasswordHider.class).isEnabled() && (this.inputField.getText().startsWith("/l") && this.inputField.getText().split(" ")[0].length() <= 6 || this.inputField.getText().startsWith("/reg") && this.inputField.getText().split(" ")[0].length() <= 9 && this.inputField.getText().split(" ").length != 1)) {
             BlurUtility.drawBlur(10.0F, () -> {
                 RenderUtility.drawRectNoWH((double)(this.mc.fontRendererObj.getStringWidth(this.inputField.getText().split(" ")[0]) + 7), (double)(this.height - 14), (double)(this.mc.fontRendererObj.getStringWidth(this.inputField.getText().split(" ")[0]) + 6 + this.mc.fontRendererObj.getStringWidth(this.inputField.getText().substring(this.inputField.getText().split(" ")[0].length()))), (double)(this.height - 2), Integer.MIN_VALUE);
             });

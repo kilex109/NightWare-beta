@@ -16,6 +16,7 @@ import java.util.Random;
 import javax.annotation.Nullable;
 import javax.imageio.ImageIO;
 
+import nightware.main.event.render.EventOverlay;
 import nightware.main.event.render.EventRender3D;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
@@ -666,28 +667,29 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
     private void hurtCameraEffect(float partialTicks)
     {
-        if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)
-        {
-            EntityLivingBase entitylivingbase = (EntityLivingBase)this.mc.getRenderViewEntity();
-            float f = (float)entitylivingbase.hurtTime - partialTicks;
+        EventOverlay eventOverlay = new EventOverlay(EventOverlay.OverlayType.HURT_CAM);
+        EventManager.call(eventOverlay);
+        if (!eventOverlay.isCancelled()) {
+            if (this.mc.getRenderViewEntity() instanceof EntityLivingBase) {
+                EntityLivingBase entitylivingbase = (EntityLivingBase) this.mc.getRenderViewEntity();
+                float f = (float) entitylivingbase.hurtTime - partialTicks;
 
-            if (entitylivingbase.getHealth() <= 0.0F)
-            {
-                float f1 = (float)entitylivingbase.deathTime + partialTicks;
-                GlStateManager.rotate(40.0F - 8000.0F / (f1 + 200.0F), 0.0F, 0.0F, 1.0F);
+                if (entitylivingbase.getHealth() <= 0.0F) {
+                    float f1 = (float) entitylivingbase.deathTime + partialTicks;
+                    GlStateManager.rotate(40.0F - 8000.0F / (f1 + 200.0F), 0.0F, 0.0F, 1.0F);
+                }
+
+                if (f < 0.0F) {
+                    return;
+                }
+
+                f = f / (float) entitylivingbase.maxHurtTime;
+                f = MathHelper.sin(f * f * f * f * (float) Math.PI);
+                float f2 = entitylivingbase.attackedAtYaw;
+                GlStateManager.rotate(-f2, 0.0F, 1.0F, 0.0F);
+                GlStateManager.rotate(-f * 14.0F, 0.0F, 0.0F, 1.0F);
+                GlStateManager.rotate(f2, 0.0F, 1.0F, 0.0F);
             }
-
-            if (f < 0.0F)
-            {
-                return;
-            }
-
-            f = f / (float)entitylivingbase.maxHurtTime;
-            f = MathHelper.sin(f * f * f * f * (float)Math.PI);
-            float f2 = entitylivingbase.attackedAtYaw;
-            GlStateManager.rotate(-f2, 0.0F, 1.0F, 0.0F);
-            GlStateManager.rotate(-f * 14.0F, 0.0F, 0.0F, 1.0F);
-            GlStateManager.rotate(f2, 0.0F, 1.0F, 0.0F);
         }
     }
 
@@ -777,8 +779,9 @@ public class EntityRenderer implements IResourceManagerReloadListener
                     f4 = f4 * 0.1F;
                     f5 = f5 * 0.1F;
                     RayTraceResult raytraceresult = this.mc.world.rayTraceBlocks(new Vec3d(d0 + (double)f3, d1 + (double)f4, d2 + (double)f5), new Vec3d(d0 - d4 + (double)f3 + (double)f5, d1 - d6 + (double)f4, d2 - d5 + (double)f5));
-
-                    if (raytraceresult != null)
+                    EventOverlay eventOverlay = new EventOverlay(EventOverlay.OverlayType.CAMERA_CLIP);
+                    EventManager.call(eventOverlay);
+                    if (raytraceresult != null && !eventOverlay.isCancelled())
                     {
                         double d7 = raytraceresult.hitVec.distanceTo(new Vec3d(d0, d1, d2));
 

@@ -14,16 +14,7 @@ public class EventOverlay extends EventCancellable {
    }
 
    public static enum OverlayType {
-      TOTEM_ANIMATION,
-      FIRE,
-      BOSS_BAR,
-      FOG,
-      SCOREBOARD,
-      HURT_CAM,
-      WEATHER,
-      ARMOR,
-      PARTICLES,
-      SKYLIGHT,
-      CAMERA_CLIP;
+      CAMERA_CLIP,
+      HURT_CAM;
    }
 }

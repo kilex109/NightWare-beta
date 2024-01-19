@@ -67,8 +67,9 @@ public class Keybinds extends Module {
          this.realOffset = AnimationMath.fast(this.realOffset, (float) offset, 15.0F);
          this.keybindsDraggable.setWidth((float) width);
          this.keybindsDraggable.setHeight((float) (19 + offset));
-         RenderUtility.drawGradientGlow((float) this.keybindsDraggable.getX(), (float) this.keybindsDraggable.getY(), (float) width, 19.0F + this.realOffset, 10, isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220), isDark ? new Color(30, 30, 30, 180) : new Color(255, 255, 255, 220));
-         RenderUtility.Cornered((float) this.keybindsDraggable.getX(), (float) this.keybindsDraggable.getY(), (float) width, 19.0F + this.realOffset, 5, 5, 5, 5, isDark ? new Color(30, 30, 30, 180).getRGB() : new Color(255, 255, 255, 220).getRGB());
+         int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+         RenderUtility.drawGradientGlow((float) this.keybindsDraggable.getX(), (float) this.keybindsDraggable.getY(), (float) width, 19.0F + this.realOffset, 10, glowColor, glowColor2, glowColor, glowColor2);
+         RenderUtility.Cornered((float) this.keybindsDraggable.getX(), (float) this.keybindsDraggable.getY(), (float) width, 19.0F + this.realOffset, 5, 5, 5, 5, bgColor);
          Fonts.nunitoBold18.drawGradientCenteredString("Клавиши", this.keybindsDraggable.getX() + (width / 2), (float) this.keybindsDraggable.getY() + 5.5F, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
          SmartScissor.push();
          SmartScissor.setFromComponentCoordinates((double) this.keybindsDraggable.getX(), (double) this.keybindsDraggable.getY(), (double) width, (double) (19.0F + this.realOffset));
