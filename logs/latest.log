@@ -129,3 +129,878 @@
 [17:20:40] [Client thread/WARN]: File minecraft:sounds/rustme/music.shop.boats.3p.ogg does not exist, cannot add it to event minecraft:music.shop.boats.3p
 [17:20:40] [Client thread/WARN]: File minecraft:sounds/rustme/music.shop.helicopters.3p.ogg does not exist, cannot add it to event minecraft:music.shop.helicopters.3p
 [17:20:40] [Client thread/WARN]: File minecraft:sounds/rustme/music.shop.horses.3p.ogg does not exist, cannot add it to event minecraft:music.shop.horses.3p
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:ambient.cave
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.destroy
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.anvil.use
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.brewing_stand.brew
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.chest.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.chest.locked
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.chest.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.chorus_flower.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.chorus_flower.grow
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.cloth.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.cloth.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.cloth.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.cloth.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.cloth.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.comparator.click
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.dispenser.dispense
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.dispenser.fail
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.dispenser.launch
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.enchantment_table.use
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.end_gateway.spawn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.end_portal.spawn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.end_portal_frame.fill
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.enderchest.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.enderchest.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.fence_gate.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.fence_gate.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.fire.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.fire.extinguish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.furnace.fire_crackle
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.glass.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.glass.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.glass.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.glass.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.glass.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.grass.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.grass.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.grass.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.grass.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.grass.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.gravel.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.gravel.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.gravel.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.gravel.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.gravel.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.iron_door.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.iron_door.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.iron_trapdoor.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.iron_trapdoor.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.ladder.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.ladder.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.ladder.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.ladder.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.ladder.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.lava.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.lava.extinguish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.lava.pop
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.lever.click
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal_pressureplate.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.metal_pressureplate.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.basedrum
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.bass
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.bell
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.chime
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.flute
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.guitar
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.harp
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.hat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.pling
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.snare
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.note.xylophone
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.piston.contract
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.piston.extend
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.portal.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.portal.travel
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.portal.trigger
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.redstone_torch.burnout
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.sand.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.sand.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.sand.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.sand.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.sand.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.shulker_box.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.shulker_box.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.slime.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.slime.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.slime.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.slime.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.slime.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.snow.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.snow.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.snow.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.snow.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.snow.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone_button.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone_button.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone_pressureplate.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.stone_pressureplate.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.tripwire.attach
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.tripwire.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.tripwire.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.tripwire.detach
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.water.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.waterlily.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood_button.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood_button.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood_pressureplate.click_off
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wood_pressureplate.click_on
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wooden_door.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wooden_door.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wooden_trapdoor.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:block.wooden_trapdoor.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:enchant.thorns.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.armorstand.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.armorstand.fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.armorstand.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.armorstand.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.arrow.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.arrow.hit_player
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.arrow.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bat.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bat.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bat.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bat.loop
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bat.takeoff
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.blaze.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.blaze.burn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.blaze.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.blaze.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.blaze.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.boat.paddle_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.boat.paddle_water
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bobber.retrieve
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bobber.splash
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.bobber.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.hiss
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.purr
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cat.purreow
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.chicken.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.chicken.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.chicken.egg
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.chicken.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.chicken.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cow.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cow.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cow.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cow.milk
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.cow.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.creeper.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.creeper.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.creeper.primed
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.donkey.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.donkey.angry
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.donkey.chest
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.donkey.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.donkey.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.egg.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.ambient_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.curse
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.death_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.flop
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.elder_guardian.hurt_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.flap
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.growl
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderdragon_fireball.explode
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endereye.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endereye.launch
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.scream
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.stare
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermen.teleport
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermite.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermite.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermite.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.endermite.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.enderpearl.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_fangs.attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.cast_spell
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.prepare_attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.prepare_summon
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.evocation_illager.prepare_wololo
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.experience_bottle.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.experience_orb.pickup
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.blast
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.blast_far
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.large_blast
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.large_blast_far
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.launch
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.twinkle
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.firework.twinkle_far
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.big_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.burn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.drink
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.eat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.explode
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.extinguish_fire
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.small_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.splash
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.generic.swim
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.scream
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.ghast.warn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.ambient_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.death_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.flop
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.guardian.hurt_land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.angry
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.armor
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.breathe
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.eat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.gallop
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.jump
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.land
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.saddle
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.horse.step_wood
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.big_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.small_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.splash
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.hostile.swim
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.husk.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.husk.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.husk.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.husk.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.cast_spell
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.mirror_move
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.prepare_blindness
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.illusion_illager.prepare_mirror
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.irongolem.attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.irongolem.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.irongolem.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.irongolem.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.item.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.item.pickup
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.itemframe.add_item
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.itemframe.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.itemframe.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.itemframe.remove_item
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.itemframe.rotate_item
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.leashknot.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.leashknot.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.lightning.impact
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.lightning.thunder
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.lingeringpotion.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.angry
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.chest
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.eat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.spit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.llama.swag
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.magmacube.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.magmacube.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.magmacube.jump
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.magmacube.squish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.minecart.inside
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.minecart.riding
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.mooshroom.shear
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.mule.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.mule.chest
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.mule.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.mule.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.painting.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.painting.place
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.eat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.fly
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.blaze
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.creeper
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.elder_guardian
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.enderdragon
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.enderman
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.endermite
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.evocation_illager
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.ghast
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.husk
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.illusion_illager
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.magmacube
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.polar_bear
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.shulker
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.silverfish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.skeleton
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.slime
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.spider
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.stray
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.vex
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.vindication_illager
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.witch
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.wither
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.wither_skeleton
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.wolf
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.zombie
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.zombie_pigman
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.imitate.zombie_villager
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.parrot.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.pig.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.pig.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.pig.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.pig.saddle
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.pig.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.crit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.knockback
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.nodamage
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.strong
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.sweep
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.attack.weak
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.big_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.breath
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.burp
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.hurt_drown
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.hurt_on_fire
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.levelup
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.small_fall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.splash
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.player.swim
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.baby_ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.polar_bear.warning
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.rabbit.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.rabbit.attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.rabbit.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.rabbit.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.rabbit.jump
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.sheep.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.sheep.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.sheep.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.sheep.shear
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.sheep.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.close
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.hurt_closed
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.open
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker.teleport
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker_bullet.hit
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.shulker_bullet.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.silverfish.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.silverfish.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.silverfish.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.silverfish.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton_horse.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton_horse.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.skeleton_horse.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.slime.attack
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.slime.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.slime.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.slime.jump
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.slime.squish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_magmacube.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_magmacube.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_magmacube.squish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_slime.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_slime.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_slime.jump
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.small_slime.squish
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.snowball.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.snowman.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.snowman.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.snowman.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.snowman.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.spider.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.spider.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.spider.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.spider.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.splash_potion.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.splash_potion.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.squid.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.squid.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.squid.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.stray.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.stray.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.stray.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.stray.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.tnt.primed
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vex.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vex.charge
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vex.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vex.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.no
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.trading
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.villager.yes
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vindication_illager.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vindication_illager.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.vindication_illager.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.witch.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.witch.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.witch.drink
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.witch.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.witch.throw
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.break_block
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.shoot
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither.spawn
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither_skeleton.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wither_skeleton.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.growl
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.howl
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.pant
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.shake
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.wolf.whine
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.attack_door_wood
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.attack_iron_door
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.break_door_wood
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.infect
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_horse.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_horse.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_horse.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_pig.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_pig.angry
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_pig.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_pig.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.ambient
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.converted
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.cure
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.death
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.hurt
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:entity.zombie_villager.step
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_chain
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_diamond
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_elytra
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_generic
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_gold
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_iron
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.armor.equip_leather
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bottle.empty
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bottle.fill
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bottle.fill_dragonbreath
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bucket.empty
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bucket.empty_lava
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bucket.fill
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.bucket.fill_lava
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.chorus_fruit.teleport
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.elytra.flying
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.firecharge.use
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.flintandsteel.use
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.hoe.till
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.shield.block
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.shield.break
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.shovel.flatten
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:item.totem.use
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.creative
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.credits
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.dragon
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.end
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.game
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.menu
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:music.nether
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.11
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.13
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.blocks
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.cat
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.chirp
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.far
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.mall
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.mellohi
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.stal
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.strad
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.wait
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:record.ward
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:ui.button.click
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:ui.toast.in
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:ui.toast.out
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:ui.toast.challenge_complete
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:weather.rain
+[17:20:41] [Client thread/WARN]: Missing sound for event: minecraft:weather.rain.above
+[17:20:41] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:20:41] [Thread-3/INFO]: Initializing LWJGL OpenAL
+[17:20:41] [Thread-3/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:20:41] [Thread-3/INFO]: OpenAL initialized.
+[17:20:42] [Sound Library Loader/INFO]: Sound engine started
+[17:20:46] [Client thread/WARN]: Unable to load item model: 'minecraft:item/rustme/building_models/fuse_box' for item: 'minecraft:diamond_pickaxe'
+[17:20:46] [Client thread/WARN]: java.io.FileNotFoundException: minecraft:models/item/rustme/building_models/fuse_box.json
+[17:20:49] [Client thread/WARN]: Unable to load item model: 'minecraft:item/rustme/building_holograms/blue_fuse_box' for item: 'minecraft:diamond_hoe'
+[17:20:49] [Client thread/WARN]: java.io.FileNotFoundException: minecraft:models/item/rustme/building_holograms/blue_fuse_box.json
+[17:20:49] [Client thread/WARN]: Unable to load item model: 'minecraft:item/rustme/building_holograms/red_fuse_box' for item: 'minecraft:diamond_hoe'
+[17:20:49] [Client thread/WARN]: java.io.FileNotFoundException: minecraft:models/item/rustme/building_holograms/red_fuse_box.json
+[17:20:50] [Client thread/WARN]: In parent chain: minecraft:item/rustme/gun_models/crossbow.loaded.zoom -> minecraft:item/rustme/gun_models/crossbow_loaded; unable to load model: 'minecraft:item/rustme/gun_models/crossbow_loaded'
+[17:20:50] [Client thread/WARN]: In parent chain: minecraft:item/rustme/gun_models/speargun.loaded.zoom -> minecraft:item/rustme/gun_models/speargun_loaded; unable to load model: 'minecraft:item/rustme/gun_models/speargun_loaded'
+[17:20:52] [Client thread/INFO]: [OptiFine] Mipmap levels: 4
+[17:20:52] [Client thread/INFO]: [OptiFine] Multitexture: false
+[17:20:52] [Client thread/INFO]: [OptiFine] Multipass connected textures: false
+[17:20:52] [Client thread/INFO]: [OptiFine] Multipass connected textures: false
+[17:20:52] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_pane_red.properties
+[17:20:52] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_red.properties
+[17:20:52] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_light_blue.properties
+[17:20:52] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_pane_light_blue.properties
+[17:20:52] [Client thread/INFO]: [OptiFine] Multipass connected textures: false
+[17:20:52] [Client thread/INFO]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wooden_spear, 4 -> 16
+[17:20:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/texturaaaaa/b048855401496990cb19c5f2dd4aaa71.png, java.io.FileNotFoundException
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/diesel_barrel, 4 -> 16
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/locked_crate, 4 -> 16
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_red_keycard, 4 -> 16
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lr300, 4 -> 16
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pumpkin_bucket, 4 -> 16
+[17:20:52] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/grenade_f1, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/empty_armor_slot_shield, 1 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bone_arrow, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/cleaver, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_blue_keypad, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_crate, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/skull_fire_pit, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/key_lock, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/revolver, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/gold_leggings, 1 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/eoka, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rhib, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/potato_fruit_dying, 8 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rocket, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/workbench_level_2_metal, 8 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/candy_1, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/candy_2, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/salvaged_hammer, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/corn_dying_rotten, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/scrap_helicopter, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/28, 720 -> 1024
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/speargun, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wooden_spikes, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/satchel_charge, 8 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/water_jug, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/semi_auto_pistol, 4 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/fireworks, 1 -> 16
+[17:20:53] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/root_combiner, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/composter, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/motor_boat_screw_backward, 2 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/spas12, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/food_crate, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/car_wheels_working_forward, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/offparticle, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/gift, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/fluid_switch_pump, 4 -> 16
+[17:20:54] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures//системные папки/2/telegram desktop/windows.png, java.io.FileNotFoundException
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/water_barrel, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/butcher_knife, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/cupboard, 4 -> 16
+[17:20:54] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/rustme/models/3zxc.png, java.io.IOException
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mining_quarry_engine, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/guntrap, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mining_quarry_fuel_tank, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rug_bear_skin, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/assault_rifle, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/high_velocity_rocket, 4 -> 16
+[17:20:54] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/texturaaaaa/blue.png, java.io.FileNotFoundException
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/stone_axe, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_ammo_crate, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/fluid_splitter, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/grenade_launcher, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/switch, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/ceiling_light, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pumpkin_dying, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_yellow_crate, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/military_crate, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/grenade_40mm_he, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/stump, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/vending_machine, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/campfire, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/coffin, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/code_lock, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/sickle, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/small_oil_refinery, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/cockpit_vehicle_module, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/jackhammer, 4 -> 16
+[17:20:54] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/small_water_catcher, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/scattered_sulfur_rock, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/combat_knife, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/furnace, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/barbeque, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/excavator_airdrop_computer, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/motor_boat, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/building_plan, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/salvaged_shelves, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_key_card, 4 -> 16
+[17:20:55] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/texturaaaaa/5c62f6862b704559fc2ae2355df71539.png, java.io.FileNotFoundException
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/scarecrow, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/fluid_combiner, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/crossbow, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/metal_pickaxe, 4 -> 16
+[17:20:55] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/texturaaaaa/929fd62ac1ca27b4d1100e2b592c93b9.png, java.io.FileNotFoundException
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/888, 564 -> 1024
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/eletrical_branch, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/candy_cane_club, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/1xaxaa, 520 -> 1024
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/research_table, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/small_generator, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/salvaged_sword, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/nailgun, 4 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/vehicle_parts_crate, 8 -> 16
+[17:20:55] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/repair_bench, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_medicine_crate, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mushroom, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/candy_cane_club_lines_green, 8 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/chocolate, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/candy_cane_club_lines, 8 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rhib_screw_forward, 2 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/arrow, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/blue_barrel, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/car_wheels, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_tech_crate, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_water_catcher, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/supply_grenade, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/excavator_fuel_tank, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/0000, 564 -> 1024
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/volcano_firework, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/metal_axe, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:iii/metaldabldoor/metaldoor, 720 -> 1024
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mallet, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/metal_chair, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lantern, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mp5, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/4zxc, 564 -> 1024
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/medium_rechargeable_battery, 8 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/chainsaw, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/compound_bow, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/m249, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/smg, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bone_club, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_blue_crate, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/minicopter, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_furnace, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/snaptrap, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/hemp, 4 -> 16
+[17:20:56] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_fuel_crate, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/double_hqm_door, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rock, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pump_shotgun, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/workbench_level_2, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/workbench_level_3, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/double_wooden_door, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/workbench_level_1, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/table, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_green_keycard, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/speargun_spear, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_food_crate, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/window_bars, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/beancan_grenade, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bed, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/l96, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/greyglass, 999 -> 1024
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bone_knife, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/rhib_screw_backward, 2 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mixing_table, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/tool_crate, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wooden_chair, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/double_metal_door, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/hemp_dying, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/small_stash, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/planter_box, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/sleeping_bag, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/potato, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/potato_fruit, 8 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/corn_fruit, 8 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pumpkin, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:blocks/soul_sand, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_medkit, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/sprinkler, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/items/pitchfork, 180 -> 256
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/thompson, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/medical_crate, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/skull_fire_pit_head, 8 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_blue_keycard, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/berry_plant, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mining_quarry_ore_container, 4 -> 16
+[17:20:57] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/corn, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/chair, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/supply_crate_xmas, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/prototyte17, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/modular_car_lift, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/recycler, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/air, 1 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/backpack, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/ladder, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/gold_boots, 1 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/small_rechargeable_battery, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/locker, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:blocks/ladder, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/car_wheels_working_backward, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wire, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/python_revolver, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/xmax_tree, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pitchfork, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wind_turbine, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/666, 240 -> 256
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/common_crate, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/tuna_can_lamp, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/semi_auto_rifle, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/car_fuel_tank, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/primitive_crate, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/lab_components_crate, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/skull_fire_pit_side, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/garage_door, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/1111111112glaza, 540 -> 1024
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/2zxc, 564 -> 1024
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/water_pump, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/salvaged_axe, 4 -> 16
+[17:20:58] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/double_barrel_shotgun, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/m92, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/splitter, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/excavator_ore_switch, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/stone_spear, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/electric_heater, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_rechargeable_battery, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/stone_fireplace, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/safezone_marketplace, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/excavator_fuel_switch, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/scattered_metal_rock, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/medical_syringe, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/water_bottle, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/1isagi, 564 -> 1024
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/solar_panel_battery, 21 -> 32
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/motor_boat_screw_forward, 2 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/large_solar_panel, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/icons/invisible_icon, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/casino_roll, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_red_keypad, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/m39, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mace, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/boomer, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:items/record_wait, 1 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/1kkk, 564 -> 1024
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/oil_barrel, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/machete, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/sam_site, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/timed_explosive_charge, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/hmlmg, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/hose, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/supply_crate_parashute, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/pipeshotgun, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_button, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/wineskin, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/minicopter_back_propeiler, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/white_barrel, 4 -> 16
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/hitch_trough, 4 -> 16
+[17:20:59] [Client thread/ERROR]: Unable to parse metadata from minecraft:textures/rustme/models/1iii111.png
+java.lang.RuntimeException: broken aspect ratio and not an animation
+	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:337) ~[nightware/:?]
+	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:205) [nightware/:?]
+	at net.minecraft.client.renderer.texture.TextureMap.loadSprites(TextureMap.java:137) [nightware/:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadSprites(ModelBakery.java:921) [nightware/:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.setupModelRegistry(ModelBakery.java:95) [nightware/:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:25) [nightware/:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:112) [nightware/:?]
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:592) [nightware/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:458) [nightware/:?]
+	at net.minecraft.client.main.Main.main(Main.java:115) [nightware/:?]
+	at Start.main(Start.java:11) [nightware/:?]
+[17:20:59] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/radtown_green_keypad, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/auto_turret, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/sofa, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/mine, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled non power of 2: minecraft:rustme/models/00000111, 240 -> 256
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bandage, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/bolt_rifle, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/supply_crate, 4 -> 16
+[17:21:00] [Client thread/INFO]: [OptiFine] Scaled too small texture: minecraft:rustme/models/salvaged_pickaxe, 4 -> 16
+[17:21:00] [Client thread/INFO]: Created: 8192x4096 textures-atlas
+[17:21:01] [Client thread/WARN]: Missing model for: minecraft:item/rustme/gun_models/crossbow.loaded.zoom
+[17:21:01] [Client thread/WARN]: Missing model for: minecraft:item/rustme/building_models/fuse_box
+[17:21:01] [Client thread/WARN]: Missing model for: minecraft:item/rustme/gun_models/speargun.loaded.zoom
+[17:21:01] [Client thread/WARN]: Missing model for: minecraft:item/rustme/building_holograms/blue_fuse_box
+[17:21:01] [Client thread/WARN]: Missing model for: minecraft:item/rustme/building_holograms/red_fuse_box
+[17:21:02] [Client thread/INFO]: Narrator library for x64 successfully loaded
+[17:21:02] [Client thread/INFO]: [STDOUT]: Инициализация пользователя.. | 1/15
+[17:21:02] [Client thread/INFO]: [STDOUT]: hwid
+[17:21:03] [Client thread/INFO]: [STDOUT]: [InternalProtect] Auth Succeffull
+[17:21:03] [Client thread/INFO]: [STDOUT]: Дата и время окончания подписки: 2030-01-01 23:59
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация тем клиента.. | 2/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация модулей.. | 3/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация комманд.. | 4/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация конфигов.. | 5/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация аккаунтов.. | 6/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация последнего аккаунта.. | 7/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация передвижения худа.. | 8/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация списка друзей.. | 9/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация списка админов.. | 10/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация макросов.. | 11/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация активности в дискорде.. | 12/15
+[17:21:03] [Client thread/INFO]: [STDOUT]: Инициализация кликгуи.. | 13/15
+[17:21:06] [Client thread/INFO]: [STDOUT]: Инициализация крыльев.. | 14/15
+[17:21:06] [Client thread/INFO]: [STDOUT]: Инициализация эвентов.. | 15/15
+[17:21:06] [Client thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[17:21:06] [Client thread/INFO]: [OptiFine] Texture animation: mcpatcher/anim/inventory/inventory.properties
+[17:21:08] [Client thread/WARN]: [OptiFine] TextureAnimation: Animation coordinates are outside the target texture: textures/gui/container/inventory.png
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Colormap mcpatcher/colormap/water.png
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Colormap mcpatcher/colormap/swampgrass.png
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Colormap mcpatcher/colormap/swampfoliage.png
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Colormap mcpatcher/colormap/sky0.png
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Loading mcpatcher/color.properties
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: drop.water = ffffff
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: lilypad = 577119
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomColors: Potion colors: 20
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomSky properties: mcpatcher/sky/world0/sky1.properties
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomSky properties: mcpatcher/sky/world0/sky2.properties
+[17:21:08] [Client thread/INFO]: [OptiFine] CustomSky properties: mcpatcher/sky/world0/sky3.properties
