@@ -33,14 +33,15 @@ public class Notification {
    }
 
    public void render(float x, float y, float width, float height, float alpha) {
-      Color color = NightWare.getInstance().getC(0);
-      Color color2 = NightWare.getInstance().getC(500);
+      int color = NightWare.getInstance().getC(0).getRGB();
+      int color2 = NightWare.getInstance().getC(500).getRGB();
       boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
-      RenderUtility.drawGlow(x, y, width, height, 10, isDark ? Color.GRAY : (new Color(255, 255, 255)));
-      RenderUtility.drawRoundedRect(x, y, width, height, 5.0F, ColorUtility.applyOpacity(isDark ? new Color(30, 30, 30) : Color.WHITE, alpha).getRGB());
-      Fonts.icons21.drawString(this.type.getIcon(), x + 3.0F, y + 5.5F, ColorUtility.applyOpacity(color, alpha).getRGB());
-      Fonts.tenacityBold18.drawString(this.title, x + 6.0F + (float)Fonts.icons21.getStringWidth(this.type.getIcon()), y + 5.0F, ColorUtility.applyOpacity(isDark ? Color.WHITE : Color.BLACK, alpha).getRGB());
-      Fonts.nunitoBold15.drawString(this.description, x + 4.0F, y + 18.0F, ColorUtility.applyOpacity(isDark ? Color.WHITE : Color.BLACK, alpha).getRGB());
+      int textColor = isDark ? new Color(255, 255, 255).getRGB() : new Color(44, 44, 44).getRGB();
+      int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+      RenderUtility.drawGradientGlow(x, y, width, height, 10, color, color2, color, color2);
+      RenderUtility.drawRoundedRect(x, y, width, height, 5.0F, bgColor);
+      Fonts.tenacityBold18.drawString(this.title, x + 4.0F, y + 5.0F, textColor);
+      Fonts.nunitoBold15.drawString(this.description, x + 4.0F, y + 18.0F, textColor);
    }
 
    public NotificationType getType() {

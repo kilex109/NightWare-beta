@@ -193,6 +193,9 @@ public class SoundInfo extends Module {
                exes.remove(i);
             }
          }
+         /*if (exes.size() >= 20) {
+            exes.clear();
+         }*/
          this.siDraggable.setHeight(15 + exes.size() * 16 + 4);
          animSize.to = this.siDraggable.getHeight();
          int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();

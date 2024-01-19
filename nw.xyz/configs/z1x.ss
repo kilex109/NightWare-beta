@@ -14,7 +14,7 @@
       "enabled": false,
       "bind": 21,
       "Settings": {
-        "Режим": "Spin",
+        "Режим": "Backwards",
         "Скорость": 50.0
       }
     },
@@ -24,15 +24,15 @@
       "Settings": {}
     },
     "BullingBot": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "WaterSpeed": {
       "enabled": false,
-      "bind": 0,
+      "bind": 36,
       "Settings": {
-        "Скорость": 0.4,
+        "Скорость": 4.6,
         "Мини-прыжки": true
       }
     },
@@ -91,7 +91,7 @@
     },
     "SoundInfo": {
       "enabled": true,
-      "bind": 0,
+      "bind": 27,
       "Settings": {}
     },
     "Arraylist": {
@@ -245,7 +245,7 @@
       "Settings": {}
     },
     "NoHurtCam": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {}
     },
@@ -263,9 +263,9 @@
     },
     "AutoAccept": {
       "enabled": true,
-      "bind": 0,
+      "bind": 25,
       "Settings": {
-        "Принимать": "",
+        "Принимать": "Запрос на телепортацию\nЗапрос в друзья\nЗапрос на трейд\n",
         "Подтверждать трейд": true
       }
     },
@@ -349,11 +349,11 @@
         "Сайлент": true,
         "Все конечности": true,
         "Аккуратность": 0.15,
-        "Радиус": 360.0,
-        "Предикт": 7.0,
+        "Радиус": 182.0,
+        "Предикт": 7.5,
         "Авто-Стрельба": true,
         "Проверять задержку": false,
-        "КПС": 15.0
+        "КПС": 18.0
       }
     }
   }

@@ -80,7 +80,7 @@ public class Hud extends Module {
          GlStateManager.pushMatrix();
 
          if (elements.get(0)) {
-            String text = "NightWare " + ChatFormatting.GRAY + "| " + ChatFormatting.RESET + Minecraft.getDebugFPS() + "fps " + ChatFormatting.GRAY + "| " + ChatFormatting.RESET + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) + "ms";
+            String text = "NightWare " + ChatFormatting.BOLD + "| " + ChatFormatting.RESET + Minecraft.getDebugFPS() + "fps " + ChatFormatting.BOLD + "| " + ChatFormatting.RESET + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) + "ms";
             String textA = wtA.done;
             int width = Math.max(Fonts.mntsb16.getStringWidth(text),Fonts.mntssb14.getStringWidth(textA)) + 14;
             RenderUtility.drawGradientGlow(6, 6, width, 20, 5, color, color2, color, color2);
@@ -92,7 +92,7 @@ public class Hud extends Module {
          }
 
          if (elements.get(1)) {
-            Fonts.mntsb16.drawGradientString(mc.player.getPosition().getX() + " :: " + mc.player.getPosition().getY() + " :: " + mc.player.getPosition().getZ(), 2, scaledHeight - 8, NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));
+            Fonts.mntsb16.drawGradientString("X: " + mc.player.getPosition().getX() + ", Y: " + mc.player.getPosition().getY() + ", Z: " + mc.player.getPosition().getZ(), 2, scaledHeight - 8, NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));
          }
 
          if (elements.get(2)) {
