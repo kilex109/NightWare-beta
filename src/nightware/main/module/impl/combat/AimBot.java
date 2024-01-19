@@ -26,6 +26,8 @@ import nightware.main.utility.render.RenderUtility;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import static nightware.main.module.Utils.mc;
+
 @ModuleAnnotation(
         name = "AimBot",
         category = Category.COMBAT
@@ -45,6 +47,7 @@ public class AimBot extends Module {
     public static NumberSetting accuracy = new NumberSetting("Аккуратность", 0.1f, 0.01f, 0.3f, 0.01f);
     public static NumberSetting fov = new NumberSetting("Радиус", 100, 10, 360, 1);
     public static NumberSetting predict = new NumberSetting("Предикт", 5.5f, 0, 10, 0.1f);
+    public static BooleanSetting autoPredict = new BooleanSetting("Авто-предикт", true);
     public static BooleanSetting autoShoot = new BooleanSetting("Авто-Стрельба", false);
     public static BooleanSetting checkCoolDown = new BooleanSetting("Проверять задержку", false);
     public static NumberSetting cps = new NumberSetting("КПС", 15, 1, 20, 1);
@@ -52,6 +55,7 @@ public class AimBot extends Module {
 
     public AimBot() {
         super();
+        predict.setVisible(() -> !autoPredict.get());
         checkCoolDown.setVisible(() -> autoShoot.get());
         cps.setVisible(() -> autoShoot.get());
     }
@@ -95,7 +99,8 @@ public class AimBot extends Module {
     }
 
     public void aim(TargetResult target, EventUpdate event) {
-        float[] rotations = getAim(target, predict.get());
+        float pred = autoPredict.get() ? (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) / 20f : predict.get();
+        float[] rotations = getAim(target, pred);
         if (silent.get()) {
             event.setRotationYaw(rotations[0]);
             event.setRotationPitch(rotations[1]);
