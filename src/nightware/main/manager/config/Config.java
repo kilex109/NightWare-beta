@@ -17,7 +17,7 @@ public class Config implements ConfigUpdater {
 
    public Config(String name) {
       this.name = name;
-      this.file = new File(ConfigManager.configDirectory, name + ".nw");
+      this.file = new File(ConfigManager.configDirectory, name + ".ss");
       if (!this.file.exists()) {
          try {
             this.file.createNewFile();

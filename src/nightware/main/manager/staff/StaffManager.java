@@ -81,6 +81,6 @@ public class StaffManager {
    }
 
    static {
-      staffFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\staff.nw");
+      staffFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\staff.ss");
    }
 }
