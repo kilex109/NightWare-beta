@@ -35,7 +35,7 @@ public class NWMainMenu extends GuiScreen {
       this.addButton(new CustomButton(3, this.width / 2 + 2, this.height / 2 - 9, 100, 22, "Настройки"));
       this.addButton(new CustomButton(4, this.width / 2 - 102, this.height / 2 + 17, 204, 22, "Выход"));
 
-      if (NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("MEDIA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("BETA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("Dev")) {
+      if (NightWare.getInstance().getUserInfo().getRole().endsWith("+")) {
          this.addButton(new CustomButton(5, this.width / 2 + 106, this.height / 2 - 35, 22, 22, "RML"));
       }
    }

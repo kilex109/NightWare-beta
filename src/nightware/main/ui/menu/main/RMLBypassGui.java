@@ -22,7 +22,7 @@ public class RMLBypassGui extends GuiScreen {
    public void initGui() {
       this.width = (new ScaledResolution(mc)).getScaledWidth();
       this.height = (new ScaledResolution(mc)).getScaledHeight();
-      if (NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("MEDIA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("BETA+") || NightWare.getInstance().getUserInfo().getRole().equalsIgnoreCase("Dev")) {
+      if (NightWare.getInstance().getUserInfo().getRole().endsWith("+")) {
          HaveSub = true;
          this.addButton(new CustomButton(0, this.width / 2 - 102, this.height / 2 - 35, 100, 22, "Добавить"));
          this.addButton(new CustomButton(1, this.width / 2 + 2, this.height / 2 - 35, 100, 22, "Удалить"));
