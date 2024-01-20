@@ -46,6 +46,26 @@ public class Indicators extends Module {
 
    @EventTarget
    public void onPacket(EventReceivePacket eventPacket) {
+
+      ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+      executorService.scheduleAtFixedRate(() -> {
+         if (mc.player != null) {
+            NBTTagList loreTag = mc.player.getHeldItemMainhand().func_190925_c("display").getTagList("Lore", 8);
+
+            StringBuilder loreBuilder = new StringBuilder();
+            for (int i = 0; i < loreTag.tagCount(); i++) {
+               String loreLine = loreTag.getStringTagAt(i);
+               if (loreLine.contains("Ïàòðîíû")) {
+                  loreBuilder.append(loreTag.getStringTagAt(i)).append("\n");
+               }
+            }
+
+            ammo = (loreBuilder.toString()).replaceAll(".*§7\\| ", "");
+         }
+      }, 0, 1, TimeUnit.SECONDS);
+
+      System.out.println(mc.world.getScoreboard().getObjectiveInDisplaySlot(1).getDisplayName());
+
       if (eventPacket.getPacket() instanceof SPacketChat) {
          SPacketChat packet = (SPacketChat) eventPacket.getPacket();
          String unformattedText = packet.getChatComponent().getUnformattedText();
@@ -58,23 +78,6 @@ public class Indicators extends Module {
             } else if (unformattedText.startsWith("§a") && ammoi.get()) {
                eventPacket.setCancelled(true);
             }
-
-            ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
-            executorService.scheduleAtFixedRate(() -> {
-               if (mc.player != null) {
-                  NBTTagList loreTag = mc.player.getHeldItemMainhand().func_190925_c("display").getTagList("Lore", 8);
-
-                  StringBuilder loreBuilder = new StringBuilder();
-                  for (int i = 0; i < loreTag.tagCount(); i++) {
-                     String loreLine = loreTag.getStringTagAt(i);
-                     if (loreLine.contains("Ïàòðîíû")) {
-                        loreBuilder.append(loreTag.getStringTagAt(i)).append("\n");
-                     }
-                  }
-
-                  ammo = (loreBuilder.toString()).replaceAll(".*§7\\| ", "");
-               }
-            }, 0, 1, TimeUnit.SECONDS);
          }
       }
    }
