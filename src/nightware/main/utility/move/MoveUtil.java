@@ -71,9 +71,9 @@ public class MoveUtil implements Utility {
             double cos = MathHelper.cos((float) Math.toRadians(yaw + 90));
             mc.player.motionX = forward * motion * cos + strafe * motion * sin;
             mc.player.motionZ = forward * motion * sin - strafe * motion * cos;
-
         }
     }
+
     public static boolean isUnderBedrock() {
         if (mc.player.posY <= 3.0) {
             RayTraceResult trace = mc.world.rayTraceBlocks(mc.player.getPositionVector(), new Vec3d(mc.player.posX, 0.0, mc.player.posZ), false, false, false);
@@ -98,10 +98,8 @@ public class MoveUtil implements Utility {
                 forward = -1;
             }
         }
-        mc.player.motionX = (forward * speed * Math.cos(Math.toRadians(yaw + 90))
-                + strafe * speed * Math.sin(Math.toRadians(yaw + 90)));
-        mc.player.motionZ = (forward * speed * Math.sin(Math.toRadians(yaw + 90))
-                - strafe * speed * Math.cos(Math.toRadians(yaw + 90)));
+        mc.player.motionX = (forward * speed * Math.cos(Math.toRadians(yaw + 90)) + strafe * speed * Math.sin(Math.toRadians(yaw + 90)));
+        mc.player.motionZ = (forward * speed * Math.sin(Math.toRadians(yaw + 90)) - strafe * speed * Math.cos(Math.toRadians(yaw + 90)));
     }
 
     public static boolean reason(boolean water) {

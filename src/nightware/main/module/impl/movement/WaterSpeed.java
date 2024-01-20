@@ -11,6 +11,7 @@ import nightware.main.event.player.EventUpdate;
 import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
+import nightware.main.module.Utils;
 import nightware.main.module.setting.impl.BooleanSetting;
 import nightware.main.module.setting.impl.NumberSetting;
 import nightware.main.utility.move.MoveUtil;
@@ -47,7 +48,7 @@ public class WaterSpeed extends Module {
             mc.player.setSneaking(true);
             mc.player.motionY = .12f;
          }
-         MoveUtil.setMotion(speed.get());
+         Utils.setSpeed(speed.get());
          mc.player.setSneaking(true);
    }
 

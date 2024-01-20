@@ -13,7 +13,6 @@ public enum Themes {
    ELECTRIC(new Theme("Electric", Theme.ThemeType.STYLE, new Color[]{new Color(0x4776E6), new Color(0x8E54E9)})),
    BLOODY(new Theme("Bloody Mary", Theme.ThemeType.STYLE, new Color[]{new Color(0xFF512F), new Color(0xDD2476)})),
    ROSEWATER(new Theme("Rose Water", Theme.ThemeType.STYLE, new Color[]{new Color(0xE55D87), new Color(0x5FC3E4)})),
-   WITCHING(new Theme("Witching Hour", Theme.ThemeType.STYLE, new Color[]{new Color(0xE55D87), new Color(0x5FC3E4)})),
    MONTECARLO(new Theme("Monte Carlo", Theme.ThemeType.STYLE, new Color[]{new Color(0xCC95C0), new Color(0xDBD4B4), new Color(0x7AA1D2)})),
    ARGON(new Theme("Argon", Theme.ThemeType.STYLE, new Color[]{new Color(0x03001e), new Color(0x7303c0), new Color(0xec38bc), new Color(0xfdeff9)})),
    WIRETAP(new Theme("Wiretap", Theme.ThemeType.STYLE, new Color[]{new Color(0x8A2387), new Color(0xE94057), new Color(0xec38bc)})),

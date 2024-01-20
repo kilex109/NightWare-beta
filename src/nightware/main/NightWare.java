@@ -20,6 +20,7 @@ import nightware.main.module.ModuleManager;
 import nightware.main.module.impl.render.Arraylist;
 import nightware.main.ui.csgui.CsGui;
 import nightware.main.ui.menu.altmanager.alt.AltFileManager;
+import nightware.main.utility.misc.BullingUtility;
 import nightware.main.utility.misc.Discord;
 import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.model.WingsLayerRender;
@@ -27,6 +28,7 @@ import nightware.main.utility.render.model.WingsModel;
 import java.awt.Color;
 import java.io.IOException;
 import java.util.Random;
+import java.util.concurrent.CompletableFuture;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -53,6 +55,8 @@ public class NightWare {
    @Getter
    private FriendManager friendManager;
    @Getter
+   private BullingUtility bullingUtility;
+   @Getter
    private StaffManager staffManager;
    @Getter
    private MacroManager macroManager;
@@ -67,16 +71,73 @@ public class NightWare {
    public static String till;
 
    public void start() throws IOException {
-      System.out.println("Инициализация пользователя.. | 1/15");
+      System.out.println("Инициализация пользователя.. | 1/16");
       AvtorizaciyaHAHA.Server();
+      antiDebug();
       this.userInfo = new UserInfo(username, uid, role, till);
-      System.out.println("Инициализация тем клиента.. | 2/15");
+      System.out.println("Инициализация тем клиента.. | 2/16");
       this.themeManager = new ThemeManager();
-      System.out.println("Инициализация модулей.. | 3/15");
+      System.out.println("Инициализация модулей.. | 3/16");
       this.moduleManager = new ModuleManager();
-      System.out.println("Инициализация комманд.. | 4/15");
+      System.out.println("Инициализация комманд.. | 4/16");
       this.commandManager = new CommandManager();
 
+      try {
+         System.out.println("Инициализация конфигов.. | 5/16");
+         this.configManager.loadConfig("autocfg");
+         System.out.println("Инициализация аккаунтов.. | 6/16");
+         this.altFileManager = new AltFileManager();
+         this.altFileManager.init();
+         System.out.println("Инициализация последнего аккаунта.. | 7/16");
+         this.lastAccountManager = new LastAccountManager();
+         this.lastAccountManager.init();
+         System.out.println("Инициализация передвижения худа.. | 8/16");
+         this.dragManager = new DragManager();
+         this.dragManager.init();
+         System.out.println("Инициализация списка друзей.. | 9/16");
+         this.friendManager = new FriendManager();
+         this.friendManager.init();
+         System.out.println("Инициализация списка админов.. | 10/16");
+         this.staffManager = new StaffManager();
+         this.staffManager.init();
+         System.out.println("Инициализация макросов.. | 11/16");
+         this.macroManager = new MacroManager();
+         this.macroManager.init();
+      } catch (Exception ignored) {
+      }
+      System.out.println("Инициализация активности в дискорде.. | 12/16");
+      Discord.startRPC();
+      System.out.println("Инициализация кликгуи.. | 13/16");
+      this.csGui = new CsGui();
+      System.out.println("Инициализация крыльев.. | 14/16");
+      new WingsModel();
+
+       for (RenderPlayer render : Minecraft.getMinecraft().getRenderManager().getSkinMap().values()) {
+           render.addLayer(new WingsLayerRender());
+       }
+
+      System.out.println("Инициализация эвентов.. | 15/16");
+      EventManager.register(this);
+      System.out.println("Инициализация буллинга.. | 16/16");
+      this.bullingUtility = new BullingUtility();
+      this.bullingUtility.init();
+      if (username.equals("null") || till.equals("null") || role.equals("null")) {
+         System.exit((new Random()).nextInt(20));
+      }
+   }
+
+   @NotNative
+   public void reload() {
+      try {
+         AvtorizaciyaHAHA.Server();
+      } catch (IOException e) {
+         throw new RuntimeException(e);
+      }
+      this.userInfo = new UserInfo(username, uid, role, till);
+   }
+
+   @NotNative
+   public void antiDebug() {
       try {
          killProcess("ollydbg.exe");
          killProcess("ProcessHacker.exe");
@@ -111,57 +172,11 @@ public class NightWare {
          killProcess("ida64.exe");
          killProcess("httpdebugger.exe");
          killProcess("cheatengine-x86_64.exe");
-
-         System.out.println("Инициализация конфигов.. | 5/15");
-         this.configManager.loadConfig("autocfg");
-         System.out.println("Инициализация аккаунтов.. | 6/15");
-         this.altFileManager = new AltFileManager();
-         this.altFileManager.init();
-         System.out.println("Инициализация последнего аккаунта.. | 7/15");
-         this.lastAccountManager = new LastAccountManager();
-         this.lastAccountManager.init();
-         System.out.println("Инициализация передвижения худа.. | 8/15");
-         this.dragManager = new DragManager();
-         this.dragManager.init();
-         System.out.println("Инициализация списка друзей.. | 9/15");
-         this.friendManager = new FriendManager();
-         this.friendManager.init();
-         System.out.println("Инициализация списка админов.. | 10/15");
-         this.staffManager = new StaffManager();
-         this.staffManager.init();
-         System.out.println("Инициализация макросов.. | 11/15");
-         this.macroManager = new MacroManager();
-         this.macroManager.init();
-      } catch (Exception ignored) {
-      }
-      System.out.println("Инициализация активности в дискорде.. | 12/15");
-      Discord.startRPC();
-      System.out.println("Инициализация кликгуи.. | 13/15");
-      this.csGui = new CsGui();
-      System.out.println("Инициализация крыльев.. | 14/15");
-      new WingsModel();
-
-       for (RenderPlayer render : Minecraft.getMinecraft().getRenderManager().getSkinMap().values()) {
-           render.addLayer(new WingsLayerRender());
-       }
-
-      System.out.println("Инициализация эвентов.. | 15/15");
-      EventManager.register(this);
-      if (username.equals("null") || till.equals("null") || role.equals("null")) {
-         System.exit((new Random()).nextInt(20));
-      }
-   }
-
-   @NotNative
-   public void reload() {
-      try {
-         AvtorizaciyaHAHA.Server();
+         killProcess("cheatengine-x86_64-SSE4-AVX2.exe");
+         killProcess("cheatengine-i386.exe");
       } catch (IOException e) {
-         throw new RuntimeException(e);
+         for (; ; ) ;
       }
-      this.userInfo = new UserInfo(username, uid, role, till);
-      this.themeManager = new ThemeManager();
-      this.commandManager = new CommandManager();
    }
 
    @NotNative

@@ -4,6 +4,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.darkmagician6.eventapi.EventManager;
+import nightware.main.NightWare;
 import nightware.main.event.misc.EventMessage;
 import nightware.main.event.misc.EventPush;
 import nightware.main.event.player.EventMove;
@@ -86,6 +87,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IInteractionObject;
 import net.minecraft.world.World;
+import nightware.main.module.impl.player.NoPush;
 
 public class EntityPlayerSP extends AbstractClientPlayer {
     public final NetHandlerPlayClient connection;
@@ -541,7 +543,7 @@ public class EntityPlayerSP extends AbstractClientPlayer {
     protected boolean pushOutOfBlocks(double x, double y, double z) {
         EventPush eventPush = new EventPush();
         EventManager.call(eventPush);
-        if (eventPush.isCancelled()){
+        if (eventPush.isCancelled()) {
             return false;
         }
         if (this.noClip) {

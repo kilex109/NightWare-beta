@@ -5,18 +5,18 @@
     "name": "Potions"
   },
   {
-    "x": 250,
-    "y": 100,
+    "x": 812,
+    "y": 21,
     "name": "Sound Info"
   },
   {
-    "x": 300,
-    "y": 10,
+    "x": 425,
+    "y": 380,
     "name": "Target HUD"
   },
   {
-    "x": 200,
-    "y": 200,
+    "x": 187,
+    "y": 81,
     "name": "Keybinds"
   },
   {

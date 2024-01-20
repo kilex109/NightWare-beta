@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/nightware/main/module/impl/player/MiddleClick.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/nightware/main/module/impl/render/Hud.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/nightware/main/module/impl/util/Indicators.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/nightware/main/ui/menu/main/NWMainMenu.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/nightware/main/utility/render/font/FontRenderer.java" charset="windows-1251" />
     <file url="PROJECT" charset="windows-1251" />

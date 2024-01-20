@@ -22,7 +22,6 @@ public class StaffManager {
       } else {
          this.readStaff();
       }
-
    }
 
    public void addStaff(String name) {

@@ -2,11 +2,16 @@ package nightware.main.module.impl.combat;
 
 import com.darkmagician6.eventapi.EventTarget;
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.play.server.SPacketChat;
+import net.minecraft.util.text.ChatType;
 import nightware.main.NightWare;
+import nightware.main.event.packet.EventReceivePacket;
 import nightware.main.event.player.EventUpdate;
 import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
+import nightware.main.module.impl.util.Indicators;
 import nightware.main.module.setting.impl.BooleanSetting;
 import nightware.main.module.setting.impl.NumberSetting;
 import net.minecraft.client.Minecraft;
@@ -25,6 +30,11 @@ import nightware.main.utility.render.RenderUtility;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ForkJoinPool;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 
 import static nightware.main.module.Utils.mc;
 
@@ -40,14 +50,15 @@ public class AimBot extends Module {
     int ticks = 0;
     public TimerUtils timer = new TimerUtils();
     public TimerUtils timerLastSee = new TimerUtils();
+    public static boolean reloading;
 
     public static BooleanSetting bots = new BooleanSetting("Боты", false);
     public static BooleanSetting silent = new BooleanSetting("Сайлент", true);
     public static BooleanSetting multipoint = new BooleanSetting("Все конечности", false);
     public static NumberSetting accuracy = new NumberSetting("Аккуратность", 0.1f, 0.01f, 0.3f, 0.01f);
     public static NumberSetting fov = new NumberSetting("Радиус", 100, 10, 360, 1);
-    public static NumberSetting predict = new NumberSetting("Предикт", 5.5f, 0, 10, 0.1f);
     public static BooleanSetting autoPredict = new BooleanSetting("Авто-предикт", true);
+    public static NumberSetting predict = new NumberSetting("Предикт", 5.5f, 0, 10, 0.1f);
     public static BooleanSetting autoShoot = new BooleanSetting("Авто-Стрельба", false);
     public static BooleanSetting checkCoolDown = new BooleanSetting("Проверять задержку", false);
     public static NumberSetting cps = new NumberSetting("КПС", 15, 1, 20, 1);
@@ -86,11 +97,17 @@ public class AimBot extends Module {
     }
 
     public void shoot(EntityLivingBase target) {
-        if ((checkCoolDown.get() && mc.player.getCooldownTracker().getCooldown(mc.player.inventory.getCurrentItem().getItem(), mc.getRenderPartialTicks()) == 0) || !checkCoolDown.get()) {
+        reloading = false;
+        if ((checkCoolDown.get() && mc.player.getCooldownTracker().getCooldown(mc.player.inventory.getCurrentItem().getItem(), mc.getRenderPartialTicks()) == 0) || !checkCoolDown.get() && !reloading) {
             mc.playerController.clickBlock(new BlockPos(mc.player.posX, mc.player.posY + 1, mc.player.posZ), EnumFacing.UP);
             mc.player.swingArm(EnumHand.MAIN_HAND);
             timer.reset();
         }
+    }
+
+    @EventTarget
+    public void onPacket(EventReceivePacket eventPacket) {
+
     }
 
     public float getBowOffset(Entity t) {
@@ -133,36 +150,44 @@ public class AimBot extends Module {
         return getNeededRotations(target.getTarget().posX - posX + target.getPos().xCoord, target.getTarget().posY + target.getPos().yCoord + posY, target.getTarget().posZ - posZ + target.getPos().zCoord, mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ);
     }
 
+    private static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
+
     public Vec3d getMultipointPos(EntityLivingBase target, float predict) {
         if (mc.player.canEntityBeSeen(target)) {
             return new Vec3d(0, target.getEyeHeight(), 0);
         }
+
         ArrayList<Vec3d> vec3ds = new ArrayList<>();
         double posX = (target.lastTickPosX - target.posX) * predict;
         double posZ = (target.lastTickPosZ - target.posZ) * predict;
+
         if (mc.player.canEntityBeSeen((target.posX - posX), (target.posY) + target.getEyeHeight(), (target.posZ - posZ))) {
             return new Vec3d(0, target.getEyeHeight(), 0);
         } else if (multipoint.get()) {
-            for (float x = -(target.width / 2); x < target.width / 2; x += accuracy.get()) {
-                for (float y = 0; y < target.height; y += accuracy.get()) {
-                    for (float z = -(target.width / 2); z < target.width / 2; z += accuracy.get()) {
-                        if (mc.player.canEntityBeSeen((target.posX - posX) + x, (target.posY) + y, (target.posZ - posZ) + z)) {
-                            vec3ds.add(new Vec3d(x, y, z));
-                        }
-                    }
-                }
-            }
+            float accuracyValue = accuracy.get();
+            List<Vec3d> points = DoubleStream.iterate(-(target.width / 2), x -> x < target.width / 2, x -> x + accuracyValue)
+                    .boxed()
+                    .flatMap(x ->
+                            DoubleStream.iterate(0, y -> y < target.height, y -> y + accuracyValue)
+                                    .boxed()
+                                    .flatMap(y ->
+                                            DoubleStream.iterate(-(target.width / 2), z -> z < target.width / 2, z -> z + accuracyValue)
+                                                    .mapToObj(z ->
+                                                            new Vec3d((target.posX - posX) + x, (target.posY) + y, (target.posZ - posZ) + z)
+                                                    )
+                                    )
+                    )
+                    .parallel()
+                    .filter(point ->
+                            mc.player.canEntityBeSeen(point.x, point.y, point.z)
+                    )
+                    .collect(Collectors.toList());
 
-            if (vec3ds.size() > 0) {
-                vec3ds.sort(new Comparator<Vec3d>() {
-                    @Override
-                    public int compare(Vec3d o1, Vec3d o2) {
-                        return (int) ((getDistance(o1, new Vec3d(0, target.getEyeHeight(), 0)) - getDistance(o2, new Vec3d(0, target.getEyeHeight(), 0))) * 1000);
-                    }
-                });
-                return vec3ds.get(0);
-            } else {
-                return null;
+            if (!points.isEmpty()) {
+                Optional<Vec3d> result = points.parallelStream()
+                        .min(Comparator.comparingDouble(o -> getDistance(o, new Vec3d(0, target.getEyeHeight(), 0))));
+
+                return result.orElse(null);
             }
         }
         return null;

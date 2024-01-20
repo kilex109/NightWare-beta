@@ -109,11 +109,16 @@ public abstract class GuiContainer extends GuiScreen
      */
     public void drawScreen(int mouseX, int mouseY, float partialTicks)
     {
+        int color = NightWare.getInstance().getC(0).getRGB();
+        int color2 = NightWare.getInstance().getC(500).getRGB();
         boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+        int textColor = isDark ? new Color(255, 255, 255).getRGB() : new Color(44, 44, 44).getRGB();
+        int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
         int w = (new ScaledResolution(mc)).getScaledWidth();
         int h = (new ScaledResolution(mc)).getScaledHeight();
-        RenderUtility.drawRoundedRect(w / 2 - (Fonts.mntsb16.getStringWidth("Drop All") / 2 + 3), h - 20, Fonts.mntsb16.getStringWidth("Drop All") + 6, 15, 5, isDark ? new Color(50, 50, 50).getRGB() : new Color(255, 255, 255).getRGB());
-        Fonts.mntsb16.drawCenteredString("Drop All", w / 2, h - 15, -1);
+        RenderUtility.drawGradientGlow(w / 2 - (Fonts.mntsb16.getStringWidth("Drop All") / 2 + 3), h - 20, Fonts.mntsb16.getStringWidth("Drop All") + 6, 15, 5, color, color2, color, color2);
+        RenderUtility.drawRoundedRect(w / 2 - (Fonts.mntsb16.getStringWidth("Drop All") / 2 + 3), h - 20, Fonts.mntsb16.getStringWidth("Drop All") + 6, 15, 5, bgColor);
+        Fonts.mntsb16.drawCenteredString("Drop All", w / 2, h - 15, textColor);
 
         int i = this.guiLeft;
         int j = this.guiTop;

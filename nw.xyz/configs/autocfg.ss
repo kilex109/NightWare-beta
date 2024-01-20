@@ -1,10 +1,10 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Midnight",
+  "StyleTheme": "Night",
   "Modules": {
     "AutoSprint": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Во все стороны": false
@@ -12,27 +12,35 @@
     },
     "AntiAim": {
       "enabled": false,
-      "bind": 0,
+      "bind": 21,
       "Settings": {
-        "Режим": "Spin",
+        "Режим": "Backwards",
         "Скорость": 50.0
       }
     },
     "AntiBot": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
-    "BullingBot": {
-      "enabled": false,
+    "KillMessage": {
+      "enabled": true,
       "bind": 0,
       "Settings": {}
+    },
+    "Indicators": {
+      "enabled": true,
+      "bind": 0,
+      "Settings": {
+        "Перезарядка": true,
+        "Патроны": true
+      }
     },
     "WaterSpeed": {
       "enabled": false,
-      "bind": 0,
+      "bind": 36,
       "Settings": {
-        "Скорость": 0.4,
+        "Скорость": 4.8,
         "Мини-прыжки": true
       }
     },
@@ -42,15 +50,15 @@
       "Settings": {}
     },
     "Arrows": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Размер": 1.0
+        "Размер": 1.5
       }
     },
     "BackPeek": {
       "enabled": false,
-      "bind": 0,
+      "bind": 44,
       "Settings": {
         "Ускорение": true,
         "Сила ускорения": 0.6,
@@ -60,52 +68,53 @@
     },
     "SuspendPackets": {
       "enabled": false,
-      "bind": 0,
+      "bind": 49,
       "Settings": {
         "Дистанция": 1.5
       }
     },
     "SlowPackets": {
       "enabled": false,
-      "bind": 0,
+      "bind": 48,
       "Settings": {
         "Задержка": 50.0
       }
     },
     "NoSlow": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "Strafe": {
       "enabled": false,
-      "bind": 0,
+      "bind": 34,
       "Settings": {}
     },
     "Timer": {
       "enabled": false,
-      "bind": 0,
+      "bind": 47,
       "Settings": {
         "Скорость": 0.6
       }
     },
     "SoundInfo": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "Arraylist": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Hide Render": false,
+        "Hide Render": true,
         "Shadow": true,
         "Color Speed": 6.0,
-        "Lower Case": false
+        "Lower Case": false,
+        "Режим": "Новый"
       }
     },
     "Target ESP": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Mode": "Default",
@@ -113,95 +122,95 @@
       }
     },
     "Hud": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Элементы": ""
+        "Элементы": "Логотип\nКоординаты\nБроня\nТаргет худ\n"
       }
     },
     "ClickGui": {
       "enabled": false,
       "bind": 54,
       "Settings": {
-        "Blur": true,
+        "Blur": false,
         "Blur Iterations": 5.0
       }
     },
     "ChunkAnimator": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "Trails": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Delete through": 100.0
+        "Delete through": 500.0
       }
     },
     "ChinaHat": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Outline": true,
-        "Line Width": 1.0
+        "Line Width": 5.0
       }
     },
     "FullBright": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "JumpCircle": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "WallHack": {
       "enabled": false,
-      "bind": 0,
+      "bind": 22,
       "Settings": {
         "Свечение": false,
         "Просвет": true
       }
     },
     "HitEffect": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Эффект": "Молния"
       }
     },
     "WorldTime": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Mode": "Day",
+        "Mode": "Night",
         "Time": 1000.0
       }
     },
     "Keybinds": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "Wings": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Scale": 1.0
       }
     },
     "NameTags": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "EntityESP": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Elements": ""
+        "Elements": "Box\nItem\n"
       }
     },
     "ItemESP": {
@@ -210,7 +219,7 @@
       "Settings": {}
     },
     "CameraClip": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
@@ -229,23 +238,23 @@
       }
     },
     "Crosshair": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Dot": false,
-        "Cooldown Indicator": false,
+        "Cooldown Indicator": true,
         "Highlight Entities": true,
-        "T-shaped": false,
+        "T-shaped": true,
         "Radius": 3.0
       }
     },
     "Notifications": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "NoHurtCam": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
@@ -253,19 +262,19 @@
       "enabled": false,
       "bind": 0,
       "Settings": {
-        "Действия": ""
+        "Действия": "Прыжок\nСообщение\n"
       }
     },
     "AutoRespawn": {
       "enabled": false,
-      "bind": 0,
+      "bind": 24,
       "Settings": {}
     },
     "AutoAccept": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
-        "Принимать": "",
+        "Принимать": "Запрос на телепортацию\nЗапрос в друзья\nЗапрос на трейд\n",
         "Подтверждать трейд": true
       }
     },
@@ -275,30 +284,30 @@
       "Settings": {}
     },
     "NoServerRotations": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "InventoryMove": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "MCF": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "NoClip": {
       "enabled": false,
-      "bind": 0,
+      "bind": 45,
       "Settings": {
         "Скорость": 0.6
       }
     },
     "FreeCam": {
       "enabled": false,
-      "bind": 0,
+      "bind": 23,
       "Settings": {
         "Скорость": 1.0
       }
@@ -317,7 +326,7 @@
       }
     },
     "BetterTab": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Анимация": true,
@@ -325,36 +334,36 @@
       }
     },
     "HitSound": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Звук": "Bonk"
       }
     },
     "DeathCoordinates": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "PasswordHider": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "AimBot": {
       "enabled": false,
-      "bind": 0,
+      "bind": 19,
       "Settings": {
-        "Боты": false,
+        "Боты": true,
         "Сайлент": true,
-        "Все конечности": false,
-        "Аккуратность": 0.1,
-        "Радиус": 100.0,
-        "Предикт": 5.5,
-        "Авто-предикт": true,
-        "Авто-Стрельба": false,
+        "Все конечности": true,
+        "Аккуратность": 0.15,
+        "Радиус": 179.0,
+        "Авто-предикт": false,
+        "Предикт": 7.0,
+        "Авто-Стрельба": true,
         "Проверять задержку": false,
-        "КПС": 15.0
+        "КПС": 18.0
       }
     }
   }
