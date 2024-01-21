@@ -5,28 +5,28 @@
     "name": "Potions"
   },
   {
-    "x": 823,
-    "y": 12,
+    "x": 812,
+    "y": 21,
     "name": "Sound Info"
   },
   {
-    "x": 421,
-    "y": 385,
+    "x": 425,
+    "y": 380,
     "name": "Target HUD"
   },
   {
-    "x": 151,
-    "y": 73,
+    "x": 187,
+    "y": 81,
     "name": "Keybinds"
   },
   {
-    "x": 505,
-    "y": 69,
+    "x": 200,
+    "y": 100,
     "name": "Staff List"
   },
   {
-    "x": 335,
-    "y": 143,
+    "x": 10,
+    "y": 100,
     "name": "Inventory View"
   }
 ]

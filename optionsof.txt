@@ -6,10 +6,10 @@ ofOcclusionFancy:false
 ofSmoothFps:false
 ofSmoothWorld:true
 ofAoLevel:0.0
-ofClouds:0
+ofClouds:3
 ofCloudsHeight:0.0
-ofTrees:0
-ofDroppedItems:0
+ofTrees:1
+ofDroppedItems:1
 ofRain:3
 ofAnimatedWater:2
 ofAnimatedLava:2
@@ -32,7 +32,7 @@ ofLagometer:false
 ofShowFps:false
 ofAutoSaveTicks:400
 ofBetterGrass:3
-ofConnectedTextures:2
+ofConnectedTextures:3
 ofWeather:true
 ofSky:true
 ofStars:true
@@ -47,10 +47,10 @@ ofAfLevel:1
 ofProfiler:false
 ofBetterSnow:false
 ofSwampColors:true
-ofRandomMobs:true
-ofSmoothBiomes:true
+ofRandomMobs:false
+ofSmoothBiomes:false
 ofCustomFonts:true
-ofCustomColors:true
+ofCustomColors:false
 ofCustomItems:true
 ofCustomSky:true
 ofShowCapes:true
@@ -65,5 +65,5 @@ ofCustomGuis:true
 ofFullscreenMode:Default
 ofFastMath:false
 ofFastRender:false
-ofTranslucentBlocks:0
+ofTranslucentBlocks:1
 key_of.key.zoom:46

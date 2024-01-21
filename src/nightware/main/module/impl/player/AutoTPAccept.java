@@ -12,6 +12,7 @@ import nightware.main.module.setting.impl.BooleanSetting;
 import nightware.main.module.setting.impl.MultiBooleanSetting;
 
 import java.util.Arrays;
+import java.util.concurrent.CompletableFuture;
 
 import net.minecraft.inventory.ClickType;
 import net.minecraft.network.play.server.SPacketChat;
@@ -40,14 +41,14 @@ public class AutoTPAccept extends Module {
          } else if (m.contains("/trade") && che.get(0)) {
             ChatUtility.sendChatMessage("/trade accept");
             if (autoAccept.get()) {
-               new Thread(() -> {
+               CompletableFuture.runAsync(() -> {
                   try {
                      Thread.sleep(500L);
                   } catch (InterruptedException e) {
                      throw new RuntimeException(e);
                   }
                   mc.playerController.windowClick(mc.player.openContainer.windowId, 49, 0, ClickType.PICKUP, mc.player);
-               }).start();
+               });
             }
          }
       }

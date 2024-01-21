@@ -32,6 +32,7 @@ public class Arraylist extends Module {
    public BooleanSetting shadow = new BooleanSetting("Shadow", true);
    public static NumberSetting colorSpeed = new NumberSetting("Color Speed", 6.0F, 1.0F, 9.0F, 1.0F);
    public BooleanSetting lowerCase = new BooleanSetting("Lower Case", false);
+   public static ModeSetting mode = new ModeSetting("Режим", "Новый", "Новый", "Старый");
 
    @EventTarget
    public void onRender2D(EventRender2D event) {
@@ -126,21 +127,37 @@ public class Arraylist extends Module {
             if (!moduleAnimation.isDone()) {
                RenderUtility.scaleStart(x + 2.0F + alphaAnimation / 2.0F, y + (float)offset + 5.5F, moduleAnimation.getOutput());
             }
+            if (mode.is("Старый")) {
+               alphaAnimation = moduleAnimation.getOutput();
+               int offsetiki = 0;
+               offsetiki += 25;
+               int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+               int color = NightWare.getInstance().getC(offsetiki).getRGB();
+               int color2 = NightWare.getInstance().getC(500 + offsetiki).getRGB();
+               RenderUtility.drawFixedGlow(x, y + (float) offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 5, bgColor);
+               RenderUtility.drawRoundedRect(x, y + (float) offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 2, bgColor);
+               this.getFont().drawGradientString(moduleName, x + 2.0F + (float) (this.getFont().equals(Fonts.minecraft13) ? 1 : 0), y + (float) offset + (11.0F - (float) this.getFont().getStringHeight(moduleName)) / 2.0F + 1.0F, new Color(color), new Color(color2));
+               if (!moduleAnimation.isDone()) {
+                  RenderUtility.scaleEnd();
+               }
 
-            alphaAnimation = moduleAnimation.getOutput();
-            int offsetiki = 0;
-            offsetiki += 25;
-            int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
-            int color = NightWare.getInstance().getC(offsetiki).getRGB();
-            int color2 = NightWare.getInstance().getC(500 + offsetiki).getRGB();
-            RenderUtility.drawFixedGlow(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 5, bgColor);
-            RenderUtility.drawRoundedRect(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 2, bgColor);
-            this.getFont().drawGradientString(moduleName, x + 2.0F + (float)(this.getFont().equals(Fonts.minecraft13) ? 1 : 0), y + (float)offset + (11.0F - (float)this.getFont().getStringHeight(moduleName)) / 2.0F + 1.0F, new Color(color), new Color(color2));
-            if (!moduleAnimation.isDone()) {
-               RenderUtility.scaleEnd();
+               offset = (int) ((float) offset + moduleAnimation.getOutput() * 10.0F);
+            } else if (mode.is("Новый")) {
+               alphaAnimation = moduleAnimation.getOutput();
+               int offsetiki = 0;
+               offsetiki += 25;
+               int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+               int color = NightWare.getInstance().getC(offsetiki).getRGB();
+               int color2 = NightWare.getInstance().getC(500 + offsetiki).getRGB();
+               RenderUtility.drawFixedGlow(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 6, color);
+               RenderUtility.drawRoundedRect(x, y + (float)offset, this.getFont().getStringWidth(moduleName) + 4, 11.0F, 5, bgColor);
+               this.getFont().drawGradientString(moduleName, x + 2.0F + (float)(this.getFont().equals(Fonts.minecraft13) ? 1 : 0), y + (float)offset + (11.0F - (float)this.getFont().getStringHeight(moduleName)) / 2.0F + 1.0F, new Color(color), new Color(color2));
+               if (!moduleAnimation.isDone()) {
+                  RenderUtility.scaleEnd();
+               }
+
+               offset = (int)((float)offset + moduleAnimation.getOutput() * 12F);
             }
-
-            offset = (int)((float)offset + moduleAnimation.getOutput() * 10.0F);
             ++count;
          }
       }

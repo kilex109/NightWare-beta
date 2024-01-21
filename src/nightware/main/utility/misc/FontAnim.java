@@ -2,14 +2,12 @@ package nightware.main.utility.misc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class FontAnim {
 
     private List<String> texts = new ArrayList<>();
-
-
     public String done = "";
-
     private int delay = 0;
 
     public FontAnim(int delay, List<String> texts) {
@@ -19,7 +17,7 @@ public class FontAnim {
     }
 
     public void start() {
-        new Thread(() -> {
+        CompletableFuture.runAsync(() -> {
             try {
                 int index = 0;
                 while (true) {
@@ -38,11 +36,9 @@ public class FontAnim {
                     index += 1;
                     Thread.sleep(400);
                 }
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        }).start();
+        });
     }
 }
-

@@ -29,7 +29,8 @@ public class ModuleManager {
       this.registerModule(new AutoSprint());
       this.registerModule(new AntiAim());
       this.registerModule(new AntiBot());
-      this.registerModule(new BullingBot());
+      this.registerModule(new KillMessage());
+      this.registerModule(new Indicators());
       this.registerModule(new WaterSpeed());
       this.registerModule(new Optimizer());
       this.registerModule(new Arrows());

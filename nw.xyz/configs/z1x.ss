@@ -1,10 +1,10 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Bloody Mary",
+  "StyleTheme": "Gold",
   "Modules": {
     "AutoSprint": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {
         "Во все стороны": false
@@ -23,17 +23,27 @@
       "bind": 0,
       "Settings": {}
     },
-    "BullingBot": {
+    "KillMessage": {
       "enabled": true,
       "bind": 0,
       "Settings": {}
+    },
+    "Indicators": {
+      "enabled": true,
+      "bind": 0,
+      "Settings": {
+        "Перезарядка": true,
+        "Патроны": true
+      }
     },
     "WaterSpeed": {
       "enabled": false,
       "bind": 36,
       "Settings": {
-        "Скорость": 4.6,
-        "Мини-прыжки": true
+        "Скорость": 1.2,
+        "Лимит скорости": 2.1,
+        "Скорость накопления": 0.1,
+        "Режим": "Плавный"
       }
     },
     "Optimizer": {
@@ -67,7 +77,7 @@
     },
     "SlowPackets": {
       "enabled": false,
-      "bind": 45,
+      "bind": 48,
       "Settings": {
         "Задержка": 50.0
       }
@@ -91,7 +101,7 @@
     },
     "SoundInfo": {
       "enabled": true,
-      "bind": 27,
+      "bind": 0,
       "Settings": {}
     },
     "Arraylist": {
@@ -100,8 +110,9 @@
       "Settings": {
         "Hide Render": true,
         "Shadow": true,
-        "Color Speed": 5.0,
-        "Lower Case": false
+        "Color Speed": 6.0,
+        "Lower Case": false,
+        "Режим": "Новый"
       }
     },
     "Target ESP": {
@@ -144,7 +155,7 @@
       "bind": 0,
       "Settings": {
         "Outline": true,
-        "Line Width": 1.0
+        "Line Width": 5.0
       }
     },
     "FullBright": {
@@ -176,8 +187,8 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Mode": "Custom",
-        "Time": 17000.0
+        "Mode": "Sunrise",
+        "Time": 21800.0
       }
     },
     "Keybinds": {
@@ -189,7 +200,7 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Scale": 1.0
+        "Scale": 1.5
       }
     },
     "NameTags": {
@@ -200,9 +211,7 @@
     "EntityESP": {
       "enabled": true,
       "bind": 0,
-      "Settings": {
-        "Elements": "Box\nItem\nHealth\n"
-      }
+      "Settings": {}
     },
     "ItemESP": {
       "enabled": false,
@@ -224,19 +233,19 @@
       "bind": 0,
       "Settings": {
         "Line Width": 1.0,
-        "Color": -64508,
-        "Friend Color": -16449788
+        "Color": -1,
+        "Friend Color": -16711936
       }
     },
     "Crosshair": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Dot": false,
-        "Cooldown Indicator": false,
+        "Cooldown Indicator": true,
         "Highlight Entities": true,
-        "T-shaped": false,
-        "Radius": 6.0
+        "T-shaped": true,
+        "Radius": 3.0
       }
     },
     "Notifications": {
@@ -245,7 +254,7 @@
       "Settings": {}
     },
     "NoHurtCam": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
@@ -253,7 +262,7 @@
       "enabled": false,
       "bind": 0,
       "Settings": {
-        "Действия": ""
+        "Действия": "Прыжок\nСообщение\n"
       }
     },
     "AutoRespawn": {
@@ -263,14 +272,14 @@
     },
     "AutoAccept": {
       "enabled": true,
-      "bind": 25,
+      "bind": 0,
       "Settings": {
         "Принимать": "Запрос на телепортацию\nЗапрос в друзья\nЗапрос на трейд\n",
         "Подтверждать трейд": true
       }
     },
     "NoPush": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {}
     },
@@ -285,13 +294,13 @@
       "Settings": {}
     },
     "MCF": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {}
     },
     "NoClip": {
       "enabled": false,
-      "bind": 50,
+      "bind": 45,
       "Settings": {
         "Скорость": 0.6
       }
@@ -304,7 +313,7 @@
       }
     },
     "NameProtect": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {}
     },
@@ -345,12 +354,13 @@
       "enabled": false,
       "bind": 19,
       "Settings": {
-        "Боты": false,
+        "Боты": true,
         "Сайлент": true,
         "Все конечности": true,
         "Аккуратность": 0.15,
-        "Радиус": 182.0,
-        "Предикт": 7.5,
+        "Радиус": 179.0,
+        "Авто-предикт": false,
+        "Предикт": 7.0,
         "Авто-Стрельба": true,
         "Проверять задержку": false,
         "КПС": 18.0

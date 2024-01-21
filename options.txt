@@ -14,7 +14,7 @@ fboEnable:true
 difficulty:2
 fancyGraphics:false
 ao:0
-renderClouds:fast
+renderClouds:false
 resourcePacks:["By dor4iks","BetterGUI"]
 incompatibleResourcePacks:[]
 lastServer:
@@ -43,7 +43,7 @@ mipmapLevels:4
 forceUnicodeFont:false
 reducedDebugInfo:false
 useNativeTransport:true
-entityShadows:true
+entityShadows:false
 mainHand:right
 attackIndicator:1
 showSubtitles:false
@@ -86,7 +86,7 @@ key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
 key_of.key.zoom:46
-soundCategory_master:0.029801324
+soundCategory_master:0.01655629
 soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

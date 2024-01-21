@@ -5,9 +5,7 @@ import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
 import lombok.Getter;
 import nightware.main.NightWare;
-import ru.crashdami.internalprotection.nativeobfuscator.Native;
 
-@Native
 public class Discord {
 
     @Getter

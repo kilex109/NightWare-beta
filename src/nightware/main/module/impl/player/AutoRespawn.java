@@ -10,6 +10,8 @@ import net.minecraft.network.play.server.SPacketOpenWindow;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
+import java.util.concurrent.CompletableFuture;
+
 @ModuleAnnotation(
    name = "AutoRespawn",
    category = Category.PLAYER
@@ -21,7 +23,7 @@ public class AutoRespawn extends Module {
          SPacketOpenWindow openWindow = (SPacketOpenWindow) event.getPacket();
          String windowName = openWindow.getWindowTitle().getUnformattedText();
 
-         new Thread(() -> {
+         CompletableFuture.runAsync(() -> {
             try {
                if (windowName.contains("Вы мертвы") || windowName.contains("Dead")) {
                   Thread.sleep(500L);
@@ -32,7 +34,7 @@ public class AutoRespawn extends Module {
             } catch (InterruptedException e) {
                throw new RuntimeException(e);
             }
-         }).start();
+         });
       }
    }
 }

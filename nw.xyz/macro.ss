@@ -1,1 +1,1 @@
-/suicide:26
+/suicide:25
