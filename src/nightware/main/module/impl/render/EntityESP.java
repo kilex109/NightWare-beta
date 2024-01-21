@@ -9,6 +9,7 @@ import nightware.main.event.render.EventRender2D;
 import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
+import nightware.main.module.setting.impl.BooleanSetting;
 import nightware.main.module.setting.impl.MultiBooleanSetting;
 import nightware.main.utility.render.RenderUtility;
 import nightware.main.utility.render.font.Fonts;
@@ -41,7 +42,6 @@ public class EntityESP extends Module {
    private final FloatBuffer modelview = GLAllocation.createDirectFloatBuffer(16);
    private final FloatBuffer projection = GLAllocation.createDirectFloatBuffer(16);
    private final FloatBuffer vector = GLAllocation.createDirectFloatBuffer(4);
-   public MultiBooleanSetting elements = new MultiBooleanSetting("Elements", Arrays.asList("Box", "Name", "Item", "Health"));
 
    @EventTarget
    public void onRender2D(EventRender2D event) {
@@ -99,7 +99,6 @@ public class EntityESP extends Module {
             double posY = (double)position.y;
             double endPosX = (double)position.z;
             double endPosY = (double)position.w;
-            if (this.elements.get(0)) {
                RenderUtility.drawRectNoWH(posX - 1.0D, posY, posX + 0.5D, endPosY + 0.5D, Color.black.getRGB());
                RenderUtility.drawRectNoWH(posX - 1.0D, posY - 0.5D, endPosX + 0.5D, posY + 0.5D + 0.5D, Color.black.getRGB());
                RenderUtility.drawRectNoWH(endPosX - 0.5D - 0.5D, posY, endPosX + 0.5D, endPosY + 0.5D, Color.black.getRGB());
@@ -108,24 +107,14 @@ public class EntityESP extends Module {
                RenderUtility.drawRectNoWH(posX, endPosY - 0.5D, endPosX, endPosY, -1);
                RenderUtility.drawRectNoWH(posX - 0.5D, posY, endPosX, posY + 0.5D, -1);
                RenderUtility.drawRectNoWH(endPosX - 0.5D, posY, endPosX, endPosY, -1);
-            }
 
             double hpPercentage = (double)(entity.getHealth() / entity.getMaxHealth());
             double hpHeight2 = (endPosY - posY) * hpPercentage;
             double hpHeight3 = endPosY - posY;
             double dif = (endPosX - posX) / 2.0D;
             double textWidth = (double) Fonts.nunito12.getStringWidth(entity.getName());
-            if (this.elements.get(1)) {
-               Fonts.nunito12.drawStringWithOutline(ChatFormatting.stripFormatting(entity.getName()), (double)((float)(posX + dif - textWidth / 2.0D) - 1.0F), (double)((float)posY - 20.0F + 15.0F), -1);
-            }
 
-            if (this.elements.get(3)) {
-               RenderUtility.drawRectNoWH((double)((float)(posX - 3.5D)), (double)((float)(endPosY + 0.5D)), (double)((float)(posX - 1.5D)), (double)((float)(endPosY - hpHeight3 - 0.5D)), (new Color(0, 0, 0, 255)).getRGB());
-               RenderUtility.drawVGradientRect((float)(posX - 3.0D), (float)endPosY, (float)(posX - 2.0D), (float)(endPosY - hpHeight3), color, color2);
-               RenderUtility.drawRectNoWH(posX - 3.5D, posY, posX - 1.5D, endPosY - hpHeight2, (new Color(0, 0, 0, 255)).getRGB());
-            }
-
-            if (!entity.getHeldItemMainhand().isEmpty() && this.elements.get(2)) {
+            if (!entity.getHeldItemMainhand().isEmpty()) {
                Fonts.nunito12.drawCenteredStringWithOutline(ChatFormatting.stripFormatting(entity.getHeldItemMainhand().getDisplayName()), (double)((float)(posX + (endPosX - posX) / 2.0D)), (double)((float)(endPosY + 0.5D) + 4.0F), -1);
             }
 

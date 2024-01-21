@@ -1,10 +1,10 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Night",
+  "StyleTheme": "Gold",
   "Modules": {
     "AutoSprint": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {
         "Во все стороны": false
@@ -40,8 +40,10 @@
       "enabled": false,
       "bind": 36,
       "Settings": {
-        "Скорость": 4.8,
-        "Мини-прыжки": true
+        "Скорость": 1.2,
+        "Лимит скорости": 2.1,
+        "Скорость накопления": 0.1,
+        "Режим": "Плавный"
       }
     },
     "Optimizer": {
@@ -185,8 +187,8 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Mode": "Night",
-        "Time": 1000.0
+        "Mode": "Sunrise",
+        "Time": 21800.0
       }
     },
     "Keybinds": {
@@ -198,7 +200,7 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Scale": 1.0
+        "Scale": 1.5
       }
     },
     "NameTags": {
@@ -209,9 +211,7 @@
     "EntityESP": {
       "enabled": true,
       "bind": 0,
-      "Settings": {
-        "Elements": "Box\nItem\n"
-      }
+      "Settings": {}
     },
     "ItemESP": {
       "enabled": false,
@@ -266,7 +266,7 @@
       }
     },
     "AutoRespawn": {
-      "enabled": false,
+      "enabled": true,
       "bind": 24,
       "Settings": {}
     },
@@ -318,7 +318,7 @@
       "Settings": {}
     },
     "BetterChat": {
-      "enabled": false,
+      "enabled": true,
       "bind": 0,
       "Settings": {
         "Сохранять историю": true,

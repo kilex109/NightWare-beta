@@ -46,26 +46,6 @@ public class Indicators extends Module {
 
    @EventTarget
    public void onPacket(EventReceivePacket eventPacket) {
-
-      ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
-      executorService.scheduleAtFixedRate(() -> {
-         if (mc.player != null) {
-            NBTTagList loreTag = mc.player.getHeldItemMainhand().func_190925_c("display").getTagList("Lore", 8);
-
-            StringBuilder loreBuilder = new StringBuilder();
-            for (int i = 0; i < loreTag.tagCount(); i++) {
-               String loreLine = loreTag.getStringTagAt(i);
-               if (loreLine.contains("Патроны")) {
-                  loreBuilder.append(loreTag.getStringTagAt(i)).append("\n");
-               }
-            }
-
-            ammo = (loreBuilder.toString()).replaceAll(".*§7\\| ", "");
-         }
-      }, 0, 1, TimeUnit.SECONDS);
-
-      System.out.println(mc.world.getScoreboard().getObjectiveInDisplaySlot(1).getDisplayName());
-
       if (eventPacket.getPacket() instanceof SPacketChat) {
          SPacketChat packet = (SPacketChat) eventPacket.getPacket();
          String unformattedText = packet.getChatComponent().getUnformattedText();
@@ -78,6 +58,23 @@ public class Indicators extends Module {
             } else if (unformattedText.startsWith("§a") && ammoi.get()) {
                eventPacket.setCancelled(true);
             }
+
+            ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+            executorService.scheduleAtFixedRate(() -> {
+               if (mc.player != null) {
+                  NBTTagList loreTag = mc.player.getHeldItemMainhand().func_190925_c("display").getTagList("Lore", 8);
+
+                  StringBuilder loreBuilder = new StringBuilder();
+                  for (int i = 0; i < loreTag.tagCount(); i++) {
+                     String loreLine = loreTag.getStringTagAt(i);
+                     if (loreLine.contains("Патроны")) {
+                        loreBuilder.append(loreTag.getStringTagAt(i)).append("\n");
+                     }
+                  }
+
+                  ammo = (loreBuilder.toString()).replaceAll(".*§7\\| ", "");
+               }
+            }, 0, 1, TimeUnit.SECONDS);
          }
       }
    }
@@ -85,16 +82,16 @@ public class Indicators extends Module {
    @EventTarget
    public void onRender2D(EventRender2D eventRender2D) {
       ScaledResolution sr = new ScaledResolution(mc);
-      if (ammoi.get() && !(ammo == "") && !(ammo == null)) {
-         Fonts.mntsb16.drawCenteredString("Патроны: " + ammo, sr.getScaledWidth() / 2, sr.getScaledHeight() / 2 + 15, -1);
+      if (ammoi.get() && !(ammo == null)) {
+         Fonts.mntsb16.drawCenteredString(ammo, sr.getScaledWidth() / 2, sr.getScaledHeight() / 2 + 15, -1);
       }
       if (reloading && reloadingi.get()) {
          boolean reload = !govno.equals("0");
          if (reload) {
             Fonts.mntsb16.drawCenteredString("Перезаряжаю.. " + govno + "%", sr.getScaledWidth() / 2, sr.getScaledHeight() / 2 + 25, -1);
             RenderUtility.drawRoundedRect(sr.getScaledWidth() / 2 - 50, reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, 100, 5, 3, new Color(22, 22, 22).getRGB());
-            RenderUtility.drawRoundedRect(sr.getScaledWidth() / 2 - (width / 2), reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, width, 5, 3, new Color(7, 241, 33).getRGB());
-            RenderUtility.drawFixedGlow(sr.getScaledWidth() / 2 - (width / 2), reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, width, 5, 5, new Color(7, 241, 33).getRGB());
+            RenderUtility.drawRoundedRect(sr.getScaledWidth() / 2 - (100 / 2), reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, width, 5, 3, new Color(7, 241, 33).getRGB());
+            RenderUtility.drawFixedGlow(sr.getScaledWidth() / 2 - (100 / 2), reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, width, 5, 5, new Color(7, 241, 33).getRGB());
          }
       }
    }

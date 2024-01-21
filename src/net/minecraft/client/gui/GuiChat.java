@@ -284,7 +284,11 @@ public class GuiChat extends GuiScreen implements ITabCompleter
 
         if (NightWare.getInstance().getModuleManager().getModule(PasswordHider.class).isEnabled() && (this.inputField.getText().startsWith("/l") && this.inputField.getText().split(" ")[0].length() <= 6 || this.inputField.getText().startsWith("/reg") && this.inputField.getText().split(" ")[0].length() <= 9 && this.inputField.getText().split(" ").length != 1)) {
             BlurUtility.drawBlur(10.0F, () -> {
-                RenderUtility.drawRectNoWH((double)(Fonts.mntsb18.getStringWidth(this.inputField.getText().split(" ")[0]) + 7), this.height - 12, (double)(Fonts.mntsb18.getStringWidth(this.inputField.getText().split(" ")[0]) + 6 + Fonts.mntsb18.getStringWidth(this.inputField.getText().substring(this.inputField.getText().split(" ")[0].length()))), (double)(this.height - 2), Integer.MIN_VALUE);
+                if (NightWare.getInstance().getModuleManager().getModule(BetterChat.class).isEnabled() && BetterChat.changeChat.get()) {
+                    RenderUtility.drawRectNoWH((double) (Fonts.mntsb18.getStringWidth(this.inputField.getText().split(" ")[0]) + 7), this.height - 12, (double) (Fonts.mntsb18.getStringWidth(this.inputField.getText().split(" ")[0]) + 6 + Fonts.mntsb18.getStringWidth(this.inputField.getText().substring(this.inputField.getText().split(" ")[0].length()))), (double) (this.height - 2), Integer.MIN_VALUE);
+                } else {
+                    RenderUtility.drawRectNoWH((double) (this.mc.fontRendererObj.getStringWidth(this.inputField.getText().split(" ")[0]) + 7), this.height - 12, (double) (this.mc.fontRendererObj.getStringWidth(this.inputField.getText().split(" ")[0]) + 6 + this.mc.fontRendererObj.getStringWidth(this.inputField.getText().substring(this.inputField.getText().split(" ")[0].length()))), (double) (this.height - 2), Integer.MIN_VALUE);
+                }
             });
         }
 

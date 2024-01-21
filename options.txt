@@ -14,7 +14,7 @@ fboEnable:true
 difficulty:2
 fancyGraphics:false
 ao:0
-renderClouds:fast
+renderClouds:false
 resourcePacks:["By dor4iks","BetterGUI"]
 incompatibleResourcePacks:[]
 lastServer:
@@ -43,7 +43,7 @@ mipmapLevels:4
 forceUnicodeFont:false
 reducedDebugInfo:false
 useNativeTransport:true
-entityShadows:true
+entityShadows:false
 mainHand:right
 attackIndicator:1
 showSubtitles:false
