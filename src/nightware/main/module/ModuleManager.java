@@ -2,14 +2,7 @@ package nightware.main.module;
 
 import nightware.main.module.impl.exploit.*;
 import nightware.main.module.impl.movement.*;
-import nightware.main.module.impl.player.AntiAFK;
-import nightware.main.module.impl.player.AutoRespawn;
-import nightware.main.module.impl.player.AutoTPAccept;
-import nightware.main.module.impl.player.FreeCam;
-import nightware.main.module.impl.player.InventoryMove;
-import nightware.main.module.impl.player.MiddleClick;
-import nightware.main.module.impl.player.NoPush;
-import nightware.main.module.impl.player.NoServerRotations;
+import nightware.main.module.impl.player.*;
 import nightware.main.module.impl.combat.HitEffect;
 import nightware.main.module.impl.util.*;
 import nightware.main.module.impl.combat.HitSound;
@@ -34,6 +27,7 @@ public class ModuleManager {
       this.registerModule(new WaterSpeed());
       this.registerModule(new Optimizer());
       this.registerModule(new Arrows());
+      this.registerModule(new HandTranslate());
       this.registerModule(new BackPeek());
       this.registerModule(new SuspendPackets());
       this.registerModule(new SlowPackets());

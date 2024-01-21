@@ -26,7 +26,7 @@ public class HostsUtils {
                 System.out.println("Exists.");
             }
         } catch (IOException e) {
-            System.out.println("У мужлан и java нет прав");
+            System.out.println("No Access");
         }
     }
 
@@ -35,7 +35,7 @@ public class HostsUtils {
             File file = new File("C:/Windows/System32/drivers/etc/hosts");
 
             if (!file.isFile()) {
-                System.out.println("Файл не существует.");
+                System.out.println("File not exists.");
                 return;
             }
 
@@ -59,19 +59,19 @@ public class HostsUtils {
             reader.close();
 
             if (!found) {
-                System.out.println("Строка не найдена в файле.");
+                System.out.println("String not found.");
                 return;
             }
 
             if (!file.delete()) {
-                System.out.println("Не удалось удалить исходный файл.");
+                System.out.println("File not found.");
                 return;
             }
 
             if (!tempFile.renameTo(file))
-                System.out.println("Не удалось переименовать временный файл.");
+                System.out.println("Temp file not be renamed.");
 
-            System.out.println("Строка успешно удалена из файла.");
+            System.out.println("String succefull deleted from file.");
         } catch (IOException e) {
             e.printStackTrace();
         }

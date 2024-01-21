@@ -58,17 +58,11 @@ public class AvtorizaciyaHAHA {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     StringBuilder response = new StringBuilder();
                     String line;
-
-
                     while ((line = reader.readLine()) != null) {
                         response.append(line);
                     }
-
                     reader.close();
                     if (!addresses.getHostAddress().equalsIgnoreCase("127.0.0.1")) {
-
-                        //..if (addresses.getHostAddress().equalsIgnoreCase("46.174.53.249") || (addresses.getHostAddress().equalsIgnoreCase("193.233.164.8"))) {
-
                             JSONObject jsonResponse = new JSONObject(response.toString());
                             if (jsonResponse != null) {
 
@@ -126,7 +120,7 @@ public class AvtorizaciyaHAHA {
                                     }
                                 } else {
 
-                                    for (; ; ) ;
+                                    for (; ;) ;
                                 }
                             }
                             //}
