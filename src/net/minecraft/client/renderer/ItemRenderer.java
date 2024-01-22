@@ -30,11 +30,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.storage.MapData;
-import nightware.main.NightWare;
-import nightware.main.event.render.EventTransform;
-import nightware.main.module.Module;
-import nightware.main.module.ModuleManager;
-import nightware.main.module.impl.player.HandTranslate;
 import optifine.Config;
 import optifine.DynamicLights;
 import optifine.Reflector;
@@ -287,9 +282,6 @@ public class ItemRenderer
 
     private void transformEatFirstPerson(float p_187454_1_, EnumHandSide p_187454_2_, ItemStack p_187454_3_)
     {
-        EventTransform eventTransform = new EventTransform(p_187454_2_);
-        EventManager.call(eventTransform);
-
         float f = (float)this.mc.player.getItemInUseCount() - p_187454_1_ + 1.0F;
         float f1 = f / (float)p_187454_3_.getMaxItemUseDuration();
 
@@ -320,11 +312,6 @@ public class ItemRenderer
 
     private void transformSideFirstPerson(EnumHandSide p_187459_1_, float p_187459_2_)
     {
-        EventTransform e = new EventTransform(p_187459_1_);
-        EventManager.call(e);
-        if (NightWare.getInstance().getModuleManager().getModule(HandTranslate.class).isEnabled()) {
-            int n = p_187459_1_ == EnumHandSide.RIGHT ? 1 : -1;
-        }
         int i = p_187459_1_ == EnumHandSide.RIGHT ? 1 : -1;
         GlStateManager.translate((float)i * 0.56f, -0.52f + p_187459_2_ * -0.6f, -0.72f);
     }

@@ -6,16 +6,12 @@ import nightware.main.event.misc.EventFullCube;
 import nightware.main.event.misc.EventPush;
 import nightware.main.event.packet.EventReceivePacket;
 import nightware.main.event.packet.EventSendPacket;
-import nightware.main.event.player.EventLivingUpdate;
-import nightware.main.event.player.EventMotion;
 import nightware.main.event.player.EventUpdate;
 import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
 import nightware.main.module.setting.impl.NumberSetting;
-import nightware.main.utility.move.MovementUtility;
 import net.minecraft.client.entity.EntityOtherPlayerMP;
-import net.minecraft.network.play.client.CPacketPlayer;
 
 @ModuleAnnotation(
    name = "FreeCam",

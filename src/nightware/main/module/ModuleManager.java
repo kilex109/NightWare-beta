@@ -28,7 +28,6 @@ public class ModuleManager {
       this.registerModule(new WaterSpeed());
       this.registerModule(new Optimizer());
       this.registerModule(new Arrows());
-      this.registerModule(new HandTranslate());
       this.registerModule(new BackPeek());
       this.registerModule(new SuspendPackets());
       this.registerModule(new SlowPackets());
