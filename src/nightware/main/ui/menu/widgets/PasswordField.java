@@ -353,9 +353,9 @@ public class PasswordField extends Gui {
          int i;
          int j;
          if (this.getEnableBackgroundDrawing()) {
-            i = NightWare.getInstance().getThemeManager().getCurrentStyleTheme().getColors()[0].getRGB();
-            j = NightWare.getInstance().getThemeManager().getCurrentStyleTheme().getColors()[1].getRGB();
-            RenderUtility.drawRoundedGradientRect((float)this.xPosition - 0.5F, (float)this.yPosition - 0.5F, (float)(this.width + 1), (float)(this.height + 1), 6.0F, 1.0F, i, i, j, j);
+            i = NightWare.getInstance().getC(0).getRGB();
+            j = NightWare.getInstance().getC(500).getRGB();
+            RenderUtility.drawGradientGlow((float)this.xPosition - 0.5F, (float)this.yPosition - 0.5F, (float)(this.width + 1), (float)(this.height + 1), 6, i, i, j, j);
             RenderUtility.drawRoundedRect((float)this.xPosition, (float)this.yPosition, (float)this.width, (float)this.height, 5.0F, (new Color(30, 30, 30)).getRGB());
          }
 

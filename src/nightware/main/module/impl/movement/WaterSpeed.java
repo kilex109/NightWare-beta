@@ -58,7 +58,6 @@ public class WaterSpeed extends Module {
             Utils.setSpeed(speed.get());
             mc.player.setSneaking(true);
         } else if (mode.is("Плавный")) {
-            ChatUtility.addChatMessage(addSpeed.get() + " / " + newSpeed);
             List<ItemStack> stacks = new ArrayList<>();
             mc.player.getArmorInventoryList().forEach(stacks::add);
             stacks.removeIf(w -> w.getItem() instanceof ItemAir);

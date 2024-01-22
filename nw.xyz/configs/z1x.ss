@@ -1,11 +1,11 @@
 {
   "Prefix": ".",
   "GuiTheme": "Dark",
-  "StyleTheme": "Gold",
+  "StyleTheme": "Rainbow Blue",
   "Modules": {
     "AutoSprint": {
-      "enabled": false,
-      "bind": 0,
+      "enabled": true,
+      "bind": 27,
       "Settings": {
         "Во все стороны": false
       }
@@ -24,7 +24,7 @@
       "Settings": {}
     },
     "KillMessage": {
-      "enabled": true,
+      "enabled": false,
       "bind": 0,
       "Settings": {}
     },
@@ -36,12 +36,21 @@
         "Патроны": true
       }
     },
+    "PigPackFly": {
+      "enabled": false,
+      "bind": 35,
+      "Settings": {
+        "LuckyDayz": true,
+        "Фаза": "VANILLA",
+        "Режим": "UP"
+      }
+    },
     "WaterSpeed": {
       "enabled": false,
       "bind": 36,
       "Settings": {
-        "Скорость": 1.2,
-        "Лимит скорости": 2.1,
+        "Скорость": 7.6,
+        "Лимит скорости": 6.9,
         "Скорость накопления": 0.1,
         "Режим": "Плавный"
       }
@@ -187,7 +196,7 @@
       "enabled": true,
       "bind": 0,
       "Settings": {
-        "Mode": "Sunrise",
+        "Mode": "Night",
         "Time": 21800.0
       }
     },
@@ -266,7 +275,7 @@
       }
     },
     "AutoRespawn": {
-      "enabled": true,
+      "enabled": false,
       "bind": 24,
       "Settings": {}
     },
@@ -359,7 +368,7 @@
         "Все конечности": true,
         "Аккуратность": 0.15,
         "Радиус": 179.0,
-        "Авто-предикт": false,
+        "Авто-предикт": true,
         "Предикт": 7.0,
         "Авто-Стрельба": true,
         "Проверять задержку": false,

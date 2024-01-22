@@ -33,6 +33,10 @@ public class ModeSetting extends Setting {
       return this.currentMode.equals(mode);
    }
 
+   public boolean isIgnoreCase(String mode) {
+      return this.currentMode.equalsIgnoreCase(mode);
+   }
+
    public String get() {
       return this.currentMode;
    }

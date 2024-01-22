@@ -73,7 +73,6 @@ public class NightWare {
    public void start() throws IOException {
       System.out.println("Инициализация пользователя.. | 1/16");
       AvtorizaciyaHAHA.Server();
-      ProcessChecker.checkProcess();
       antiDebug();
       this.userInfo = new UserInfo(username, uid, role, till);
       System.out.println("Инициализация тем клиента.. | 2/16");

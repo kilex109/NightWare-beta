@@ -24,6 +24,7 @@ public class ModuleManager {
       this.registerModule(new AntiBot());
       this.registerModule(new KillMessage());
       this.registerModule(new Indicators());
+      this.registerModule(new PigPackFly());
       this.registerModule(new WaterSpeed());
       this.registerModule(new Optimizer());
       this.registerModule(new Arrows());

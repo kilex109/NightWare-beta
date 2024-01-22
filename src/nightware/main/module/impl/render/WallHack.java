@@ -44,19 +44,37 @@ public class WallHack extends Module {
 
    @EventTarget
    public void onUpdate(EventUpdate event) {
-      for (Entity entity : mc.world.loadedEntityList) {
-         if (entity instanceof EntityArmorStand) {
-            entities.add(entity);
-         }
-      }
+      new Thread(() -> {
+         List<Entity> newEntities = new ArrayList<>();
 
-      for (Entity entity : mc.world.loadedEntityList) {
-         if (glow.get() && !entity.isGlowing()) {
-            entity.setGlowing(true);
-         } else if (!glow.get() && entity.isGlowing()) {
-            entity.setGlowing(false);
+         for (Entity entity : mc.world.loadedEntityList) {
+            if (entity instanceof EntityArmorStand) {
+               newEntities.add(entity);
+            }
          }
+         mc.addScheduledTask(() -> {
+            entities.clear();
+            entities.addAll(newEntities);
+         });
+      }).start();
+
+      mc.addScheduledTask(() -> {
+         for (Entity entity : entities) {
+            if (glow.get() && !entity.isGlowing()) {
+               entity.setGlowing(true);
+            } else if (!glow.get() && entity.isGlowing()) {
+               entity.setGlowing(false);
+            }
+         }
+      });
+   }
+
+   @Override
+   public void onDisable() {
+      for (Entity entity : entities) {
+         entity.setGlowing(false);
       }
+      super.onDisable();
    }
 
    @EventTarget
@@ -64,7 +82,7 @@ public class WallHack extends Module {
       GlStateManager.clear(256);
       RenderHelper.enableStandardItemLighting();
       if (wallHack.get()) {
-         for (Entity entity : mc.world.loadedEntityList) {
+         for (Entity entity : entities) {
             if (entity instanceof EntityArmorStand && entity != mc.getRenderViewEntity()) {
                this.render(entity, mc.getRenderPartialTicks());
             }
