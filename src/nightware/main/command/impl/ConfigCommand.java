@@ -73,7 +73,7 @@ public class ConfigCommand extends CommandAbstract {
 
                for(int var7 = 0; var7 < var6; ++var7) {
                   File s = var5[var7];
-                  this.sendMessage(s.getName().replaceAll(".nw", ""));
+                  this.sendMessage(s.getName().replaceAll(".ss", ""));
                }
 
                return;
