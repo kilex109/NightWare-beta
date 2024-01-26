@@ -79,6 +79,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import nightware.main.module.impl.render.SwingAnimations;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -1657,14 +1658,12 @@ public abstract class EntityLivingBase extends Entity
      * Returns an integer indicating the end point of the swing animation, used by {@link #swingProgress} to provide a
      * progress indicator. Takes dig speed enchantments into account.
      */
-    private int getArmSwingAnimationEnd()
-    {
-        if (this.isPotionActive(MobEffects.HASTE))
-        {
+    private int getArmSwingAnimationEnd() {
+        if (this.isPotionActive(MobEffects.HASTE)) {
             return 6 - (1 + this.getActivePotionEffect(MobEffects.HASTE).getAmplifier());
-        }
-        else
-        {
+        } else if (NightWare.getInstance().getModuleManager().getModule(SwingAnimations.class).isEnabled() && this instanceof EntityPlayerSP) {
+            return this.isPotionActive(MobEffects.MINING_FATIGUE) ? 6 + (1 + this.getActivePotionEffect(MobEffects.MINING_FATIGUE).getAmplifier()) * 2 : SwingAnimations.swipeSpeed.getInt();
+        } else {
             return this.isPotionActive(MobEffects.MINING_FATIGUE) ? 6 + (1 + this.getActivePotionEffect(MobEffects.MINING_FATIGUE).getAmplifier()) * 2 : 6;
         }
     }

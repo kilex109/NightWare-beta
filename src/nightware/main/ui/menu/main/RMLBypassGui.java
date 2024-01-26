@@ -54,7 +54,7 @@ public class RMLBypassGui extends GuiScreen {
             HostsUtils.addHostsEntry(InetAddress.getLocalHost().getHostAddress() + " lplay.rustme.net");
             break;
          case 1:
-             HostsUtils.removeLineFromFile(InetAddress.getLocalHost().getHostAddress() + " lplay.rustme.net");
+             HostsUtils.removeLineFromFile("lplay.rustme.net");
             break;
          case 2:
             ScriptManager.onBypass(mc.session.getUsername());

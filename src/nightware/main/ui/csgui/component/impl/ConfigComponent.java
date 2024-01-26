@@ -28,33 +28,34 @@ public class ConfigComponent extends Component {
       Color color = NightWare.getInstance().getC(0);
       Color color2 = NightWare.getInstance().getC(500);
       boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+      int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
       Color moduleColor = isDark ? new Color(34, 34, 34) : new Color(240, 240, 240);
-      RenderUtility.drawRoundedRect(this.x, this.y, this.width, this.height, 5.0F, moduleColor.getRGB());
-      Fonts.nunitoBold16.drawString(this.name, this.x + 5.0F, this.y + 5.0F, isDark ? Color.WHITE.getRGB() : (new Color(40, 40, 40)).getRGB());
-      float xOffset = 2.0F;
+      RenderUtility.drawGradientGlow(this.x + 1.5f, this.y + 1, this.width - 2.5f, this.height - 2.5f, 3, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
+      RenderUtility.drawRoundedRect(this.x, this.y, this.width, this.height, 5.0F, bgColor);
+      Fonts.nunitoBold16.drawString(this.name, this.x + 5, this.y + 5.0F, isDark ? Color.WHITE.getRGB() : (new Color(40, 40, 40)).getRGB());
+      float xOffset = 5.0F;
       float spacing = 3.0F;
 
       float enabledWidth;
       for(Iterator var9 = this.buttons.iterator(); var9.hasNext(); xOffset += enabledWidth + spacing) {
          String mode = (String)var9.next();
          enabledWidth = this.getEnabledWidth(mode);
-         float enabledHeight = (float)(Fonts.nunito14.getFontHeight() + 4);
-         RenderUtility.drawRoundedRect(this.x + 3.0F + xOffset, this.y + 8.0F + (float)Fonts.nunito14.getFontHeight(), enabledWidth, enabledHeight, 3.0F, isDark ? (new Color(52, 52, 52)).getRGB() : (new Color(160, 160, 160)).getRGB());
-         Fonts.nunito14.drawString(mode, this.x + 5.0F + xOffset, this.y + 11.0F + (float)Fonts.nunito14.getFontHeight(), isDark ? Color.WHITE.getRGB() : (new Color(55, 55, 55)).getRGB());
+         float enabledHeight = (float)(Fonts.nunitoBold16.getFontHeight() + 4);
+         RenderUtility.drawRoundedRect(this.x + xOffset - 2.0f, this.y + 12.0F + (float)Fonts.nunitoBold14.getFontHeight(), enabledWidth, enabledHeight - 2, 3.0F, isDark ? new Color(31, 31, 31, 255).getRGB() : new Color(255, 255, 255, 255).getRGB());
+         Fonts.nunitoBold14.drawString(mode, this.x + xOffset, this.y + 14F + (float)Fonts.nunitoBold14.getFontHeight(), isDark ? Color.WHITE.getRGB() : (new Color(55, 55, 55)).getRGB());
       }
-
    }
 
    public boolean mouseBoolClicked(double mouseX, double mouseY, int mouseButton) {
-      float xOffset = 2.0F;
+      float xOffset = 5.0F;
       float spacing = 3.0F;
 
       float enabledWidth;
       for(Iterator var8 = this.buttons.iterator(); var8.hasNext(); xOffset += enabledWidth + spacing) {
          String mode = (String)var8.next();
          enabledWidth = this.getEnabledWidth(mode);
-         float enabledHeight = (float)(Fonts.nunito14.getFontHeight() + 4);
-         if (RenderUtility.isHovered(mouseX, mouseY, (double)(this.x + 3.0F + xOffset), (double)(this.y + 8.0F + (float)Fonts.nunito14.getFontHeight()), (double)enabledWidth, (double)enabledHeight)) {
+         float enabledHeight = (float)(Fonts.nunitoBold14.getFontHeight() + 4);
+         if (RenderUtility.isHovered(mouseX, mouseY, this.x + xOffset - 2.0f, this.y + 12.0F + (float)Fonts.nunitoBold14.getFontHeight(), enabledWidth, enabledHeight - 2)) {
             byte var13 = -1;
             switch(mode.hashCode()) {
             case 2373894:
@@ -94,7 +95,7 @@ public class ConfigComponent extends Component {
    }
 
    private float getEnabledWidth(String mode) {
-      return (float)(Fonts.nunito14.getStringWidth(mode) + 4);
+      return (float)(Fonts.nunitoBold14.getStringWidth(mode) + 4);
    }
 
    public String getName() {

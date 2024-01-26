@@ -28,9 +28,9 @@ public class ModuleManager {
       this.registerModule(new WaterSpeed());
       this.registerModule(new Optimizer());
       this.registerModule(new Arrows());
-      this.registerModule(new BackPeek());
-      this.registerModule(new SuspendPackets());
-      this.registerModule(new SlowPackets());
+      this.registerModule(new AutoPeek());
+      this.registerModule(new FastPeek());
+      this.registerModule(new FakeLags());
       this.registerModule(new NoSlow());
       this.registerModule(new Strafe());
       this.registerModule(this.timer = new Timer());
@@ -50,18 +50,14 @@ public class ModuleManager {
       this.registerModule(new Keybinds());
       this.registerModule(new Wings());
       this.registerModule(new NameTags());
-      this.registerModule(new EntityESP());
+      this.registerModule(new PlayerESP());
       this.registerModule(new ItemESP());
-      this.registerModule(new CameraClip());
-      this.registerModule(new StaffList());
       this.registerModule(new Tracers());
       this.registerModule(new Crosshair());
       this.registerModule(new Notifications());
-      this.registerModule(new NoHurtCam());
       this.registerModule(new AntiAFK());
       this.registerModule(new AutoRespawn());
       this.registerModule(new AutoTPAccept());
-      this.registerModule(new NoPush());
       this.registerModule(new NoServerRotations());
       this.registerModule(new InventoryMove());
       this.registerModule(new MiddleClick());
@@ -74,6 +70,18 @@ public class ModuleManager {
       this.registerModule(new DeathCoordinates());
       this.registerModule(new PasswordHider());
       this.registerModule(new AimBot());
+
+      // LAST UPDATE -> {
+      this.registerModule(new SwingAnimations());
+      this.registerModule(new ViewModel());
+      this.registerModule(new NoAction());
+      this.registerModule(new OreESP());
+      this.registerModule(new PARTICOLES());
+      this.registerModule(new AutoFarm());
+      this.registerModule(new FakePlayer());
+      this.registerModule(new ZombaESP());
+      this.registerModule(new ItemScroller());
+      // }
    }
 
    public void registerModule(Module module) {

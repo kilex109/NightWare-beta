@@ -36,9 +36,9 @@ public class AutoTPAccept extends Module {
          String m = packet.getChatComponent().getUnformattedText();
          if (m.contains("/tpa") && che.get(0)) {
             ChatUtility.sendChatMessage("/tpa");
-         } else if (m.contains("/friends") && che.get(0)) {
+         } else if (m.contains("/friends") && che.get(1)) {
             ChatUtility.sendChatMessage("/friends accept");
-         } else if (m.contains("/trade") && che.get(0)) {
+         } else if (m.contains("/trade") && che.get(2)) {
             ChatUtility.sendChatMessage("/trade accept");
             if (autoAccept.get()) {
                CompletableFuture.runAsync(() -> {

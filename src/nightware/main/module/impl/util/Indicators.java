@@ -24,10 +24,13 @@ import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
 import nightware.main.module.impl.combat.AimBot;
+import nightware.main.module.impl.exploit.*;
 import nightware.main.module.setting.impl.BooleanSetting;
 import nightware.main.utility.misc.BullingUtility;
 import nightware.main.utility.misc.ChatUtility;
 import nightware.main.utility.render.RenderUtility;
+import nightware.main.utility.render.animation.Animation;
+import nightware.main.utility.render.animation.impl.DecelerateAnimation;
 import nightware.main.utility.render.font.Fonts;
 
 import java.awt.*;
@@ -66,12 +69,8 @@ public class Indicators extends Module {
             }
          }
       }
-   }
 
-   @EventTarget
-   public void onUpdate(EventUpdate e) {
-      ScheduledExecutorService executorService = Executors.newScheduledThreadPool(4);
-      executorService.scheduleAtFixedRate(() -> {
+      mc.addScheduledTask(() -> {
          if (mc.player != null) {
             NBTTagList loreTag = mc.player.getHeldItemMainhand().func_190925_c("display").getTagList("Lore", 8);
 
@@ -85,7 +84,12 @@ public class Indicators extends Module {
 
             ammo = (loreBuilder.toString()).replaceAll(".*§7\\| ", "");
          }
-      }, 0, 1, TimeUnit.SECONDS);
+      });
+   }
+
+   @EventTarget
+   public void onUpdate(EventUpdate e) {
+
    }
 
    @EventTarget
@@ -94,7 +98,7 @@ public class Indicators extends Module {
          if (ammoi.get() && !(ammo == null)) {
             Fonts.mntsb16.drawCenteredString(ammo, sr.getScaledWidth() / 2, sr.getScaledHeight() / 2 + 15, -1);
          }
-      if (reloading && reloadingi.get() && valid) {
+      if (reloading && reloadingi.get()) {
          boolean reload = !govno.equals("0");
          if (reload) {
             int color = NightWare.getInstance().getC(0).getRGB();
@@ -105,6 +109,21 @@ public class Indicators extends Module {
             RenderUtility.drawGradientGlow(sr.getScaledWidth() / 2 - (100 / 2), reload ? sr.getScaledHeight() / 2 + 35 : sr.getScaledHeight() / 2 + 25, width, 5, 5, color, color2, color, color2);
          }
       }
+      /*if (NightWare.getInstance().getModuleManager().getModule(AutoPeek.class).isEnabled()) {
+         Fonts.mntsb16.drawString("AUTOPEEK", sr.getScaledWidth() - (4 + Fonts.mntsb16.getStringWidth("AUTOPEEK")), sr.getScaledHeight() - 8, new Color(176, 0, 0).getRGB());
+      }
+      if (NightWare.getInstance().getModuleManager().getModule(FakeLags.class).isEnabled()) {
+         Fonts.mntsb16.drawString("FAKELAG", sr.getScaledWidth() - (4 + Fonts.mntsb16.getStringWidth("FAKELAG")), sr.getScaledHeight() - 18, new Color(176, 0, 0).getRGB());
+      }
+      if (NightWare.getInstance().getModuleManager().getModule(AntiAim.class).isEnabled()) {
+         Fonts.mntsb16.drawString("AA", sr.getScaledWidth() - (4 + Fonts.mntsb16.getStringWidth("AA")), sr.getScaledHeight() - 28, new Color(176, 0, 0).getRGB());
+      }
+      if (NightWare.getInstance().getModuleManager().getModule(FastPeek.class).isEnabled()) {
+         Fonts.mntsb16.drawString("FASTPEEK", sr.getScaledWidth() - (4 + Fonts.mntsb16.getStringWidth("FASTPEEK")), sr.getScaledHeight() - 28, new Color(176, 0, 0).getRGB());
+      }
+      if (NightWare.getInstance().getModuleManager().getModule(NoClip.class).isEnabled()) {
+         Fonts.mntsb16.drawString("NOCLIP", sr.getScaledWidth() - (4 + Fonts.mntsb16.getStringWidth("NOCLIP")), sr.getScaledHeight() - 38, new Color(176, 0, 0).getRGB());
+      }*/
    }
 
    public float getReloadWidth(String text) {

@@ -78,6 +78,5 @@ public class BindCommand extends CommandAbstract {
       } else {
          this.error();
       }
-
    }
 }

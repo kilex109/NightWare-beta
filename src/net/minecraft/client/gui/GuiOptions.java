@@ -12,8 +12,6 @@ public class GuiOptions extends GuiScreen
 {
     private static final GameSettings.Options[] SCREEN_OPTIONS = new GameSettings.Options[] {GameSettings.Options.FOV};
     private final GuiScreen lastScreen;
-
-    /** Reference to the GameSettings object. */
     private final GameSettings settings;
     private GuiButton difficultyButton;
     private GuiLockIconButton lockButton;

@@ -6,6 +6,16 @@ import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.ResourceLocation;
+import nightware.main.NightWare;
+import nightware.main.manager.theme.Themes;
+import nightware.main.utility.misc.SoundUtility;
+import nightware.main.utility.render.ColorUtility;
+import nightware.main.utility.render.RenderUtility;
+import nightware.main.utility.render.animation.Direction;
+import nightware.main.utility.render.animation.impl.DecelerateAnimation;
+import nightware.main.utility.render.font.Fonts;
+
+import java.awt.*;
 
 public class GuiButton extends Gui
 {
@@ -35,10 +45,12 @@ public class GuiButton extends Gui
     /** Hides the button completely if false. */
     public boolean visible;
     protected boolean hovered;
+    public DecelerateAnimation animation;
 
     public GuiButton(int buttonId, int x, int y, String buttonText)
     {
         this(buttonId, x, y, 200, 20, buttonText);
+        this.animation = new DecelerateAnimation(300, 1.0F, Direction.BACKWARDS);
     }
 
     public GuiButton(int buttonId, int x, int y, int widthIn, int heightIn, String buttonText)
@@ -55,6 +67,7 @@ public class GuiButton extends Gui
         this.width = widthIn;
         this.height = heightIn;
         this.displayString = buttonText;
+        this.animation = new DecelerateAnimation(300, 1.0F, Direction.BACKWARDS);
     }
 
     /**
@@ -81,29 +94,23 @@ public class GuiButton extends Gui
     {
         if (this.visible)
         {
-            FontRenderer fontrenderer = p_191745_1_.fontRendererObj;
-            p_191745_1_.getTextureManager().bindTexture(BUTTON_TEXTURES);
-            GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-            this.hovered = p_191745_2_ >= this.xPosition && p_191745_3_ >= this.yPosition && p_191745_2_ < this.xPosition + this.width && p_191745_3_ < this.yPosition + this.height;
-            int i = this.getHoverState(this.hovered);
+            int color = NightWare.getInstance().getC(0).getRGB();
+            int color2 = NightWare.getInstance().getC(500).getRGB();
+            boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+            int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
+            this.animation.setDirection(this.hovered ? Direction.FORWARDS : Direction.BACKWARDS);
+            this.hovered = p_191745_2_ >= this.x && p_191745_3_ >= this.y && p_191745_2_ < this.x + this.width && p_191745_3_ < this.y + this.height;
             GlStateManager.enableBlend();
             GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
             GlStateManager.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
-            this.drawTexturedModalRect(this.xPosition, this.yPosition, 0, 46 + i * 20, this.width / 2, this.height);
-            this.drawTexturedModalRect(this.xPosition + this.width / 2, this.yPosition, 200 - this.width / 2, 46 + i * 20, this.width / 2, this.height);
-            this.mouseDragged(p_191745_1_, p_191745_2_, p_191745_3_);
-            int j = 14737632;
-
-            if (!this.enabled)
-            {
-                j = 10526880;
+            RenderUtility.drawRoundedRect(this.x, this.y + 1, this.width, this.height - 2, 5.0F, bgColor);
+            if (this.hovered) {
+                RenderUtility.drawGradientGlow(this.x, this.y + 1, this.width, this.height - 2, 5, ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()), ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()));
+                RenderUtility.drawRoundedRect(this.x, this.y + 1, this.width, this.height - 2, 5.0F, bgColor);
+                Fonts.nunitoBold16.drawGradientCenteredString(this.displayString, (float)this.x + (float)this.width / 2.0F, (float)this.y + (float)(this.height - 8) / 2.0F + 1.0F, new Color(color), new Color(color2));
+            } else {
+                Fonts.nunitoBold16.drawCenteredString(this.displayString, (float)this.x + (float)this.width / 2.0F, (float)this.y + (float)(this.height - 8) / 2.0F + 1.0F, -1);
             }
-            else if (this.hovered)
-            {
-                j = 16777120;
-            }
-
-            this.drawCenteredString(fontrenderer, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, j);
         }
     }
 
@@ -144,7 +151,8 @@ public class GuiButton extends Gui
 
     public void playPressSound(SoundHandler soundHandlerIn)
     {
-        soundHandlerIn.playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
+//        soundHandlerIn.playSound(PositionedSoundRecord.getMasterRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F));
+        SoundUtility.playSound("buttonclick.wav", 1);
     }
 
     public int getButtonWidth()

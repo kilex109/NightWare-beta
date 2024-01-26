@@ -22,7 +22,7 @@ import nightware.main.utility.misc.SoundUtility;
    category = Category.COMBAT
 )
 public class HitEffect extends Module {
-   public ModeSetting effect = new ModeSetting("Эффект", "Молния", "Молния", "Взрыв крови", "Дым");
+   public ModeSetting effect = new ModeSetting("Эффект", "Молния", "Молния", "Взрыв крови", "Дым", "Динамит");
 
    @EventTarget
    public void onPacket(EventReceivePacket eventPacket) {
@@ -46,6 +46,8 @@ public class HitEffect extends Module {
                mc.renderGlobal.playEvent(mc.player, 2000, new BlockPos(entity.posX, entity.posY + (double) entity.getEyeHeight(), entity.posZ), 152);
             } else if (this.effect.get().equals("Взрыв крови")) {
                mc.renderGlobal.playEvent(mc.player, 2001, new BlockPos(entity.posX, entity.posY + (double) entity.getEyeHeight(), entity.posZ), 152);
+            } else if (this.effect.get().equals("Динамит")) {
+               mc.renderGlobal.playEvent(mc.player, 3000, new BlockPos(entity.posX, entity.posY + (double) entity.getEyeHeight(), entity.posZ), 152);
             }
          }
       }

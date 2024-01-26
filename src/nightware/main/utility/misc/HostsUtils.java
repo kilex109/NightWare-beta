@@ -1,6 +1,8 @@
 package nightware.main.utility.misc;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HostsUtils {
     public static void addHostsEntry(String hostsEntry) {
@@ -30,48 +32,26 @@ public class HostsUtils {
         }
     }
 
-    public static void removeLineFromFile(String lineToRemove) {
-        try {
-            File file = new File("C:/Windows/System32/drivers/etc/hosts");
+    public static void removeLineFromFile(String searchString) {
 
-            if (!file.isFile()) {
-                System.out.println("File not exists.");
-                return;
-            }
-
-            File tempFile = new File(file.getAbsolutePath() + ".tmp");
-
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-
-            String currentLine;
-            boolean found = false;
-
-            while ((currentLine = reader.readLine()) != null) {
-                if (currentLine.trim().equals(lineToRemove)) {
-                    found = true;
-                    continue;
+        List<String> lines = new ArrayList<>();
+        File file = new File("C:/Windows/System32/drivers/etc/hosts");
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (!line.contains(searchString)) {
+                    lines.add(line);
                 }
-                writer.write(currentLine + System.getProperty("line.separator"));
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-            writer.close();
-            reader.close();
-
-            if (!found) {
-                System.out.println("String not found.");
-                return;
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            for (String line : lines) {
+                writer.write(line);
+                writer.newLine();
             }
-
-            if (!file.delete()) {
-                System.out.println("File not found.");
-                return;
-            }
-
-            if (!tempFile.renameTo(file))
-                System.out.println("Temp file not be renamed.");
-
-            System.out.println("String succefull deleted from file.");
         } catch (IOException e) {
             e.printStackTrace();
         }

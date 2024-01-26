@@ -9,7 +9,7 @@ public class ScaledResolution
     private final double scaledHeightD;
     private int scaledWidth;
     private int scaledHeight;
-    private int scaleFactor;
+    private static int scaleFactor;
 
     public ScaledResolution(Minecraft minecraftClient)
     {
@@ -89,8 +89,8 @@ public class ScaledResolution
         return this.scaledHeightD;
     }
 
-    public int getScaleFactor()
+    public static int getScaleFactor()
     {
-        return this.scaleFactor;
+        return scaleFactor;
     }
 }

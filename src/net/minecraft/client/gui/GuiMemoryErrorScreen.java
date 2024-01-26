@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import nightware.main.ui.menu.main.NWMainMenu;
 import net.minecraft.client.resources.I18n;
+import nightware.main.ui.menu.main.newgui.NewMainMenu;
 
 public class GuiMemoryErrorScreen extends GuiScreen
 {
@@ -25,7 +26,7 @@ public class GuiMemoryErrorScreen extends GuiScreen
     {
         if (button.id == 0)
         {
-            this.mc.displayGuiScreen(new NWMainMenu());
+            this.mc.displayGuiScreen(new NewMainMenu());
         }
         else if (button.id == 1)
         {

@@ -1,6 +1,7 @@
 package nightware.main.command.impl;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import com.sun.jna.platform.unix.X11;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.SoundCategory;
@@ -35,6 +36,7 @@ public class RofolComanda extends CommandAbstract {
       ChatUtility.addChatMessage("Уникальный айди - " + NightWare.getInstance().getUserInfo().getUid());
       ChatUtility.addChatMessage("Роль - " + NightWare.getInstance().getUserInfo().getRole());
       ChatUtility.addChatMessage("Рекомендуемый предикт - " + (mc.getConnection().getPlayerInfo(mc.player.getUniqueID()).getResponseTime()) / 20f);
+      System.gc();
    }
 
    public void error() {

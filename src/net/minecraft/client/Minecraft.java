@@ -206,6 +206,7 @@ import net.minecraft.world.chunk.storage.AnvilSaveConverter;
 import net.minecraft.world.storage.ISaveFormat;
 import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
+import nightware.main.ui.menu.main.newgui.NewMainMenu;
 import nightware.main.utility.misc.SoundUtility;
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
@@ -611,9 +612,9 @@ public class Minecraft implements IThreadListener, ISnooperInfo
 
         NightWare.getInstance().start();
         if (this.serverName != null) {
-            this.displayGuiScreen(new GuiConnecting(new NWMainMenu(), this, this.serverName, this.serverPort));
+            this.displayGuiScreen(new GuiConnecting(new NewMainMenu(), this, this.serverName, this.serverPort));
         } else {
-            this.displayGuiScreen(new NWMainMenu());
+            this.displayGuiScreen(new NewMainMenu());
             SoundUtility.playSound("main_init.wav", 1.0f);
         }
 
@@ -1053,7 +1054,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
         }
 
         if (guiScreenIn == null && this.world == null) {
-            guiScreenIn = new NWMainMenu();
+            guiScreenIn = new NewMainMenu();
         } else if (guiScreenIn == null && this.player.getHealth() <= 0.0F) {
             guiScreenIn = new GuiGameOver((ITextComponent) null);
         }

@@ -82,7 +82,6 @@ public class CsGui extends GuiScreen {
             themes.add(new ThemeComponent(theme.getTheme(), 55.0F, 30.0F));
          }
       }
-
    }
 
    public void initGui() {
@@ -113,8 +112,8 @@ public class CsGui extends GuiScreen {
       GlStateManager.translate((float)(this.x + 175), (float)((this.y + 300) / 2), 0.0F);
       GlStateManager.scale(scale, scale, 0.0F);
       GlStateManager.translate((float)(-(this.x + 175)), (float)(-((this.y + 300) / 2)), 0.0F);
-      RenderUtility.drawRect((float)this.x, (float)this.y, 20, 20, guiColors[0].getRGB());
-      RenderUtility.drawRoundedRect((float)this.x, (float)this.y, 350.0F, 250.0F, 8.0F, 185.0F, 50.0F, guiColors[0].getRGB(), guiColors[1].getRGB());
+
+      RenderUtility.CorneredGradient((float)this.x, (float)this.y, 350.0F, 250.0F, 0, 8, 8, 8, 1, guiColors[0].getRGB(), guiColors[1].getRGB(), guiColors[0].getRGB(), guiColors[1].getRGB());
       Color color = NightWare.getInstance().getC(0);
       Color color2 = NightWare.getInstance().getC(500);
 
@@ -155,6 +154,9 @@ public class CsGui extends GuiScreen {
       RenderUtility.applyRound(0, 0, 12.0F, 1.0F, () -> {
          RenderUtility.drawProfile((float)(this.x + 1500), (float)(this.y + 220), 25.0F, 25.0F);
       });
+
+      // œ≈–≈Õ≈—“» ﬁ«≈–»Õ‘Œ Õ»∆≈ ¬ ÕŒ–Ã¿À‹Õ”ﬁ œÀ¿ÿ ”
+
       Fonts.mntssb16.drawGradientString("User: " + NightWare.getInstance().getUserInfo().getName(), (float)(this.x + 5), (float)(this.y + 210), NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));
       Fonts.mntssb16.drawGradientString("UID: " + NightWare.getInstance().getUserInfo().getUid(), (float)(this.x + 5), (float)(this.y + 220), NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));
       Fonts.mntssb16.drawGradientString("Role: " + NightWare.getInstance().getUserInfo().getRole(), (float)(this.x + 5), (float)(this.y + 230), NightWare.getInstance().getC(0), NightWare.getInstance().getC(250));

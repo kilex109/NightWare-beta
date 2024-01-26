@@ -1,6 +1,8 @@
 package nightware.main.module.impl.render;
 
 import com.darkmagician6.eventapi.EventTarget;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.util.ResourceLocation;
 import nightware.main.AnimationUtils;
 import nightware.main.NightWare;
 import nightware.main.event.misc.EventKeyBoard;
@@ -14,6 +16,7 @@ import nightware.main.module.Category;
 import nightware.main.module.Module;
 import nightware.main.module.ModuleAnnotation;
 import nightware.main.module.Utils;
+import nightware.main.module.setting.impl.ModeSetting;
 import nightware.main.utility.render.AntiAliasingUtility;
 import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.RenderUtility;
@@ -34,6 +37,7 @@ import java.util.ArrayList;
    category = Category.RENDER
 )
 public class SoundInfo extends Module {
+   public static ModeSetting tracerMode = new ModeSetting("Режим проекции", "Стрелки", "Стрелки", "Линии");
    private final Draggable siDraggable = DragManager.create(this, "Sound Info", 250, 100);
    int chouse = -1;
    AnimationUtils animChouse;
@@ -114,67 +118,83 @@ public class SoundInfo extends Module {
    @EventTarget
    public void onRender3D(EventRender3D event) {
       this.siDraggable.setWidth(125);
-      RenderUtility.glColor(Color.white.getRGB());
-      mc.gameSettings.viewBobbing = false;
-      mc.entityRenderer.setupCameraTransform(event.getPartialTicks(), 2);
-      GL11.glPushMatrix();
-      GL11.glEnable(2848);
-      GL11.glDisable(2929);
-      GL11.glDisable(3553);
-      GL11.glDisable(2896);
-      GL11.glDepthMask(false);
-      GL11.glBlendFunc(770, 771);
-      GL11.glEnable(GL11.GL_LINE_SMOOTH);
-      GL11.glLineWidth(0.000001f);
-      for (Ex ex : exes) {
-         if (ex.use) {
-            Color color = Color.WHITE;
-            double x = ex.pos.xCoord - mc.getRenderManager().viewerPosX;
-            double y = ex.pos.yCoord - mc.getRenderManager().viewerPosY;
-            double z = ex.pos.zCoord - mc.getRenderManager().viewerPosZ;
-            float red = color.getRed() / 255F;
-            float green = color.getGreen() / 255F;
-            float blue = color.getBlue() / 255F;
-            float alpha = color.getAlpha() / 255F;
-            GL11.glPushMatrix();
-            boolean old = mc.gameSettings.viewBobbing;
-            mc.gameSettings.viewBobbing = false;
-            mc.entityRenderer.setupCameraTransform(event.getPartialTicks(), 2);
-            mc.gameSettings.viewBobbing = old;
-            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-            GL11.glEnable(GL11.GL_BLEND);
-            GL11.glLineWidth(1f);
-            GL11.glDisable(GL11.GL_TEXTURE_2D);
-            GL11.glDisable(GL11.GL_DEPTH_TEST);
-            AntiAliasingUtility.hook(true, false, false);
-            GL11.glDepthMask(false);
-            GlStateManager.color(red, green, blue, alpha);
-            GL11.glBegin(GL11.GL_LINE_STRIP);
-            Vec3d vec = new Vec3d(0, 0, 1).rotatePitch((float) -(Math.toRadians(mc.player.rotationPitch))).rotateYaw((float) -Math.toRadians(mc.player.rotationYaw));
-            GL11.glVertex3d(vec.xCoord, vec.yCoord + mc.player.getEyeHeight(), vec.zCoord);
-            GL11.glVertex3d(x, y, z);
-            GL11.glEnd();
-            AntiAliasingUtility.unhook(true, false, false);
-            GL11.glEnable(GL11.GL_TEXTURE_2D);
-            GL11.glEnable(GL11.GL_DEPTH_TEST);
-            GL11.glDepthMask(true);
-            GL11.glDisable(GL11.GL_BLEND);
-            GL11.glPopMatrix();
-            GlStateManager.resetColor();
+      if (tracerMode.is("Линии")) {
+         RenderUtility.glColor(Color.white.getRGB());
+         mc.gameSettings.viewBobbing = false;
+         mc.entityRenderer.setupCameraTransform(event.getPartialTicks(), 2);
+         GL11.glPushMatrix();
+         GL11.glEnable(2848);
+         GL11.glDisable(2929);
+         GL11.glDisable(3553);
+         GL11.glDisable(2896);
+         GL11.glDepthMask(false);
+         GL11.glBlendFunc(770, 771);
+         GL11.glEnable(GL11.GL_LINE_SMOOTH);
+         GL11.glLineWidth(0.000001f);
+         for (Ex ex : exes) {
+            if (ex.use) {
+               Color color = Color.WHITE;
+               double x = ex.pos.xCoord - mc.getRenderManager().viewerPosX;
+               double y = ex.pos.yCoord - mc.getRenderManager().viewerPosY;
+               double z = ex.pos.zCoord - mc.getRenderManager().viewerPosZ;
+               float red = color.getRed() / 255F;
+               float green = color.getGreen() / 255F;
+               float blue = color.getBlue() / 255F;
+               float alpha = color.getAlpha() / 255F;
+               GL11.glPushMatrix();
+               boolean old = mc.gameSettings.viewBobbing;
+               mc.gameSettings.viewBobbing = false;
+               mc.entityRenderer.setupCameraTransform(event.getPartialTicks(), 2);
+               mc.gameSettings.viewBobbing = old;
+               GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+               GL11.glEnable(GL11.GL_BLEND);
+               GL11.glLineWidth(1f);
+               GL11.glDisable(GL11.GL_TEXTURE_2D);
+               GL11.glDisable(GL11.GL_DEPTH_TEST);
+               AntiAliasingUtility.hook(true, false, false);
+               GL11.glDepthMask(false);
+               GlStateManager.color(red, green, blue, alpha);
+               GL11.glBegin(GL11.GL_LINE_STRIP);
+               Vec3d vec = new Vec3d(0, 0, 1).rotatePitch((float) -(Math.toRadians(mc.player.rotationPitch))).rotateYaw((float) -Math.toRadians(mc.player.rotationYaw));
+               GL11.glVertex3d(vec.xCoord, vec.yCoord + mc.player.getEyeHeight(), vec.zCoord);
+               GL11.glVertex3d(x, y, z);
+               GL11.glEnd();
+               AntiAliasingUtility.unhook(true, false, false);
+               GL11.glEnable(GL11.GL_TEXTURE_2D);
+               GL11.glEnable(GL11.GL_DEPTH_TEST);
+               GL11.glDepthMask(true);
+               GL11.glDisable(GL11.GL_BLEND);
+               GL11.glPopMatrix();
+               GlStateManager.resetColor();
+            }
          }
+         GL11.glDisable(3042);
+         GL11.glDepthMask(true);
+         GL11.glDisable(GL11.GL_LINE_SMOOTH);
+         GL11.glEnable(3553);
+         GL11.glEnable(2929);
+         GL11.glDisable(2848);
+         GL11.glPopMatrix();
+         RenderUtility.glColor(Color.white.getRGB());
       }
-      GL11.glDisable(3042);
-      GL11.glDepthMask(true);
-      GL11.glDisable(GL11.GL_LINE_SMOOTH);
-      GL11.glEnable(3553);
-      GL11.glEnable(2929);
-      GL11.glDisable(2848);
-      GL11.glPopMatrix();
-      RenderUtility.glColor(Color.white.getRGB());
    }
 
    @EventTarget
    public void render2D(EventRender2D event) {
+      if (tracerMode.is("Стрелки")) {
+         for (Ex ex : exes) {
+            if (ex.use) {
+               GlStateManager.pushMatrix();
+               double yaw = Math.toDegrees(Math.atan2(ex.pos.zCoord - mc.player.posZ, ex.pos.xCoord - mc.player.posX)) - mc.player.rotationYaw - 90;
+               GL11.glTranslated((new ScaledResolution(mc)).getScaledWidth() / 2d + 1d, (new ScaledResolution(mc)).getScaledHeight() / 2d, 0);
+               GL11.glTranslated((Math.cos(Math.toRadians(yaw - 90)) * 20), Math.sin(Math.toRadians(yaw - 90)) * 20, 0);
+               GL11.glRotated(yaw, 0, 0, 1);
+               RenderUtility.drawImage(new ResourceLocation("nightware/textures/triangle.png"), (int) -9.9f, 0, (int) 17.5f, (int) 17.5f, -1);
+               GlStateManager.popMatrix();
+            }
+         }
+      }
+
       if (!mc.gameSettings.showDebugInfo) {
          int color = NightWare.getInstance().getC(0).getRGB();
          int color2 = NightWare.getInstance().getC(500).getRGB();

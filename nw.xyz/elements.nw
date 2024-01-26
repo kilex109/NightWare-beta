@@ -1,0 +1,27 @@
+[
+  {
+    "x": 10,
+    "y": 300,
+    "name": "Potions"
+  },
+  {
+    "x": 823,
+    "y": 10,
+    "name": "Sound Info"
+  },
+  {
+    "x": 423,
+    "y": 378,
+    "name": "Target HUD"
+  },
+  {
+    "x": 206,
+    "y": 136,
+    "name": "Keybinds"
+  },
+  {
+    "x": 10,
+    "y": 100,
+    "name": "Inventory View"
+  }
+]

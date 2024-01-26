@@ -16,7 +16,7 @@ public enum Category {
    private final String name;
    private final String icon;
    private boolean bottom = false;
-   private final Animation animation = new DecelerateAnimation(340, 1.0F);
+   private final Animation animation = new DecelerateAnimation(1000, 1.0F);
 
    private Category(String name, String icon) {
       this.name = name;

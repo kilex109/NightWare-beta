@@ -5,6 +5,7 @@ import nightware.main.ui.menu.altmanager.alt.Alt;
 import nightware.main.ui.menu.altmanager.alt.AltLoginThread;
 import nightware.main.ui.menu.altmanager.alt.AltManager;
 import nightware.main.ui.menu.main.NWMainMenu;
+import nightware.main.ui.menu.main.newgui.NewMainMenu;
 import nightware.main.ui.menu.widgets.CustomButton;
 import nightware.main.utility.math.Vec2i;
 import nightware.main.utility.render.RenderUtility;
@@ -78,7 +79,7 @@ public class GuiAltManager extends GuiScreen {
          AltManager.clearAccounts();
          break;
       case 4:
-         this.mc.displayGuiScreen(new NWMainMenu());
+         this.mc.displayGuiScreen(new NewMainMenu());
          break;
       }
 

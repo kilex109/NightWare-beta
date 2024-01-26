@@ -53,6 +53,4 @@ public class ScriptManager {
 
         return content.toString();
     }
-
-
 }

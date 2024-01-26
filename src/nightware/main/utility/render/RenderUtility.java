@@ -3,11 +3,14 @@ package nightware.main.utility.render;
 import com.jhlabs.image.GaussianFilter;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.culling.ICamera;
+import net.minecraft.client.shader.Framebuffer;
 import nightware.main.NightWare;
 import nightware.main.manager.theme.Themes;
 import nightware.main.module.impl.util.Optimizer;
 import nightware.main.utility.Utility;
 import nightware.main.utility.misc.DiscordPresence;
+import nightware.main.utility.render.blur.GaussianBlur;
 import nightware.main.utility.render.shader.Shader;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -43,6 +46,70 @@ public class RenderUtility implements Utility {
    private static final HashMap<Integer, Integer> SHADOW_CACHE;
    public static Frustum FRUSTUM;
    private static int PROFILE_ID;
+
+   public static Vec3d vectorTo2D(int scaleFactor, double x, double y, double z) {
+      float xPos = (float) x;
+      float yPos = (float) y;
+      float zPos = (float) z;
+      IntBuffer viewport = GLAllocation.createDirectIntBuffer(16);
+      FloatBuffer modelview = GLAllocation.createDirectFloatBuffer(16);
+      FloatBuffer projection = GLAllocation.createDirectFloatBuffer(16);
+      FloatBuffer vector = GLAllocation.createDirectFloatBuffer(4);
+      GL11.glGetFloat(GL11.GL_MODELVIEW_MATRIX, modelview);
+      GL11.glGetFloat(GL11.GL_PROJECTION_MATRIX, projection);
+      GL11.glGetInteger(GL11.GL_VIEWPORT, viewport);
+      if (GLU.gluProject(xPos, yPos, zPos, modelview, projection, viewport, vector))
+         return new Vec3d((vector.get(0) / scaleFactor), ((Display.getHeight() - vector.get(1)) / scaleFactor),
+                 vector.get(2));
+      return null;
+   }
+
+   public static Framebuffer createFrameBuffer(Framebuffer framebuffer) {
+      if (framebuffer == null || framebuffer.framebufferWidth != mc.displayWidth || framebuffer.framebufferHeight != mc.displayHeight) {
+         if (framebuffer != null) {
+            framebuffer.deleteFramebuffer();
+         }
+         return new Framebuffer(mc.displayWidth, mc.displayHeight, true);
+      }
+      return framebuffer;
+   }
+
+   public static void bindTexture(int texture) {
+      glBindTexture(GL_TEXTURE_2D, texture);
+   }
+
+   public static void resetColor() {
+      color(1, 1, 1, 1);
+   }
+
+   public static final void color(double red, double green, double blue, double alpha) {
+      GL11.glColor4d(red, green, blue, alpha);
+   }
+
+   public static void blockEspFrame(BlockPos blockPos, double red, double green, double blue) {
+      double d = blockPos.getX();
+      Minecraft.getMinecraft().getRenderManager();
+      double x = d - Minecraft.getMinecraft().getRenderManager().viewerPosX;
+      double d2 = blockPos.getY();
+      Minecraft.getMinecraft().getRenderManager();
+      double y = d2 - Minecraft.getMinecraft().getRenderManager().viewerPosY;
+      double d3 = blockPos.getZ();
+      Minecraft.getMinecraft().getRenderManager();
+      double z = d3 - Minecraft.getMinecraft().getRenderManager().viewerPosZ;
+      GL11.glBlendFunc(770, 771);
+      GL11.glEnable(3042);
+      GL11.glLineWidth(1.0f);
+      GL11.glDisable(3553);
+      GL11.glDisable(2929);
+      GL11.glDepthMask(false);
+      GL11.glColor4d(red, green, blue, 1);
+      drawSelectionBoundingBox(new AxisAlignedBB(x, y, z, x + 1.0, y + 1.0, z + 1.0));
+      GL11.glEnable(3553);
+      GL11.glEnable(2929);
+      GL11.glDepthMask(true);
+      GL11.glDisable(3042);
+      GL11.glColor4f(1, 1, 1, 1);
+   }
 
    public static void drawRect(float x, float y, float x2, float y2, int color) {
       drawGradientRect(x, y, x2, y2, color, color, color, color);
@@ -179,26 +246,23 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawCircle(float x, float y, float radius, int color) {
-      float f = (float)(color >> 24 & 255) / 255.0F;
-      float f1 = (float)(color >> 16 & 255) / 255.0F;
-      float f2 = (float)(color >> 8 & 255) / 255.0F;
-      float f3 = (float)(color & 255) / 255.0F;
+      float f = (float) (color >> 24 & 255) / 255.0F;
+      float f1 = (float) (color >> 16 & 255) / 255.0F;
+      float f2 = (float) (color >> 8 & 255) / 255.0F;
+      float f3 = (float) (color & 255) / 255.0F;
       boolean flag = GL11.glIsEnabled(GL11.GL_BLEND);
       boolean flag1 = GL11.glIsEnabled(GL11.GL_LINE_SMOOTH);
       boolean flag2 = GL11.glIsEnabled(GL11.GL_TEXTURE_2D);
 
-      if (!flag)
-      {
+      if (!flag) {
          GL11.glEnable(GL11.GL_BLEND);
       }
 
-      if (!flag1)
-      {
+      if (!flag1) {
          GL11.glEnable(GL11.GL_LINE_SMOOTH);
       }
 
-      if (flag2)
-      {
+      if (flag2) {
          GL11.glDisable(GL11.GL_TEXTURE_2D);
       }
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
@@ -209,29 +273,63 @@ public class RenderUtility implements Utility {
       GL11.glColor4f(f1, f2, f3, f);
       GL11.glBegin(GL11.GL_POLYGON);
 
-      for (int i = 0; i <= 360; ++i)
-      {
-         GL11.glVertex2d((double)x + Math.sin((double)i * Math.PI / 180.0D) * (double)radius, (double)y + Math.cos((double)i * Math.PI / 180.0D) * (double)radius);
+      for (int i = 0; i <= 360; ++i) {
+         GL11.glVertex2d((double) x + Math.sin((double) i * Math.PI / 180.0D) * (double) radius, (double) y + Math.cos((double) i * Math.PI / 180.0D) * (double) radius);
       }
 
       GL11.glEnd();
       GL11.glDisable(GL11.GL_LINE_SMOOTH);
 
-      if (flag2)
-      {
+      if (flag2) {
          GL11.glEnable(GL11.GL_TEXTURE_2D);
       }
 
-      if (!flag1)
-      {
+      if (!flag1) {
          GL11.glDisable(GL11.GL_LINE_SMOOTH);
       }
 
-      if (!flag)
-      {
+      if (!flag) {
          GL11.glDisable(GL11.GL_BLEND);
       }
       GlStateManager.resetColor();
+   }
+
+   private static ICamera camera = new Frustum();
+
+   public static void drawBoxESP(final AxisAlignedBB pos, final Color color, final float lineWidth, final boolean outline, final boolean box, final int boxAlpha, final int outlineAlpha) {
+      final AxisAlignedBB bb = new AxisAlignedBB(pos.minX - mc.getRenderManager().viewerPosX, pos.minY - mc.getRenderManager().viewerPosY, pos.minZ - mc.getRenderManager().viewerPosZ, pos.maxX - mc.getRenderManager().viewerPosX, pos.maxY - mc.getRenderManager().viewerPosY, pos.maxZ - mc.getRenderManager().viewerPosZ);
+      camera.setPosition(Objects.requireNonNull(mc.getRenderViewEntity()).posX, mc.getRenderViewEntity().posY, mc.getRenderViewEntity().posZ);
+      if (camera.isBoundingBoxInFrustum(pos)) {
+         GlStateManager.pushMatrix();
+         GlStateManager.enableBlend();
+         GlStateManager.disableDepth();
+         GlStateManager.tryBlendFuncSeparate(770, 771, 0, 1);
+         GlStateManager.disableTexture2D();
+         GlStateManager.depthMask(false);
+         GL11.glEnable(2848);
+         GL11.glHint(3154, 4354);
+         GL11.glLineWidth(lineWidth);
+         if (box) {
+            RenderGlobal.renderFilledBox(bb, color.getRed() / 255.0f, color.getGreen() / 255.0f, color.getBlue() / 255.0f, boxAlpha / 255.0f);
+         }
+         if (outline) {
+            RenderGlobal.drawBoundingBox(bb.minX, bb.minY, bb.minZ, bb.maxX, bb.maxY, bb.maxZ, color.getRed() / 255.0f, color.getGreen() / 255.0f, color.getBlue() / 255.0f, outlineAlpha / 255.0f);
+         }
+         GL11.glDisable(2848);
+         GlStateManager.depthMask(true);
+         GlStateManager.enableDepth();
+         GlStateManager.enableTexture2D();
+         GlStateManager.disableBlend();
+         GlStateManager.popMatrix();
+      }
+   }
+
+   public static void drawBlur(Runnable data, float radius) {
+      StencilUtility.initStencilToWrite();
+      data.run();
+      StencilUtility.readStencilBuffer(1);
+      GaussianBlur.renderBlur(radius);
+      StencilUtility.uninitStencilBuffer();
    }
 
    public static void applyRound(float width, float height, float round, float alpha, Runnable runnable) {
@@ -271,7 +369,7 @@ public class RenderUtility implements Utility {
       GL11.glBegin(2);
       glColor(color);
 
-      for(int i = 0; i <= 360; i++) {
+      for (int i = 0; i <= 360; i++) {
          GL11.glVertex3d(Math.sin(i * Math.PI / 180) * radius, 0, Math.cos(i * Math.PI / 180) * radius);
       }
       GL11.glEnd();
@@ -298,8 +396,7 @@ public class RenderUtility implements Utility {
       GL11.glLineWidth(1);
    }
 
-   public static void glColor(final int hex)
-   {
+   public static void glColor(final int hex) {
       final float alpha = (hex >> 24 & 0xFF) / 255F;
       final float red = (hex >> 16 & 0xFF) / 255F;
       final float green = (hex >> 8 & 0xFF) / 255F;
@@ -341,13 +438,13 @@ public class RenderUtility implements Utility {
       GlStateManager.enableBlend();
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
       GRADIENT_MASK.useProgram();
-      GRADIENT_MASK.setupUniform2f("location", x * 2.0F, (float)Minecraft.getMinecraft().displayHeight - height * 2.0F - y * 2.0F);
+      GRADIENT_MASK.setupUniform2f("location", x * 2.0F, (float) Minecraft.getMinecraft().displayHeight - height * 2.0F - y * 2.0F);
       GRADIENT_MASK.setupUniform2f("rectSize", width * 2.0F, height * 2.0F);
       GRADIENT_MASK.setupUniform1f("alpha", alpha);
-      GRADIENT_MASK.setupUniform3f("color1", (float)bottomLeft.getRed() / 255.0F, (float)bottomLeft.getGreen() / 255.0F, (float)bottomLeft.getBlue() / 255.0F);
-      GRADIENT_MASK.setupUniform3f("color2", (float)topLeft.getRed() / 255.0F, (float)topLeft.getGreen() / 255.0F, (float)topLeft.getBlue() / 255.0F);
-      GRADIENT_MASK.setupUniform3f("color3", (float)bottomRight.getRed() / 255.0F, (float)bottomRight.getGreen() / 255.0F, (float)bottomRight.getBlue() / 255.0F);
-      GRADIENT_MASK.setupUniform3f("color4", (float)topRight.getRed() / 255.0F, (float)topRight.getGreen() / 255.0F, (float)topRight.getBlue() / 255.0F);
+      GRADIENT_MASK.setupUniform3f("color1", (float) bottomLeft.getRed() / 255.0F, (float) bottomLeft.getGreen() / 255.0F, (float) bottomLeft.getBlue() / 255.0F);
+      GRADIENT_MASK.setupUniform3f("color2", (float) topLeft.getRed() / 255.0F, (float) topLeft.getGreen() / 255.0F, (float) topLeft.getBlue() / 255.0F);
+      GRADIENT_MASK.setupUniform3f("color3", (float) bottomRight.getRed() / 255.0F, (float) bottomRight.getGreen() / 255.0F, (float) bottomRight.getBlue() / 255.0F);
+      GRADIENT_MASK.setupUniform3f("color4", (float) topRight.getRed() / 255.0F, (float) topRight.getGreen() / 255.0F, (float) topRight.getBlue() / 255.0F);
       content.run();
       GRADIENT_MASK.unloadProgram();
       GlStateManager.disableBlend();
@@ -372,10 +469,10 @@ public class RenderUtility implements Utility {
          bottom = j;
       }
 
-      float f3 = (float)(color >> 24 & 255) / 255.0F;
-      float f = (float)(color >> 16 & 255) / 255.0F;
-      float f1 = (float)(color >> 8 & 255) / 255.0F;
-      float f2 = (float)(color & 255) / 255.0F;
+      float f3 = (float) (color >> 24 & 255) / 255.0F;
+      float f = (float) (color >> 16 & 255) / 255.0F;
+      float f1 = (float) (color >> 8 & 255) / 255.0F;
+      float f2 = (float) (color & 255) / 255.0F;
       Tessellator tessellator = Tessellator.getInstance();
       BufferBuilder bufferbuilder = tessellator.getBuffer();
       GlStateManager.enableBlend();
@@ -434,9 +531,9 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawBlockBox(BlockPos blockPos, Color color, int alpha) {
-      double x = mc.player.lastTickPosX + (mc.player.posX - mc.player.lastTickPosX) * (double)mc.timer.field_194147_b;
-      double y = mc.player.lastTickPosY + (mc.player.posY - mc.player.lastTickPosY) * (double)mc.timer.field_194147_b;
-      double z = mc.player.lastTickPosZ + (mc.player.posZ - mc.player.lastTickPosZ) * (double)mc.timer.field_194147_b;
+      double x = mc.player.lastTickPosX + (mc.player.posX - mc.player.lastTickPosX) * (double) mc.timer.field_194147_b;
+      double y = mc.player.lastTickPosY + (mc.player.posY - mc.player.lastTickPosY) * (double) mc.timer.field_194147_b;
+      double z = mc.player.lastTickPosZ + (mc.player.posZ - mc.player.lastTickPosZ) * (double) mc.timer.field_194147_b;
       mc.entityRenderer.setupCameraTransform(mc.getRenderPartialTicks(), 2);
       GL11.glPushMatrix();
       AntiAliasingUtility.hook(true, false, false);
@@ -445,7 +542,7 @@ public class RenderUtility implements Utility {
       GL11.glLineWidth(1.0F);
       GL11.glDisable(3553);
       GL11.glDisable(2929);
-      GlStateManager.color((float)color.getRed() / 255.0F, (float)color.getGreen() / 255.0F, (float)color.getBlue() / 255.0F, (float)alpha / 255.0F);
+      GlStateManager.color((float) color.getRed() / 255.0F, (float) color.getGreen() / 255.0F, (float) color.getBlue() / 255.0F, (float) alpha / 255.0F);
       drawSelectionBoundingBox(mc.world.getBlockState(blockPos).getSelectedBoundingBox(mc.world, blockPos).grow(0.0020000000949949026D).offset(-x, -y, -z));
       GL11.glEnable(3553);
       GL11.glEnable(2929);
@@ -511,14 +608,14 @@ public class RenderUtility implements Utility {
    }
 
    public static void drawVGradientRect(float left, float top, float right, float bottom, int startColor, int endColor) {
-      float f = (float)(startColor >> 24 & 255) / 255.0F;
-      float f1 = (float)(startColor >> 16 & 255) / 255.0F;
-      float f2 = (float)(startColor >> 8 & 255) / 255.0F;
-      float f3 = (float)(startColor & 255) / 255.0F;
-      float f4 = (float)(endColor >> 24 & 255) / 255.0F;
-      float f5 = (float)(endColor >> 16 & 255) / 255.0F;
-      float f6 = (float)(endColor >> 8 & 255) / 255.0F;
-      float f7 = (float)(endColor & 255) / 255.0F;
+      float f = (float) (startColor >> 24 & 255) / 255.0F;
+      float f1 = (float) (startColor >> 16 & 255) / 255.0F;
+      float f2 = (float) (startColor >> 8 & 255) / 255.0F;
+      float f3 = (float) (startColor & 255) / 255.0F;
+      float f4 = (float) (endColor >> 24 & 255) / 255.0F;
+      float f5 = (float) (endColor >> 16 & 255) / 255.0F;
+      float f6 = (float) (endColor >> 8 & 255) / 255.0F;
+      float f7 = (float) (endColor & 255) / 255.0F;
       GlStateManager.disableTexture2D();
       GlStateManager.enableBlend();
       GlStateManager.disableAlpha();
@@ -527,11 +624,11 @@ public class RenderUtility implements Utility {
       GL11.glPushMatrix();
       GL11.glBegin(7);
       GL11.glColor4f(f1, f2, f3, f);
-      GL11.glVertex2d((double)left, (double)top);
-      GL11.glVertex2d((double)right, (double)top);
+      GL11.glVertex2d((double) left, (double) top);
+      GL11.glVertex2d((double) right, (double) top);
       GL11.glColor4f(f5, f6, f7, f4);
-      GL11.glVertex2d((double)right, (double)bottom);
-      GL11.glVertex2d((double)left, (double)bottom);
+      GL11.glVertex2d((double) right, (double) bottom);
+      GL11.glVertex2d((double) left, (double) bottom);
       GL11.glEnd();
       GL11.glPopMatrix();
       GlStateManager.resetColor();
@@ -551,10 +648,10 @@ public class RenderUtility implements Utility {
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
       GlStateManager.shadeModel(7425);
       BUILDER.begin(7, DefaultVertexFormats.POSITION_COLOR);
-      BUILDER.pos((double)x, (double)(height + y), 0.0D).color(c1[0], c1[1], c1[2], c1[3]).endVertex();
-      BUILDER.pos((double)(width + x), (double)(height + y), 0.0D).color(c2[0], c2[1], c2[2], c2[3]).endVertex();
-      BUILDER.pos((double)(width + x), (double)y, 0.0D).color(c3[0], c3[1], c3[2], c3[3]).endVertex();
-      BUILDER.pos((double)x, (double)y, 0.0D).color(c4[0], c4[1], c4[2], c4[3]).endVertex();
+      BUILDER.pos((double) x, (double) (height + y), 0.0D).color(c1[0], c1[1], c1[2], c1[3]).endVertex();
+      BUILDER.pos((double) (width + x), (double) (height + y), 0.0D).color(c2[0], c2[1], c2[2], c2[3]).endVertex();
+      BUILDER.pos((double) (width + x), (double) y, 0.0D).color(c3[0], c3[1], c3[2], c3[3]).endVertex();
+      BUILDER.pos((double) x, (double) y, 0.0D).color(c4[0], c4[1], c4[2], c4[3]).endVertex();
       TESSELLATOR.draw();
       GlStateManager.shadeModel(7424);
       GlStateManager.enableTexture2D();
@@ -901,7 +998,7 @@ public class RenderUtility implements Utility {
       y = y - glowRadius;
       float _X = x - 0.25f;
       float _Y = y + 0.25f;
-      int identifier = Objects.hash(width,height,glowRadius);
+      int identifier = Objects.hash(width, height, glowRadius);
       GL11.glEnable(GL11.GL_TEXTURE_2D);
       glDisable(GL11.GL_CULL_FACE);
       GL11.glEnable(GL11.GL_ALPHA_TEST);
@@ -963,20 +1060,20 @@ public class RenderUtility implements Utility {
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
       GlStateManager.shadeModel(7425);
       GlStateManager.alphaFunc(516, 0.01F);
-      width += (float)(glowRadius * 2);
-      height += (float)(glowRadius * 2);
-      x -= (float)glowRadius;
-      y -= (float)glowRadius;
+      width += (float) (glowRadius * 2);
+      height += (float) (glowRadius * 2);
+      x -= (float) glowRadius;
+      y -= (float) glowRadius;
       float _X = x - 0.25F;
       float _Y = y + 0.25F;
-      int identifier = (int)(width * height * (float)glowRadius);
+      int identifier = (int) (width * height * (float) glowRadius);
       GL11.glEnable(3553);
       GL11.glDisable(2884);
       GL11.glEnable(3008);
       GlStateManager.enableBlend();
       int texId;
       if (SHADOW_CACHE.containsKey(identifier)) {
-         texId = (Integer)SHADOW_CACHE.get(identifier);
+         texId = (Integer) SHADOW_CACHE.get(identifier);
          GlStateManager.bindTexture(texId);
       } else {
          if (width <= 0.0F) {
@@ -987,13 +1084,13 @@ public class RenderUtility implements Utility {
             height = 1.0F;
          }
 
-         original = new BufferedImage((int)width, (int)height, 3);
+         original = new BufferedImage((int) width, (int) height, 3);
          Graphics g = original.getGraphics();
          g.setColor(Color.white);
-         g.fillRect(glowRadius, glowRadius, (int)width - glowRadius * 2, (int)height - glowRadius * 2);
+         g.fillRect(glowRadius, glowRadius, (int) width - glowRadius * 2, (int) height - glowRadius * 2);
          g.dispose();
-         op = new GaussianFilter((float)glowRadius);
-         BufferedImage blurred = op.filter(original, (BufferedImage)null);
+         op = new GaussianFilter((float) glowRadius);
+         BufferedImage blurred = op.filter(original, (BufferedImage) null);
          texId = TextureUtil.uploadTextureImageAllocate(TextureUtil.glGenTextures(), blurred, true, false);
          SHADOW_CACHE.put(identifier, texId);
       }
@@ -1029,20 +1126,20 @@ public class RenderUtility implements Utility {
       GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
       GlStateManager.shadeModel(7425);
       GlStateManager.alphaFunc(516, 0.01F);
-      width += (float)(glowRadius * 2);
-      height += (float)(glowRadius * 2);
-      x -= (float)glowRadius;
-      y -= (float)glowRadius;
+      width += (float) (glowRadius * 2);
+      height += (float) (glowRadius * 2);
+      x -= (float) glowRadius;
+      y -= (float) glowRadius;
       float _X = x - 0.25F;
       float _Y = y + 0.25F;
-      int identifier = (int)(width * height + width + (float)(color1.hashCode() * glowRadius) + (float)glowRadius);
+      int identifier = (int) (width * height + width + (float) (color1.hashCode() * glowRadius) + (float) glowRadius);
       GL11.glEnable(3553);
       GL11.glDisable(2884);
       GL11.glEnable(3008);
       GlStateManager.enableBlend();
       int texId;
       if (SHADOW_CACHE.containsKey(identifier)) {
-         texId = (Integer)SHADOW_CACHE.get(identifier);
+         texId = (Integer) SHADOW_CACHE.get(identifier);
          GlStateManager.bindTexture(texId);
       } else {
          if (width <= 0.0F) {
@@ -1053,13 +1150,13 @@ public class RenderUtility implements Utility {
             height = 1.0F;
          }
 
-         BufferedImage original = new BufferedImage((int)width, (int)height, 3);
+         BufferedImage original = new BufferedImage((int) width, (int) height, 3);
          Graphics g = original.getGraphics();
          g.setColor(Color.WHITE);
-         g.fillRect(glowRadius, glowRadius, (int)(width - (float)(glowRadius * 2)), (int)(height - (float)(glowRadius * 2)));
+         g.fillRect(glowRadius, glowRadius, (int) (width - (float) (glowRadius * 2)), (int) (height - (float) (glowRadius * 2)));
          g.dispose();
-         GaussianFilter op = new GaussianFilter((float)glowRadius);
-         BufferedImage blurred = op.filter(original, (BufferedImage)null);
+         GaussianFilter op = new GaussianFilter((float) glowRadius);
+         BufferedImage blurred = op.filter(original, (BufferedImage) null);
          texId = TextureUtil.uploadTextureImageAllocate(TextureUtil.glGenTextures(), blurred, true, false);
          SHADOW_CACHE.put(identifier, texId);
       }
@@ -1121,10 +1218,10 @@ public class RenderUtility implements Utility {
 
    public static void allocTextureRectangle(float x, float y, float width, float height) {
       BUILDER.begin(7, DefaultVertexFormats.POSITION_TEX);
-      BUILDER.pos((double)x, (double)y, 0.0D).tex(0.0D, 0.0D).endVertex();
-      BUILDER.pos((double)x, (double)(y + height), 0.0D).tex(0.0D, 1.0D).endVertex();
-      BUILDER.pos((double)(x + width), (double)(y + height), 0.0D).tex(1.0D, 1.0D).endVertex();
-      BUILDER.pos((double)(x + width), (double)y, 0.0D).tex(1.0D, 0.0D).endVertex();
+      BUILDER.pos((double) x, (double) y, 0.0D).tex(0.0D, 0.0D).endVertex();
+      BUILDER.pos((double) x, (double) (y + height), 0.0D).tex(0.0D, 1.0D).endVertex();
+      BUILDER.pos((double) (x + width), (double) (y + height), 0.0D).tex(1.0D, 1.0D).endVertex();
+      BUILDER.pos((double) (x + width), (double) y, 0.0D).tex(1.0D, 0.0D).endVertex();
       TESSELLATOR.draw();
    }
 
@@ -1150,9 +1247,9 @@ public class RenderUtility implements Utility {
    }
 
    public static Vec3d project2D(int scaleFactor, double x, double y, double z) {
-      float xPos = (float)x;
-      float yPos = (float)y;
-      float zPos = (float)z;
+      float xPos = (float) x;
+      float yPos = (float) y;
+      float zPos = (float) z;
       IntBuffer viewport = GLAllocation.createDirectIntBuffer(16);
       FloatBuffer modelview = GLAllocation.createDirectFloatBuffer(16);
       FloatBuffer projection = GLAllocation.createDirectFloatBuffer(16);
@@ -1160,7 +1257,7 @@ public class RenderUtility implements Utility {
       GL11.glGetFloat(2982, modelview);
       GL11.glGetFloat(2983, projection);
       GL11.glGetInteger(2978, viewport);
-      return GLU.gluProject(xPos, yPos, zPos, modelview, projection, viewport, vector) ? new Vec3d((double)(vector.get(0) / (float)scaleFactor), (double)(((float)Display.getHeight() - vector.get(1)) / (float)scaleFactor), (double)vector.get(2)) : null;
+      return GLU.gluProject(xPos, yPos, zPos, modelview, projection, viewport, vector) ? new Vec3d((double) (vector.get(0) / (float) scaleFactor), (double) (((float) Display.getHeight() - vector.get(1)) / (float) scaleFactor), (double) vector.get(2)) : null;
    }
 
    public static double interpolate(double current, double old, double scale) {
@@ -1190,9 +1287,9 @@ public class RenderUtility implements Utility {
       GlStateManager.disableDepth();
    }
 
-   public static void customScaledObject2D(float oXpos,float oYpos,float oWidth,float oHeight,float oScale) {
-      GL11.glTranslated(oWidth/2,oHeight/2,1);
-      GL11.glTranslated(-oXpos * oScale + oXpos + oWidth/2 * -oScale,-oYpos * oScale + oYpos + oHeight/2 * -oScale,1);
-      GL11.glScaled(oScale,oScale,0);
+   public static void customScaledObject2D(float oXpos, float oYpos, float oWidth, float oHeight, float oScale) {
+      GL11.glTranslated(oWidth / 2, oHeight / 2, 1);
+      GL11.glTranslated(-oXpos * oScale + oXpos + oWidth / 2 * -oScale, -oYpos * oScale + oYpos + oHeight / 2 * -oScale, 1);
+      GL11.glScaled(oScale, oScale, 0);
    }
 }

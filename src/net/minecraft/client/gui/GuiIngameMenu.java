@@ -8,6 +8,7 @@ import net.minecraft.client.gui.advancements.GuiScreenAdvancements;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.realms.RealmsBridge;
+import nightware.main.ui.menu.main.newgui.NewMainMenu;
 
 public class GuiIngameMenu extends GuiScreen
 {
@@ -59,16 +60,16 @@ public class GuiIngameMenu extends GuiScreen
 
                 if (flag)
                 {
-                    this.mc.displayGuiScreen(new NWMainMenu());
+                    this.mc.displayGuiScreen(new NewMainMenu());
                 }
                 else if (flag1)
                 {
                     RealmsBridge realmsbridge = new RealmsBridge();
-                    realmsbridge.switchToRealms(new NWMainMenu());
+                    realmsbridge.switchToRealms(new NewMainMenu());
                 }
                 else
                 {
-                    this.mc.displayGuiScreen(new NWMainMenu());
+                    this.mc.displayGuiScreen(new NewMainMenu());
                 }
 
             case 2:

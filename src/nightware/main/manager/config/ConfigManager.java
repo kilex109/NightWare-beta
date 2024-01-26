@@ -30,7 +30,7 @@ public class ConfigManager extends Manager<Config> {
 
          for(int var3 = 0; var3 < var2; ++var3) {
             File file = var1[var3];
-            if (FilenameUtils.getExtension(file.getName()).equals("ss")) {
+            if (FilenameUtils.getExtension(file.getName()).equals("nw")) {
                loadedConfigs.add(new Config(FilenameUtils.removeExtension(file.getName())));
             }
          }
@@ -46,7 +46,7 @@ public class ConfigManager extends Manager<Config> {
 
       if (configDirectory != null) {
          File[] files = configDirectory.listFiles((fx) -> {
-            return !fx.isDirectory() && FilenameUtils.getExtension(fx.getName()).equals("ss");
+            return !fx.isDirectory() && FilenameUtils.getExtension(fx.getName()).equals("nw");
          });
          File[] var2 = files;
          int var3 = files.length;
@@ -113,7 +113,7 @@ public class ConfigManager extends Manager<Config> {
          Config config;
          do {
             if (!var2.hasNext()) {
-               if ((new File(configDirectory, configName + ".ss")).exists()) {
+               if ((new File(configDirectory, configName + ".nw")).exists()) {
                   return new Config(configName);
                }
 

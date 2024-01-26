@@ -24,13 +24,14 @@ public class ThemeComponent extends Component {
       }
 
       if (this.theme.getType().equals(Theme.ThemeType.GUI)) {
-         RenderUtility.drawRoundedGradientRect(this.x, this.y, this.width, this.height, 7.0F, 1.0F, this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB());
+         RenderUtility.Cornered(this.x, this.y, this.width, 11, 7, 0, 7, 0, 1.0F, isDark ? (new Color(45, 45, 45)).getRGB() : Color.WHITE.getRGB());
+         RenderUtility.CorneredGradient(this.x, this.y + 10, this.width, this.height - 10, 0, 7, 0, 7, 1.0F, this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB(), this.theme.getColors()[0].getRGB());
       } else {
-         RenderUtility.drawRoundedGradientRect(this.x, this.y, this.width, this.height, 7.0F, 1.0F, getC(0).getRGB(), getC(0).getRGB(), getC(250).getRGB(), getC(250).getRGB());
+         RenderUtility.Cornered(this.x, this.y, this.width, 11, 7, 0, 7, 0, isDark ? (new Color(45, 45, 45)).getRGB() : Color.WHITE.getRGB());
+         RenderUtility.CorneredGradient(this.x, this.y + 10, this.width, this.height - 10, 0, 7, 0, 7, 1.0F, getC(0).getRGB(), getC(0).getRGB(), getC(250).getRGB(), getC(250).getRGB());
       }
 
-      RenderUtility.drawRoundedRect(this.x + this.width / 2.0F - (Fonts.nunitoBold15.getStringWidth(this.theme.getName()) / 2) - 3, this.y + 11.0F, Fonts.nunitoBold15.getStringWidth(this.theme.getName()) + 6, Fonts.nunitoBold15.getStringHeight(this.theme.getName()) + 2, 5, isDark ? new Color(50, 50, 50).getRGB() : new Color(222, 222, 222).getRGB());
-      Fonts.nunitoBold15.drawCenteredString(this.theme.getName(), this.x + this.width / 2.0F, this.y + 13.0F, isDark ? Color.WHITE.getRGB() : (new Color(65, 65, 65)).getRGB());
+      Fonts.nunitoBold15.drawCenteredString(this.theme.getName(), this.x + this.width / 2.0F, this.y + 2.0F, isDark ? Color.WHITE.getRGB() : (new Color(65, 65, 65)).getRGB());
    }
 
    public void mouseClicked(double mouseX, double mouseY, int mouseButton) {

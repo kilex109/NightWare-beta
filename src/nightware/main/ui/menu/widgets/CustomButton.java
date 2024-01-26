@@ -1,6 +1,9 @@
 package nightware.main.ui.menu.widgets;
 
+import net.minecraft.client.audio.SoundHandler;
 import nightware.main.NightWare;
+import nightware.main.manager.theme.Themes;
+import nightware.main.utility.misc.SoundUtility;
 import nightware.main.utility.render.ColorUtility;
 import nightware.main.utility.render.RenderUtility;
 import nightware.main.utility.render.animation.Direction;
@@ -23,20 +26,21 @@ public class CustomButton extends GuiButton {
       if (this.visible) {
          int color = NightWare.getInstance().getC(0).getRGB();
          int color2 = NightWare.getInstance().getC(500).getRGB();
+         boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+         int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
          this.hovered = mouseX >= this.x && mouseY >= this.y && mouseX < this.x + this.width && mouseY < this.y + this.height;
          this.animation.setDirection(this.hovered ? Direction.FORWARDS : Direction.BACKWARDS);
          GlStateManager.enableBlend();
          GlStateManager.tryBlendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
          GlStateManager.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
-         RenderUtility.drawRoundedRect((float)this.x, (float)this.y, (float)this.width, (float)this.height, 5.0F, (new Color(30, 30, 30)).getRGB());
+         RenderUtility.drawRoundedRect(this.x, this.y, this.width, this.height, 5.0F, bgColor);
          if (this.hovered) {
-            RenderUtility.drawRoundedGradientRect((float)this.x, (float)this.y, (float)this.width, (float)this.height, 5.0F, 1.0F, ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()));
-            RenderUtility.drawRoundedRect((float)(this.x + 1), (float)(this.y + 1), (float)(this.width - 2), (float)(this.height - 2), 4.0F, (new Color(30, 30, 30)).getRGB());
+            RenderUtility.drawGradientGlow(this.x, this.y, this.width, this.height, 5, ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()), ColorUtility.setAlpha(color, this.animation.getOutput()), ColorUtility.setAlpha(color2, this.animation.getOutput()));
+            RenderUtility.drawRoundedRect(this.x, this.y, this.width, this.height, 5.0F, bgColor);
             Fonts.nunitoBold16.drawGradientCenteredString(this.displayString, (float)this.x + (float)this.width / 2.0F, (float)this.y + (float)(this.height - 8) / 2.0F + 1.0F, new Color(color), new Color(color2));
          } else {
             Fonts.nunitoBold16.drawCenteredString(this.displayString, (float)this.x + (float)this.width / 2.0F, (float)this.y + (float)(this.height - 8) / 2.0F + 1.0F, -1);
          }
       }
-
    }
 }

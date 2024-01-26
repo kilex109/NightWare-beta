@@ -1,0 +1,96 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 2024-01-23 12:00
+Description: Rendering screen
+
+java.lang.NullPointerException: Cannot read field "width" because "currentData[character]" is null
+	at nightware.main.utility.render.font.FontRenderer.getStringWidthCust(FontRenderer.java:610)
+	at nightware.main.utility.render.font.FontRenderer.trimStringToWidth(FontRenderer.java:81)
+	at net.minecraft.client.gui.GuiTextField.drawTextBox(GuiTextField.java:554)
+	at net.minecraft.client.gui.GuiChat.drawScreen(GuiChat.java:277)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1418)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1192)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:478)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at nightware.main.utility.render.font.FontRenderer.getStringWidthCust(FontRenderer.java:610)
+	at nightware.main.utility.render.font.FontRenderer.trimStringToWidth(FontRenderer.java:81)
+	at net.minecraft.client.gui.GuiTextField.drawTextBox(GuiTextField.java:554)
+	at net.minecraft.client.gui.GuiChat.drawScreen(GuiChat.java:277)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.GuiChat
+	Mouse location: Scaled: (480, 254). Absolute: (960, 508)
+	Screen size: Scaled: (960, 509). Absolute: (1920, 1017). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['NightWar4ik'/179252, l='MpServer', x=-1516.07, y=106.00, z=510.78]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,120,0), Chunk: (at 0,7,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 27189 game time, 17001 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 70 total; [EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.62, y=126.00, z=-802.87], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=126.25, z=-803.25], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-236.59, y=103.00, z=-1487.94], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=275.33, y=140.00, z=-1050.96], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2104.11, y=123.00, z=-798.32], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2104.45, y=123.00, z=-798.29], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.07, y=126.00, z=-803.33], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2101.44, y=127.00, z=-804.07], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2104.72, y=127.00, z=-803.71], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.34, y=126.00, z=-803.03], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-222.71, y=102.00, z=-1532.92], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=67.77, y=124.00, z=-1441.61], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2098.49, y=106.00, z=-811.55], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2079.01, y=108.63, z=-832.91], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2098.58, y=106.00, z=-811.67], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2083.79, y=108.11, z=-832.86], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2091.79, y=107.00, z=-828.49], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2100.66, y=126.67, z=-803.63], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.73, y=126.92, z=-803.70], EntityArmorStand['Armor Stand'/185939, l='MpServer', x=692.87, y=107.00, z=-772.55], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2103.06, y=127.07, z=-803.65], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2098.22, y=107.00, z=-827.15], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2095.02, y=107.00, z=-827.56], EntityArmorStand['Armor Stand'/188001, l='MpServer', x=-1509.50, y=107.00, z=538.50], EntityArmorStand['Armor Stand'/188022, l='MpServer', x=-1472.50, y=110.00, z=475.50], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.30, y=120.00, z=-853.72], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.30, y=120.00, z=-853.72], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.33, y=120.00, z=-853.76], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.12, y=125.36, z=-802.22], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.29, y=125.00, z=-801.99], EntityArmorStand['Armor Stand'/167554, l='MpServer', x=2112.87, y=107.30, z=-805.94], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.33, y=120.00, z=-853.30], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.34, y=125.00, z=-802.27], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2097.81, y=106.46, z=-802.45], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2098.54, y=106.00, z=-806.19], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2099.96, y=106.00, z=-807.63], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2023.29, y=118.81, z=-854.78], EntityPlayerSP['NightWar4ik'/179252, l='MpServer', x=-1516.07, y=106.00, z=510.78], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.00, z=-802.70], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2105.81, y=112.00, z=-802.11], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.54, y=127.00, z=-798.61], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2021.50, y=118.00, z=-856.14], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.00, z=-802.70], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2024.22, y=119.01, z=-854.42], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.00, z=-802.70], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.55, y=117.00, z=-859.92], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2026.16, y=117.00, z=-860.43], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-1535.57, y=104.00, z=474.58], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2041.93, y=115.17, z=-851.60], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2026.41, y=119.00, z=-854.48], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.00, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.00, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.69, y=125.14, z=-802.70], EntityOtherPlayerMP['Hell_gf'/84348, l='MpServer', x=2105.50, y=111.00, z=-795.50], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2025.47, y=117.01, z=-861.92], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-215.94, y=102.00, z=-1518.60], EntityOtherPlayerMP['negriPena'/128292, l='MpServer', x=2073.40, y=109.00, z=-831.54], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-221.03, y=102.00, z=-1519.39], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2100.44, y=127.00, z=-797.36], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.92, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.67, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2100.88, y=127.00, z=-797.57], EntityOtherPlayerMP['NightWar4ik'/-7776, l='MpServer', x=-227.46, y=103.00, z=-1507.42], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=123.00, z=-798.35], EntityOtherPlayerMP['NightWar4ik'/1000000033, l='MpServer', x=2026.46, y=124.62, z=-847.35], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.49, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=126.10, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=125.62, z=-802.70], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.70, y=124.09, z=-801.21], EntityOtherPlayerMP['Vlad_kotik'/153395, l='MpServer', x=2102.55, y=126.00, z=-803.43]]
+	Retry entities: 86 total; [EntityArmorStand['Armor Stand'/167554, l='MpServer', x=2112.87, y=107.30, z=-805.94], EntityArmorStand['Armor Stand'/167555, l='MpServer', x=2110.09, y=107.30, z=-806.92], EntityArmorStand['Armor Stand'/167680, l='MpServer', x=2106.50, y=106.73, z=-800.50], EntityArmorStand['Armor Stand'/167552, l='MpServer', x=2113.86, y=106.15, z=-805.08], EntityArmorStand['Armor Stand'/167553, l='MpServer', x=2114.17, y=106.15, z=-805.98], EntityArmorStand['Armor Stand'/167558, l='MpServer', x=2110.09, y=107.30, z=-806.92], EntityArmorStand['Armor Stand'/167559, l='MpServer', x=2112.87, y=107.30, z=-805.94], EntityArmorStand['Armor Stand'/173959, l='MpServer', x=2139.00, y=101.00, z=-760.00], EntityArmorStand['Armor Stand'/167556, l='MpServer', x=2111.48, y=107.30, z=-806.43], EntityArmorStand['Armor Stand'/167557, l='MpServer', x=2108.81, y=107.00, z=-807.37], EntityArmorStand['Armor Stand'/167562, l='MpServer', x=2113.23, y=107.00, z=-802.42], EntityArmorStand['Armor Stand'/173962, l='MpServer', x=2139.80, y=100.13, z=-760.04], EntityArmorStand['Armor Stand'/167563, l='MpServer', x=2114.54, y=106.15, z=-804.34], EntityArmorStand['Armor Stand'/173963, l='MpServer', x=2138.04, y=100.35, z=-759.07], EntityArmorStand['Armor Stand'/167560, l='MpServer', x=2111.48, y=107.30, z=-806.43], EntityArmorStand['Armor Stand'/173960, l='MpServer', x=2140.12, y=100.35, z=-761.57], EntityArmorStand['Armor Stand'/167561, l='MpServer', x=2114.25, y=107.30, z=-805.45], EntityArmorStand['Armor Stand'/173961, l='MpServer', x=2139.07, y=100.13, z=-760.79], EntityArmorStand['Armor Stand'/167566, l='MpServer', x=2114.20, y=107.30, z=-804.75], EntityArmorStand['Armor Stand'/173966, l='MpServer', x=2142.00, y=104.00, z=-800.00], EntityArmorStand['Armor Stand'/187535, l='MpServer', x=2094.03, y=110.35, z=-809.00], EntityArmorStand['Armor Stand'/167567, l='MpServer', x=2113.64, y=107.30, z=-803.39], EntityArmorStand['Armor Stand'/173967, l='MpServer', x=2141.33, y=104.00, z=-798.49], EntityArmorStand['Armor Stand'/167564, l='MpServer', x=2113.66, y=106.15, z=-804.70], EntityArmorStand['Armor Stand'/173964, l='MpServer', x=2138.28, y=100.00, z=-759.31], EntityArmorStand['Armor Stand'/167565, l='MpServer', x=2113.64, y=107.30, z=-803.39], EntityArmorStand['Armor Stand'/173970, l='MpServer', x=2142.77, y=103.15, z=-800.56], EntityArmorStand['Armor Stand'/167571, l='MpServer', x=2110.50, y=127.62, z=-802.50], EntityArmorStand['Armor Stand'/173971, l='MpServer', x=2141.90, y=103.15, z=-800.94], EntityArmorStand['Armor Stand'/187536, l='MpServer', x=2094.03, y=108.35, z=-809.00], EntityArmorStand['Armor Stand'/173968, l='MpServer', x=2142.44, y=104.30, z=-800.98], EntityArmorStand['Armor Stand'/187537, l='MpServer', x=2093.98, y=108.35, z=-809.00], EntityArmorStand['Armor Stand'/173969, l='MpServer', x=2141.84, y=104.30, z=-799.63], EntityArmorStand['Armor Stand'/173974, l='MpServer', x=2141.30, y=103.15, z=-799.60], EntityArmorStand['Armor Stand'/187543, l='MpServer', x=2105.28, y=123.59, z=-800.50], EntityArmorStand['Armor Stand'/173972, l='MpServer', x=2142.84, y=103.80, z=-801.89], EntityArmorStand['Armor Stand'/173973, l='MpServer', x=2142.17, y=103.15, z=-799.21], EntityArmorStand['Armor Stand'/187546, l='MpServer', x=2138.50, y=106.00, z=-857.50], EntityArmorStand['Armor Stand'/187547, l='MpServer', x=2126.35, y=104.00, z=-792.70], EntityArmorStand['Armor Stand'/187556, l='MpServer', x=2092.03, y=110.35, z=-809.00], EntityArmorStand['Armor Stand'/187557, l='MpServer', x=2104.32, y=123.50, z=-798.97], EntityArmorStand['Armor Stand'/187562, l='MpServer', x=2091.62, y=106.25, z=-811.30], EntityArmorStand['Armor Stand'/187563, l='MpServer', x=2090.62, y=106.25, z=-811.30], EntityArmorStand['Armor Stand'/173227, l='MpServer', x=2113.50, y=104.00, z=-776.50], EntityArmorStand['Armor Stand'/181544, l='MpServer', x=2101.72, y=123.00, z=-797.42], EntityArmorStand['Armor Stand'/187561, l='MpServer', x=2091.12, y=106.25, z=-811.30], EntityArmorStand['Armor Stand'/186415, l='MpServer', x=755.50, y=105.00, z=-745.50], EntityArmorStand['Armor Stand'/173232, l='MpServer', x=2092.50, y=107.00, z=-773.50], EntityArmorStand['Armor Stand'/186422, l='MpServer', x=763.50, y=105.00, z=-711.50], EntityArmorStand['Armor Stand'/186423, l='MpServer', x=763.50, y=105.00, z=-709.50], EntityArmorStand['Armor Stand'/171322, l='MpServer', x=2088.84, y=106.15, z=-800.40], EntityArmorStand['Armor Stand'/171323, l='MpServer', x=2088.78, y=106.15, z=-799.45], EntityArmorStand['Armor Stand'/171321, l='MpServer', x=2091.08, y=107.00, z=-799.77], EntityArmorStand['Armor Stand'/171326, l='MpServer', x=2092.96, y=107.30, z=-799.64], EntityArmorStand['Armor Stand'/171327, l='MpServer', x=2094.32, y=107.00, z=-799.54], EntityArmorStand['Armor Stand'/171324, l='MpServer', x=2090.03, y=107.30, z=-799.84], EntityArmorStand['Armor Stand'/171325, l='MpServer', x=2091.49, y=107.30, z=-799.74], EntityArmorStand['Armor Stand'/171330, l='MpServer', x=2090.03, y=107.30, z=-799.84], EntityArmorStand['Armor Stand'/171331, l='MpServer', x=2091.49, y=107.30, z=-799.74], EntityArmorStand['Armor Stand'/171328, l='MpServer', x=2088.56, y=107.30, z=-799.95], EntityArmorStand['Armor Stand'/171329, l='MpServer', x=2092.96, y=107.30, z=-799.64], EntityArmorStand['Armor Stand'/182092, l='MpServer', x=2104.30, y=121.00, z=-798.55], EntityArmorStand['Armor Stand'/185939, l='MpServer', x=692.87, y=107.00, z=-772.55], EntityArmorStand['Armor Stand'/185942, l='MpServer', x=696.66, y=107.30, z=-776.91], EntityArmorStand['Armor Stand'/187350, l='MpServer', x=2099.96, y=104.69, z=-807.25], EntityArmorStand['Armor Stand'/185943, l='MpServer', x=695.69, y=107.30, z=-775.80], EntityArmorStand['Armor Stand'/187351, l='MpServer', x=2099.96, y=105.30, z=-807.88], EntityArmorStand['Armor Stand'/185940, l='MpServer', x=693.24, y=106.15, z=-773.70], EntityArmorStand['Armor Stand'/185941, l='MpServer', x=695.00, y=107.00, z=-775.00], EntityArmorStand['Armor Stand'/187349, l='MpServer', x=2099.96, y=106.00, z=-807.63], EntityArmorStand['Armor Stand'/185946, l='MpServer', x=695.69, y=107.30, z=-775.80], EntityArmorStand['Armor Stand'/185947, l='MpServer', x=693.96, y=106.15, z=-773.08], EntityArmorStand['Armor Stand'/185944, l='MpServer', x=694.73, y=107.30, z=-774.69], EntityArmorStand['Armor Stand'/185945, l='MpServer', x=693.76, y=107.30, z=-773.58], EntityArmorStand['Armor Stand'/187107, l='MpServer', x=2095.02, y=107.00, z=-827.56], EntityArmorStand['Armor Stand'/187108, l='MpServer', x=2095.02, y=105.69, z=-827.94], EntityArmorStand['Armor Stand'/187109, l='MpServer', x=2095.02, y=106.30, z=-827.31], EntityArmorStand['Armor Stand'/187499, l='MpServer', x=2093.02, y=110.35, z=-809.00], EntityArmorStand['Armor Stand'/187497, l='MpServer', x=2092.97, y=108.35, z=-809.00], EntityArmorStand['Armor Stand'/167666, l='MpServer', x=2111.99, y=107.00, z=-799.41], EntityArmorStand['Armor Stand'/167667, l='MpServer', x=2113.07, y=107.30, z=-802.03], EntityArmorStand['Armor Stand'/167664, l='MpServer', x=2112.51, y=107.30, z=-800.67], EntityArmorStand['Armor Stand'/167665, l='MpServer', x=2113.07, y=107.30, z=-802.03], EntityArmorStand['Armor Stand'/167668, l='MpServer', x=2112.51, y=107.30, z=-800.67], EntityArmorStand['Armor Stand'/167679, l='MpServer', x=2106.50, y=106.73, z=-800.50], EntityArmorStand['Armor Stand'/167551, l='MpServer', x=2111.87, y=107.00, z=-806.29]]
+	Server brand: Paper (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:520)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2968)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:499)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.9, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1677178872 bytes (1599 MB) / 2818572288 bytes (2688 MB) up to 4273995776 bytes (4076 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 3050/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.65, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: By dor4iks, BetterGUI
+	Current Language: ~~ERROR~~ NullPointerException: Cannot invoke "net.minecraft.client.resources.Language.toString()" because the return value of "net.minecraft.client.resources.LanguageManager.getCurrentLanguage()" is null
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 1600 Six-Core Processor 
+	OptiFine Version: OptiFine_1.12.2_HD_U_C6
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.65
+	OpenGlRenderer: NVIDIA GeForce RTX 3050/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12

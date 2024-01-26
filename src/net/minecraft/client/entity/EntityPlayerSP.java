@@ -87,7 +87,6 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IInteractionObject;
 import net.minecraft.world.World;
-import nightware.main.module.impl.player.NoPush;
 
 public class EntityPlayerSP extends AbstractClientPlayer {
     public final NetHandlerPlayClient connection;

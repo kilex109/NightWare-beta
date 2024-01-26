@@ -29,11 +29,11 @@ public class NWMainMenu extends GuiScreen {
    public void initGui() {
       this.width = (new ScaledResolution(mc)).getScaledWidth();
       this.height = (new ScaledResolution(mc)).getScaledHeight();
-      this.addButton(new CustomButton(0, this.width / 2 - 102, this.height / 2 - 35, 100, 22, "Одиночная игра"));
-      this.addButton(new CustomButton(1, this.width / 2 + 2, this.height / 2 - 35, 100, 22, "Зайти на RustMe"));
-      this.addButton(new CustomButton(2, this.width / 2 - 102, this.height / 2 - 9, 100, 22, "Аккаунты"));
-      this.addButton(new CustomButton(3, this.width / 2 + 2, this.height / 2 - 9, 100, 22, "Настройки"));
-      this.addButton(new CustomButton(4, this.width / 2 - 102, this.height / 2 + 17, 204, 22, "Выход"));
+      this.addButton(new CustomButton(0, this.width / 2 - 102, this.height / 2 - 34, 100, 22, "Одиночная игра"));
+      this.addButton(new CustomButton(1, this.width / 2 + 2, this.height / 2 - 34, 100, 22, "Зайти на RustMe"));
+      this.addButton(new CustomButton(2, this.width / 2 - 102, this.height / 2 - 8, 100, 22, "Аккаунты"));
+      this.addButton(new CustomButton(3, this.width / 2 + 2, this.height / 2 - 8, 100, 22, "Настройки"));
+      this.addButton(new CustomButton(4, this.width / 2 - 102, this.height / 2 + 18, 204, 22, "Выход"));
 
       if (NightWare.getInstance().getUserInfo().getRole().endsWith("+")) {
          this.addButton(new CustomButton(5, this.width / 2 + 106, this.height / 2 - 35, 22, 22, "RML"));

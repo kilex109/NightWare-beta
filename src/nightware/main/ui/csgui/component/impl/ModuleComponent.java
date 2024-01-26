@@ -64,10 +64,10 @@ public class ModuleComponent extends Component {
       Color color = NightWare.getInstance().getC(0);
       Color color2 = NightWare.getInstance().getC(500);
       boolean isDark = NightWare.getInstance().getThemeManager().getCurrentGuiTheme().equals(Themes.DARK.getTheme());
+      int bgColor = isDark ? new Color(30, 30, 30, 230).getRGB() : new Color(255, 255, 255, 220).getRGB();
       Color moduleColor = isDark ? new Color(34, 34, 34) : (new Color(240, 240, 240));
-      RenderUtility.drawGradientGlow(this.x + 1.0F, this.y + normalHeight - 1.0F, (float)((int)this.width - 2), 2.0F, 4, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
-      RenderUtility.drawRoundedGradientRect(this.x + 0.5F, this.y + normalHeight - 8.0F, this.width - 1.0F, 9.0F, 5.0F, 1.0F, NightWare.getInstance().getC(0).getRGB(), NightWare.getInstance().getC(0).getRGB(), NightWare.getInstance().getC(500).getRGB(), NightWare.getInstance().getC(500).getRGB());
-      RenderUtility.drawRoundedRect(this.x, this.y, this.width, normalHeight, 5.0F, moduleColor.getRGB());
+      RenderUtility.drawGradientGlow(this.x + 1.5f, this.y + 1, this.width - 2.5f, normalHeight - 2.5f, 3, NightWare.getInstance().getC(0), NightWare.getInstance().getC(500));
+      RenderUtility.drawRoundedRect(this.x, this.y, this.width, normalHeight, 5.0F, bgColor);
       Fonts.nunitoBold14.drawString(this.binding ? "Нажмите клавишу.. " : this.module.getName(), this.x + 5.0F, this.y + 6.0F, isDark ? Color.WHITE.getRGB() : (new Color(40, 40, 40)).getRGB());
       if (this.binding) {
          String bindText = this.module.bind < 0 ? "MOUSE " + this.module.getMouseBind() : Keyboard.getKeyName(this.module.getBind());

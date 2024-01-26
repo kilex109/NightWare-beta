@@ -25,10 +25,13 @@ import net.minecraft.util.text.TextFormatting;
 import nightware.main.NightWare;
 import nightware.main.manager.theme.Themes;
 import nightware.main.module.impl.combat.TimerUtils;
+import nightware.main.module.impl.player.ItemScroller;
 import nightware.main.utility.math.TimerUtility;
+import nightware.main.utility.misc.TimerHelper;
 import nightware.main.utility.render.RenderUtility;
 import nightware.main.utility.render.font.Fonts;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 
 public abstract class GuiContainer extends GuiScreen
 {
@@ -85,11 +88,13 @@ public abstract class GuiContainer extends GuiScreen
     private int lastClickButton;
     private boolean doubleClick;
     private ItemStack shiftClickedSlot = ItemStack.field_190927_a;
+    private final TimerHelper timer;
 
     public GuiContainer(Container inventorySlotsIn)
     {
         this.inventorySlots = inventorySlotsIn;
         this.ignoreMouseUp = true;
+        this.timer = new TimerHelper();
     }
 
     /**
@@ -150,6 +155,11 @@ public abstract class GuiContainer extends GuiScreen
 
             if (this.isMouseOverSlot(slot, mouseX, mouseY) && slot.canBeHovered())
             {
+                if (NightWare.getInstance().getModuleManager().getModule(ItemScroller.class).isEnabled() && Mouse.isButtonDown(0) && Keyboard.isKeyDown(this.mc.gameSettings.keyBindSneak.getKeyCode()) && this.timer.hasReached((double)ItemScroller.delay.get())) {
+                    this.handleMouseClick(slot, slot.slotNumber, 0, ClickType.QUICK_MOVE);
+                    this.timer.reset();
+                }
+
                 this.theSlot = slot;
                 GlStateManager.disableLighting();
                 GlStateManager.disableDepth();

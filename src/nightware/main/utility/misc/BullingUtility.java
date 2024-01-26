@@ -17,7 +17,7 @@ public class BullingUtility {
     public static CompletableFuture<String> bull() {
         return CompletableFuture.supplyAsync(() -> {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    new FileInputStream(Minecraft.getMinecraft().mcDataDir + "\\nw.xyz\\killmessages.ss"),
+                    new FileInputStream(Minecraft.getMinecraft().mcDataDir + "\\nw.xyz\\killmessages.nw"),
                     StandardCharsets.UTF_8))) {
                 List<String> lines = new ArrayList<>();
                 String line;
@@ -47,6 +47,6 @@ public class BullingUtility {
     }
 
     static {
-        bullingFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\killmessages.ss");
+        bullingFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\killmessages.nw");
     }
 }

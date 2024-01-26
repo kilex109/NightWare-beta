@@ -14,7 +14,7 @@ import net.minecraft.network.play.server.SPacketTitle;
    category = Category.COMBAT
 )
 public class HitSound extends Module {
-   private final ModeSetting mode = new ModeSetting("Звук", "Bonk", "Bonk", "Bell", "Bubble", "Crime", "Rust", "Hit");
+   private final ModeSetting mode = new ModeSetting("Звук", "Bonk", "Bonk", "Bell", "Bubble", "Crime", "Rust", "Hit", "UwU");
 
    @EventTarget
    public void onPacket(EventReceivePacket eventPacket) {
