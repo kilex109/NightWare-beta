@@ -91,6 +91,6 @@ public class MacroManager {
    }
 
    static {
-      macroFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\macro.nw");
+      macroFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\macro.ss");
    }
 }

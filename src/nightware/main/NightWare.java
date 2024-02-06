@@ -181,6 +181,7 @@ public class NightWare {
       this.dragManager.save();
       this.altFileManager.saveAll();
       this.lastAccountManager.save();
+      this.configManager.saveConfig("autocfg");
 
        for (Module module : this.moduleManager.getModules()) {
 

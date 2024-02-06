@@ -88,6 +88,6 @@ public class FriendManager {
    }
 
    static {
-      friendsFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\friends.nw");
+      friendsFile = new File(Minecraft.getMinecraft().mcDataDir, "\\nw.xyz\\friends.ss");
    }
 }
